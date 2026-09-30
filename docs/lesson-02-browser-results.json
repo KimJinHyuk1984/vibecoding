@@ -1,0 +1,1084 @@
+{
+  "date": "2026-09-30",
+  "browser": "Chrome 154.0.8037.59 (isolated headless profile)",
+  "checks": [
+    {
+      "name": "series-13-first-two-ready",
+      "pass": true
+    },
+    {
+      "name": "hub-does-not-present",
+      "pass": true
+    },
+    {
+      "name": "hub-opens-lesson",
+      "pass": true
+    },
+    {
+      "name": "lesson-initialization",
+      "pass": true,
+      "details": {
+        "sections": 8,
+        "prompts": 7,
+        "widgets": [
+          "true",
+          "true",
+          "true",
+          "true",
+          "true",
+          "true"
+        ],
+        "horizontal": 0
+      }
+    },
+    {
+      "name": "desktop-no-horizontal-overflow",
+      "pass": true,
+      "details": 0
+    },
+    {
+      "name": "clipboard-prompt-reconnect",
+      "pass": true,
+      "details": {
+        "length": 219
+      }
+    },
+    {
+      "name": "clipboard-prompt-brief",
+      "pass": true,
+      "details": {
+        "length": 363
+      }
+    },
+    {
+      "name": "clipboard-prompt-design",
+      "pass": true,
+      "details": {
+        "length": 273
+      }
+    },
+    {
+      "name": "clipboard-prompt-rule",
+      "pass": true,
+      "details": {
+        "length": 454
+      }
+    },
+    {
+      "name": "clipboard-prompt-fix",
+      "pass": true,
+      "details": {
+        "length": 331
+      }
+    },
+    {
+      "name": "clipboard-prompt-understand",
+      "pass": true,
+      "details": {
+        "length": 220
+      }
+    },
+    {
+      "name": "clipboard-prompt-save",
+      "pass": true,
+      "details": {
+        "length": 203
+      }
+    },
+    {
+      "name": "remix-left-turns-in-place",
+      "pass": true
+    },
+    {
+      "name": "theme-preserves-game-space",
+      "pass": true
+    },
+    {
+      "name": "theme-selection-accessible-space",
+      "pass": true
+    },
+    {
+      "name": "theme-preserves-game-library",
+      "pass": true
+    },
+    {
+      "name": "theme-selection-accessible-library",
+      "pass": true
+    },
+    {
+      "name": "theme-preserves-game-basic",
+      "pass": true
+    },
+    {
+      "name": "theme-selection-accessible-basic",
+      "pass": true
+    },
+    {
+      "name": "remix-keeps-endless-rule",
+      "pass": true
+    },
+    {
+      "name": "goal-still-playing-at-19",
+      "pass": true
+    },
+    {
+      "name": "goal-wins-exactly-at-20",
+      "pass": true,
+      "details": {
+        "phase": "won",
+        "score": 20,
+        "facing": 1,
+        "next": 1,
+        "position": "translate(208 258)"
+      }
+    },
+    {
+      "name": "goal-no-movement-after-win",
+      "pass": true
+    },
+    {
+      "name": "goal-buttons-disabled-after-win",
+      "pass": true
+    },
+    {
+      "name": "two-games-independent",
+      "pass": true
+    },
+    {
+      "name": "goal-restart-restores-state",
+      "pass": true
+    },
+    {
+      "name": "goal-wrong-direction-fails",
+      "pass": true
+    },
+    {
+      "name": "goal-failed-input-ignored",
+      "pass": true
+    },
+    {
+      "name": "mobile-remix-touch-turn",
+      "pass": true
+    },
+    {
+      "name": "mobile-remix-touch-climb-once",
+      "pass": true
+    },
+    {
+      "name": "check-and-note-persist",
+      "pass": true
+    },
+    {
+      "name": "instructor-dialog-opens",
+      "pass": true
+    },
+    {
+      "name": "instructor-dialog-escape",
+      "pass": true
+    },
+    {
+      "name": "section-menu-opens",
+      "pass": true
+    },
+    {
+      "name": "section-menu-escape",
+      "pass": true
+    },
+    {
+      "name": "theme-toggle",
+      "pass": true
+    },
+    {
+      "name": "mobile-width-light",
+      "pass": true,
+      "details": {
+        "w": 360,
+        "s": 360,
+        "problems": []
+      }
+    },
+    {
+      "name": "mobile-width-dark",
+      "pass": true,
+      "details": {
+        "w": 360,
+        "s": 360,
+        "problems": []
+      }
+    },
+    {
+      "name": "presentation-enter",
+      "pass": true
+    },
+    {
+      "name": "blackout-on",
+      "pass": true
+    },
+    {
+      "name": "presentation-slide-count-default",
+      "pass": true,
+      "details": 28
+    },
+    {
+      "name": "presentation-game-keys-stay-on-slide",
+      "pass": true
+    },
+    {
+      "name": "presentation-copy-full-prompt",
+      "pass": true
+    },
+    {
+      "name": "presentation-overflow-default",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "presentation-measurements-default",
+      "pass": true,
+      "details": {
+        "count": 28,
+        "problems": []
+      }
+    },
+    {
+      "name": "presentation-slide-count-all",
+      "pass": true,
+      "details": 31
+    },
+    {
+      "name": "presentation-overflow-all",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "presentation-measurements-all",
+      "pass": true,
+      "details": {
+        "count": 31,
+        "problems": []
+      }
+    },
+    {
+      "name": "presentation-restoration",
+      "pass": true
+    },
+    {
+      "name": "reduced-motion",
+      "pass": true
+    },
+    {
+      "name": "repository-prefixed-path",
+      "pass": true
+    },
+    {
+      "name": "file-protocol",
+      "pass": true
+    },
+    {
+      "name": "file-presentation",
+      "pass": true
+    },
+    {
+      "name": "javascript-errors",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "unexpected-http-errors",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "file-hub-opens-second-lesson",
+      "pass": true
+    },
+    {
+      "name": "file-second-lesson-to-hub",
+      "pass": true
+    },
+    {
+      "name": "contrast-light-basic",
+      "pass": true,
+      "details": {
+        "count": 227,
+        "min": 6.232826055526348,
+        "fail": []
+      }
+    },
+    {
+      "name": "contrast-light-space",
+      "pass": true,
+      "details": {
+        "count": 227,
+        "min": 6.232826055526348,
+        "fail": []
+      }
+    },
+    {
+      "name": "contrast-light-library",
+      "pass": true,
+      "details": {
+        "count": 227,
+        "min": 6.220056386526992,
+        "fail": []
+      }
+    },
+    {
+      "name": "contrast-dark-basic",
+      "pass": true,
+      "details": {
+        "count": 227,
+        "min": 8.114988087963997,
+        "fail": []
+      }
+    },
+    {
+      "name": "contrast-dark-space",
+      "pass": true,
+      "details": {
+        "count": 227,
+        "min": 8.114988087963997,
+        "fail": []
+      }
+    },
+    {
+      "name": "contrast-dark-library",
+      "pass": true,
+      "details": {
+        "count": 227,
+        "min": 8.114988087963997,
+        "fail": []
+      }
+    },
+    {
+      "name": "two-widget-static-fallbacks",
+      "pass": true
+    },
+    {
+      "name": "blocked-storage-check-guidance",
+      "pass": true
+    },
+    {
+      "name": "blocked-storage-note-guidance",
+      "pass": true
+    },
+    {
+      "name": "lesson01-left-still-turns-only",
+      "pass": true
+    },
+    {
+      "name": "lesson01-remains-endless",
+      "pass": true
+    },
+    {
+      "name": "lesson01-to-lesson02-navigation",
+      "pass": true
+    },
+    {
+      "name": "ids-and-presentation-markers",
+      "pass": true,
+      "details": {
+        "duplicate": [],
+        "nested": 0
+      }
+    },
+    {
+      "name": "extra-javascript-errors",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    }
+  ],
+  "slides": [
+    {
+      "mode": "default",
+      "slide": 1,
+      "title": "지난번 게임이 오늘의 출발점 · 오늘은 내가 게임 디자이너",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 2,
+      "title": "지난번 게임이 오늘의 출발점 · 작동하는 게임과 복구 지점 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 3,
+      "title": "지난번 게임이 오늘의 출발점 · PROMPT 01 · 내 게임 다시 파악하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 4,
+      "title": "지난번 게임이 오늘의 출발점 · 오늘의 120분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 5,
+      "title": "모양이 바뀌면 어떤 게임으로 보이나요? · 같은 게임, 세 가지 테마",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 6,
+      "title": "모양이 바뀌면 어떤 게임으로 보이나요? · 디자인과 규칙을 구분하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 7,
+      "title": "모양이 바뀌면 어떤 게임으로 보이나요? · 내 세계관 고르기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 8,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · 막연한 부탁을 구체적인 요청으로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 9,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · 설계에 넣을 세 가지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 10,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · 화면을 네 줄로 그려보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 11,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · PROMPT 02 · 내 설계 정리하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 12,
+      "title": "내가 정한 화면으로 바꾸기 · PROMPT 03 · 디자인부터 적용하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 13,
+      "title": "내가 정한 화면으로 바꾸기 · 디자인 변경 뒤에도 직접 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 14,
+      "title": "내가 정한 화면으로 바꾸기 · 변경 요청을 한 가지로 좁히기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 15,
+      "title": "작동하는 디자인을 저장하고 쉬어요 · v2는 내 디자인이 적용된 버전",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 16,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · 새 규칙을 조건과 결과로 쓰기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 17,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · PROMPT 04 · 20칸 도착 모드 추가",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 18,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · 시작·진행·성공·실패",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 19,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · 20칸 전후를 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 20,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · 예외 상황도 눌러보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 21,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · PROMPT 05 · 예상과 다른 결과 고치기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 22,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · 요구사항대로 동작하는지 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 23,
+      "title": "내가 결정한 것을 설명하는 제작자 · 한 게임의 세 가지 버전",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 24,
+      "title": "내가 결정한 것을 설명하는 제작자 · PROMPT 07 · 최종 코드와 변경점 보관",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 25,
+      "title": "내가 결정한 것을 설명하는 제작자 · Drive에 내 작품 남기기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 26,
+      "title": "내가 결정한 것을 설명하는 제작자 · 나의 두 번째 제작 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 27,
+      "title": "내가 결정한 것을 설명하는 제작자 · 오늘의 완료 기준",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 28,
+      "title": "내가 결정한 것을 설명하는 제작자 · 다른 앱에도 그대로 쓰는 방법",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 1,
+      "title": "지난번 게임이 오늘의 출발점 · 오늘은 내가 게임 디자이너",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 2,
+      "title": "지난번 게임이 오늘의 출발점 · 작동하는 게임과 복구 지점 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 3,
+      "title": "지난번 게임이 오늘의 출발점 · PROMPT 01 · 내 게임 다시 파악하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 4,
+      "title": "지난번 게임이 오늘의 출발점 · 게임이나 채팅이 없을 때",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 5,
+      "title": "지난번 게임이 오늘의 출발점 · 오늘의 120분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 6,
+      "title": "모양이 바뀌면 어떤 게임으로 보이나요? · 같은 게임, 세 가지 테마",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 7,
+      "title": "모양이 바뀌면 어떤 게임으로 보이나요? · 디자인과 규칙을 구분하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 8,
+      "title": "모양이 바뀌면 어떤 게임으로 보이나요? · 내 세계관 고르기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 9,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · 막연한 부탁을 구체적인 요청으로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 10,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · 설계에 넣을 세 가지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 11,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · 화면을 네 줄로 그려보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 12,
+      "title": "“예쁘게”를 확인할 수 있는 말로 · PROMPT 02 · 내 설계 정리하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 13,
+      "title": "내가 정한 화면으로 바꾸기 · PROMPT 03 · 디자인부터 적용하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 14,
+      "title": "내가 정한 화면으로 바꾸기 · 디자인 변경 뒤에도 직접 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 15,
+      "title": "내가 정한 화면으로 바꾸기 · 변경 요청을 한 가지로 좁히기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 16,
+      "title": "작동하는 디자인을 저장하고 쉬어요 · v2는 내 디자인이 적용된 버전",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 17,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · 새 규칙을 조건과 결과로 쓰기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 18,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · PROMPT 04 · 20칸 도착 모드 추가",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 19,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · 시작·진행·성공·실패",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 20,
+      "title": "끝없이 오르기 vs 20칸에 도착하기 · 보충 체험 · 20칸에서 멈추기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 21,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · 20칸 전후를 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 22,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · 예외 상황도 눌러보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 23,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · PROMPT 05 · 예상과 다른 결과 고치기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 24,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · PROMPT 06 · 빠르면 상태의 원리 알아보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 25,
+      "title": "잘 되는 순간과 틀리기 쉬운 순간 · 요구사항대로 동작하는지 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 26,
+      "title": "내가 결정한 것을 설명하는 제작자 · 한 게임의 세 가지 버전",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 27,
+      "title": "내가 결정한 것을 설명하는 제작자 · PROMPT 07 · 최종 코드와 변경점 보관",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 28,
+      "title": "내가 결정한 것을 설명하는 제작자 · Drive에 내 작품 남기기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 29,
+      "title": "내가 결정한 것을 설명하는 제작자 · 나의 두 번째 제작 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 30,
+      "title": "내가 결정한 것을 설명하는 제작자 · 오늘의 완료 기준",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 31,
+      "title": "내가 결정한 것을 설명하는 제작자 · 다른 앱에도 그대로 쓰는 방법",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    }
+  ],
+  "hashes": [
+    {
+      "file": "DESIGN.md",
+      "hash": "C473FCA5C871CAB360DAE65320E6A38189D7E987857CC53700C69E9606A40100",
+      "expected": "C473FCA5C871CAB360DAE65320E6A38189D7E987857CC53700C69E9606A40100"
+    },
+    {
+      "file": "assets/css/tokens.css",
+      "hash": "6C3EEDE764AE1875570731BA175D569DA58030C7FDA96669FCED3FE36DEB8590",
+      "expected": "6C3EEDE764AE1875570731BA175D569DA58030C7FDA96669FCED3FE36DEB8590"
+    },
+    {
+      "file": "assets/css/base.css",
+      "hash": "2B1D4CFCF12DC00C9A65A288D106BB1F6E9C75AB14D900CA24095738B35B25CB",
+      "expected": "2B1D4CFCF12DC00C9A65A288D106BB1F6E9C75AB14D900CA24095738B35B25CB"
+    },
+    {
+      "file": "assets/js/shared.js",
+      "hash": "E74FACE44F5B81E6A96CFA500CA616A089975EB85EF5EF985CE05DB182D75569",
+      "expected": "E74FACE44F5B81E6A96CFA500CA616A089975EB85EF5EF985CE05DB182D75569"
+    }
+  ],
+  "instructorUnchanged": true
+}

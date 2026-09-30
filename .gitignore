@@ -1,0 +1,7 @@
+/source/
+/work-temp/
+.venv/
+venv/
+__pycache__/
+*.pyc
+/바이브코딩_강의자료(마포고_서성원).pptx

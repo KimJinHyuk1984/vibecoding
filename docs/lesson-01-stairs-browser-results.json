@@ -1,0 +1,1169 @@
+{
+  "date": "2026-09-30",
+  "browser": "Chrome 154.0.8037.58 (isolated headless profile)",
+  "checks": [
+    {
+      "name": "series-13-only-first-ready",
+      "pass": true
+    },
+    {
+      "name": "hub-does-not-present",
+      "pass": true
+    },
+    {
+      "name": "hub-opens-lesson",
+      "pass": true
+    },
+    {
+      "name": "lesson-initialization",
+      "pass": true,
+      "details": {
+        "sections": 9,
+        "prompts": 7,
+        "widgets": [
+          "true",
+          "true",
+          "true",
+          "true"
+        ],
+        "horizontal": 0
+      }
+    },
+    {
+      "name": "desktop-no-horizontal-overflow",
+      "pass": true,
+      "details": 0
+    },
+    {
+      "name": "clipboard-prompt-build",
+      "pass": true,
+      "details": {
+        "length": 474
+      }
+    },
+    {
+      "name": "clipboard-prompt-style",
+      "pass": true,
+      "details": {
+        "length": 161
+      }
+    },
+    {
+      "name": "clipboard-prompt-records",
+      "pass": true,
+      "details": {
+        "length": 197
+      }
+    },
+    {
+      "name": "clipboard-prompt-mobile",
+      "pass": true,
+      "details": {
+        "length": 205
+      }
+    },
+    {
+      "name": "clipboard-prompt-fix",
+      "pass": true,
+      "details": {
+        "length": 264
+      }
+    },
+    {
+      "name": "clipboard-prompt-understand",
+      "pass": true,
+      "details": {
+        "length": 185
+      }
+    },
+    {
+      "name": "clipboard-prompt-save",
+      "pass": true,
+      "details": {
+        "length": 172
+      }
+    },
+    {
+      "name": "game-idle-input-ignored",
+      "pass": true
+    },
+    {
+      "name": "game-start",
+      "pass": true,
+      "details": {
+        "phase": "playing",
+        "score": 0,
+        "best": 0,
+        "facing": 1,
+        "next": 1,
+        "position": "translate(300 258)",
+        "nodes": 13
+      }
+    },
+    {
+      "name": "left-turns-without-climbing",
+      "pass": true,
+      "details": {
+        "phase": "playing",
+        "score": 0,
+        "best": 0,
+        "facing": -1,
+        "next": 1,
+        "position": "translate(300 258)",
+        "nodes": 13
+      }
+    },
+    {
+      "name": "held-left-does-not-repeat",
+      "pass": true
+    },
+    {
+      "name": "right-climbs-once",
+      "pass": true,
+      "details": {
+        "phase": "playing",
+        "score": 1,
+        "best": 1,
+        "facing": 1,
+        "next": -1,
+        "position": "translate(346 258)",
+        "nodes": 14
+      }
+    },
+    {
+      "name": "game-arrows-do-not-scroll",
+      "pass": true
+    },
+    {
+      "name": "held-right-does-not-repeat",
+      "pass": true
+    },
+    {
+      "name": "infinite-stairs-250-keyboard-climbs",
+      "pass": true,
+      "details": {
+        "state": {
+          "phase": "playing",
+          "score": 250,
+          "best": 250,
+          "facing": -1,
+          "next": 1,
+          "position": "translate(300 258)",
+          "nodes": 14
+        },
+        "leftClimbs": 125,
+        "rightClimbs": 125
+      }
+    },
+    {
+      "name": "course-in-bounds-and-dom-bounded",
+      "pass": true,
+      "details": {
+        "geometry": true,
+        "maxNodes": 14
+      }
+    },
+    {
+      "name": "wrong-direction-ends-round",
+      "pass": true,
+      "details": {
+        "phase": "over",
+        "score": 250,
+        "best": 250,
+        "facing": -1,
+        "next": 1,
+        "position": "translate(300 258)",
+        "nodes": 14
+      }
+    },
+    {
+      "name": "game-over-input-ignored",
+      "pass": true
+    },
+    {
+      "name": "restart-restores-position-direction-score",
+      "pass": true,
+      "details": {
+        "phase": "playing",
+        "score": 0,
+        "best": 250,
+        "facing": 1,
+        "next": 1,
+        "position": "translate(300 258)",
+        "nodes": 13
+      }
+    },
+    {
+      "name": "onscreen-buttons-operate-once",
+      "pass": true
+    },
+    {
+      "name": "multiple-restarts-do-not-duplicate-input",
+      "pass": true
+    },
+    {
+      "name": "game-does-not-capture-textarea-arrows",
+      "pass": true
+    },
+    {
+      "name": "mobile-touch-turns-only",
+      "pass": true
+    },
+    {
+      "name": "mobile-touch-climbs-once",
+      "pass": true
+    },
+    {
+      "name": "mobile-controls-touch-size",
+      "pass": true
+    },
+    {
+      "name": "check-and-note-persist",
+      "pass": true
+    },
+    {
+      "name": "instructor-dialog-opens",
+      "pass": true
+    },
+    {
+      "name": "instructor-dialog-escape",
+      "pass": true
+    },
+    {
+      "name": "section-menu-opens",
+      "pass": true
+    },
+    {
+      "name": "section-menu-escape",
+      "pass": true
+    },
+    {
+      "name": "theme-toggle",
+      "pass": true
+    },
+    {
+      "name": "mobile-width-light",
+      "pass": true,
+      "details": {
+        "w": 360,
+        "s": 360,
+        "problems": []
+      }
+    },
+    {
+      "name": "mobile-width-dark",
+      "pass": true,
+      "details": {
+        "w": 360,
+        "s": 360,
+        "problems": []
+      }
+    },
+    {
+      "name": "presentation-enter",
+      "pass": true
+    },
+    {
+      "name": "blackout-on",
+      "pass": true
+    },
+    {
+      "name": "presentation-slide-count-default",
+      "pass": true,
+      "details": 33
+    },
+    {
+      "name": "presentation-game-left-turn",
+      "pass": true
+    },
+    {
+      "name": "presentation-game-keys-stay-on-slide",
+      "pass": true
+    },
+    {
+      "name": "presentation-copy-full-prompt",
+      "pass": true
+    },
+    {
+      "name": "presentation-overflow-default",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "presentation-measurements-default",
+      "pass": true,
+      "details": {
+        "count": 33,
+        "problems": []
+      }
+    },
+    {
+      "name": "presentation-slide-count-all",
+      "pass": true,
+      "details": 34
+    },
+    {
+      "name": "presentation-overflow-all",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "presentation-measurements-all",
+      "pass": true,
+      "details": {
+        "count": 34,
+        "problems": []
+      }
+    },
+    {
+      "name": "presentation-restoration",
+      "pass": true
+    },
+    {
+      "name": "reduced-motion",
+      "pass": true
+    },
+    {
+      "name": "repository-prefixed-path",
+      "pass": true
+    },
+    {
+      "name": "file-protocol",
+      "pass": true
+    },
+    {
+      "name": "file-presentation",
+      "pass": true
+    },
+    {
+      "name": "javascript-errors",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "unexpected-http-errors",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "file-hub-to-lesson",
+      "pass": true
+    },
+    {
+      "name": "file-lesson-to-hub",
+      "pass": true
+    },
+    {
+      "name": "text-contrast-light",
+      "pass": true,
+      "details": {
+        "count": 178,
+        "min": 6.232826055526348,
+        "fail": []
+      }
+    },
+    {
+      "name": "text-contrast-dark",
+      "pass": true,
+      "details": {
+        "count": 178,
+        "min": 8.114988087963997,
+        "fail": []
+      }
+    },
+    {
+      "name": "widget-load-failure-fallback",
+      "pass": true
+    },
+    {
+      "name": "storage-blocked-check-still-works",
+      "pass": true
+    },
+    {
+      "name": "storage-blocked-note-guidance",
+      "pass": true
+    },
+    {
+      "name": "extra-javascript-errors",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    }
+  ],
+  "slides": [
+    {
+      "mode": "default",
+      "slide": 1,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 바이브코딩이란?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 2,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 내가 할 일과 AI가 도울 일",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 3,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 작게 만들고, 실행하고, 다시 요청하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 4,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 이 작은 게임에서 시작하는 것들",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 5,
+      "title": "만들기 전에, 한 판 해볼까요? · 무한의 계단 게임 체험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 6,
+      "title": "만들기 전에, 한 판 해볼까요? · 플레이어에서 제작자로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 7,
+      "title": "강의 탭 하나, 제작 탭 하나 · 실습 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 8,
+      "title": "강의 탭 하나, 제작 탭 하나 · 도구가 보이지 않을 때",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 9,
+      "title": "강의 탭 하나, 제작 탭 하나 · 오늘의 120분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 10,
+      "title": "첫 프롬프트, 첫 게임 · 어떻게 요청하면 좋을까?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 11,
+      "title": "첫 프롬프트, 첫 게임 · 복사해서 첫 게임 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 12,
+      "title": "첫 프롬프트, 첫 게임 · 생성이 끝나면 해야 할 일",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 13,
+      "title": "첫 프롬프트, 첫 게임 · 화면이 안 나와도 계속할 수 있어요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 14,
+      "title": "‘완성’이라는 답변보다 직접 확인 · 내 게임 테스트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 15,
+      "title": "‘완성’이라는 답변보다 직접 확인 · 키 방향과 캐릭터 방향 구분하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 16,
+      "title": "잠깐 쉬고, 내 아이디어를 더해요 · 작동하는 첫 버전을 남기기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 17,
+      "title": "복사한 게임에 내 생각 한 가지 · 미션 A · 내 이름을 붙인 게임",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 18,
+      "title": "복사한 게임에 내 생각 한 가지 · 디자인 수정 프롬프트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 19,
+      "title": "복사한 게임에 내 생각 한 가지 · 미션 B · 내 기록 돌아보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 20,
+      "title": "복사한 게임에 내 생각 한 가지 · 기록 추가 프롬프트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 21,
+      "title": "복사한 게임에 내 생각 한 가지 · 미션 C · 손가락으로도 편하게",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 22,
+      "title": "복사한 게임에 내 생각 한 가지 · 모바일 개선 프롬프트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 23,
+      "title": "복사한 게임에 내 생각 한 가지 · 한 번에 한 가지씩",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 24,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 오류를 구체적으로 설명하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 25,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 내 상황을 넣어 수정 요청",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 26,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 전송 전에 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 27,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 게임이 잘 될 때의 도전",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 28,
+      "title": "내가 만든 것을 남기고, 보여주기 · 친구에게 테스트 부탁하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 29,
+      "title": "내가 만든 것을 남기고, 보여주기 · 보관할 코드 받기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 30,
+      "title": "내가 만든 것을 남기고, 보여주기 · 내 작품 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 31,
+      "title": "내가 만든 것을 남기고, 보여주기 · 나의 첫 제작 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 32,
+      "title": "내가 만든 것을 남기고, 보여주기 · 오늘의 완료 기준",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "default",
+      "slide": 33,
+      "title": "내가 만든 것을 남기고, 보여주기 · 다음에도 쓸 수 있는 방법",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 1,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 바이브코딩이란?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 2,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 내가 할 일과 AI가 도울 일",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 3,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 작게 만들고, 실행하고, 다시 요청하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 4,
+      "title": "만들고 싶은 것을 말하는 데서 시작 · 이 작은 게임에서 시작하는 것들",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 5,
+      "title": "만들기 전에, 한 판 해볼까요? · 무한의 계단 게임 체험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 6,
+      "title": "만들기 전에, 한 판 해볼까요? · 플레이어에서 제작자로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 7,
+      "title": "강의 탭 하나, 제작 탭 하나 · 실습 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 8,
+      "title": "강의 탭 하나, 제작 탭 하나 · 도구가 보이지 않을 때",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 9,
+      "title": "강의 탭 하나, 제작 탭 하나 · 미리보기가 없을 때",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 10,
+      "title": "강의 탭 하나, 제작 탭 하나 · 오늘의 120분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 11,
+      "title": "첫 프롬프트, 첫 게임 · 어떻게 요청하면 좋을까?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 12,
+      "title": "첫 프롬프트, 첫 게임 · 복사해서 첫 게임 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 13,
+      "title": "첫 프롬프트, 첫 게임 · 생성이 끝나면 해야 할 일",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 14,
+      "title": "첫 프롬프트, 첫 게임 · 화면이 안 나와도 계속할 수 있어요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 15,
+      "title": "‘완성’이라는 답변보다 직접 확인 · 내 게임 테스트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 16,
+      "title": "‘완성’이라는 답변보다 직접 확인 · 키 방향과 캐릭터 방향 구분하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 17,
+      "title": "잠깐 쉬고, 내 아이디어를 더해요 · 작동하는 첫 버전을 남기기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 18,
+      "title": "복사한 게임에 내 생각 한 가지 · 미션 A · 내 이름을 붙인 게임",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 19,
+      "title": "복사한 게임에 내 생각 한 가지 · 디자인 수정 프롬프트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 20,
+      "title": "복사한 게임에 내 생각 한 가지 · 미션 B · 내 기록 돌아보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 21,
+      "title": "복사한 게임에 내 생각 한 가지 · 기록 추가 프롬프트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 22,
+      "title": "복사한 게임에 내 생각 한 가지 · 미션 C · 손가락으로도 편하게",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 23,
+      "title": "복사한 게임에 내 생각 한 가지 · 모바일 개선 프롬프트",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 24,
+      "title": "복사한 게임에 내 생각 한 가지 · 한 번에 한 가지씩",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 25,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 오류를 구체적으로 설명하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 26,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 내 상황을 넣어 수정 요청",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 27,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 전송 전에 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 28,
+      "title": "“안 돼요”를 해결 가능한 설명으로 · 게임이 잘 될 때의 도전",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 29,
+      "title": "내가 만든 것을 남기고, 보여주기 · 친구에게 테스트 부탁하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 30,
+      "title": "내가 만든 것을 남기고, 보여주기 · 보관할 코드 받기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 31,
+      "title": "내가 만든 것을 남기고, 보여주기 · 내 작품 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 32,
+      "title": "내가 만든 것을 남기고, 보여주기 · 나의 첫 제작 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 33,
+      "title": "내가 만든 것을 남기고, 보여주기 · 오늘의 완료 기준",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "mode": "all",
+      "slide": 34,
+      "title": "내가 만든 것을 남기고, 보여주기 · 다음에도 쓸 수 있는 방법",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    }
+  ],
+  "hashes": [
+    {
+      "file": "DESIGN.md",
+      "hash": "C473FCA5C871CAB360DAE65320E6A38189D7E987857CC53700C69E9606A40100",
+      "expected": "C473FCA5C871CAB360DAE65320E6A38189D7E987857CC53700C69E9606A40100"
+    },
+    {
+      "file": "assets/css/tokens.css",
+      "hash": "6C3EEDE764AE1875570731BA175D569DA58030C7FDA96669FCED3FE36DEB8590",
+      "expected": "6C3EEDE764AE1875570731BA175D569DA58030C7FDA96669FCED3FE36DEB8590"
+    },
+    {
+      "file": "assets/css/base.css",
+      "hash": "2B1D4CFCF12DC00C9A65A288D106BB1F6E9C75AB14D900CA24095738B35B25CB",
+      "expected": "2B1D4CFCF12DC00C9A65A288D106BB1F6E9C75AB14D900CA24095738B35B25CB"
+    },
+    {
+      "file": "assets/js/shared.js",
+      "hash": "E74FACE44F5B81E6A96CFA500CA616A089975EB85EF5EF985CE05DB182D75569",
+      "expected": "E74FACE44F5B81E6A96CFA500CA616A089975EB85EF5EF985CE05DB182D75569"
+    }
+  ],
+  "instructorUnchanged": true
+}
