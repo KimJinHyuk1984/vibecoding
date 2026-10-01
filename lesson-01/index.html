@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="바이브코딩 소개부터 무한의 계단 게임 제작까지. 프롬프트를 복사하고 직접 실행하며 배우는 첫 번째 수업입니다.">
+  <meta name="description" content="코드를 읽지 않아도 시작하는 첫 프로젝트. 무한의 계단을 만들고 꾸민 뒤 Google Sheets에 기록을 저장해 친구들과 랭킹을 공유합니다.">
   <meta name="color-scheme" content="light dark">
-  <title>말로 만드는 나의 첫 게임</title>
+  <title>1회 · 내 게임을 우리 반 서비스로</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="../assets/css/tokens.css">
   <link rel="stylesheet" href="../assets/css/base.css">
@@ -19,7 +19,7 @@
   <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__fill" data-progress></div></div>
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="강의 처음으로"><span class="brand-title" data-lecture-title>말로 만드는 나의 첫 게임</span></a>
+      <a class="brand" href="#top" aria-label="강의 처음으로"><span class="brand-title" data-lecture-title>내 게임을 우리 반 서비스로</span></a>
       <nav class="section-nav" aria-label="강의 섹션" data-section-nav></nav>
       <div class="header-actions">
         <button class="button" type="button" data-presentation-toggle>발표 모드 <kbd>P</kbd></button>
@@ -28,161 +28,174 @@
       </div>
     </div>
   </header>
-  <main id="main" tabindex="-1">
-    <div class="container">
-      <section class="hero lesson-hero" id="top" aria-labelledby="lecture-title">
-        <p class="kicker" data-lecture-kicker>FIRST BUILD</p>
-        <h1 id="lecture-title" data-lecture-title>말로 만드는 나의 첫 게임</h1>
-        <p class="hero-subtitle" data-lecture-subtitle>바이브코딩을 알아보고, 무한의 계단 게임에 나만의 아이디어를 더합니다.</p>
-        <div class="hero-meta" data-lecture-badges aria-label="강의 정보"></div>
-        <div class="lesson-actions"><a class="button button-primary" href="#what-is-vibe">바이브코딩 알아보기 <span aria-hidden="true">↓</span></a><a class="button" href="#first-prompt">첫 프롬프트로 이동</a></div>
-        <p class="hero-promise">오늘의 도착점 <strong>직접 실행하고, 한 가지를 바꾸고, 친구에게 보여줄 수 있는 게임</strong></p>
-        <div class="hero-byline"><button class="text-button" type="button" data-open-instructor><span data-instructor-name></span> 선생님</button><span data-instructor-affiliation></span></div>
-      </section>
+  <main id="main" tabindex="-1"><div class="container">
+<section class="hero lesson-hero" id="top" aria-labelledby="lecture-title"><p class="kicker" data-lecture-kicker>BUILD · SAVE · SHARE</p><h1 id="lecture-title" data-lecture-title>내 게임을 우리 반 서비스로</h1><p class="hero-subtitle" data-lecture-subtitle>말로 만든 무한의 계단을 내 취향으로 꾸미고, 기록을 저장해 친구들과 함께 사용합니다.</p><div class="hero-meta" data-lecture-badges aria-label="강의 정보"></div><div class="lesson-actions"><a class="button button-primary" href="#try-game">먼저 게임 해보기 ↓</a><a class="button" href="#first-prompt">첫 게임 만들기</a><a class="button" href="#fix-it">막혔을 때 도움</a></div><p class="hero-promise">이번 프로젝트의 도착점 <strong>내가 만든 게임에서 친구가 플레이하고, 함께 랭킹을 보는 것</strong></p><div class="hero-byline"><button class="text-button" type="button" data-open-instructor><span data-instructor-name></span> 선생님</button><span data-instructor-affiliation></span></div></section>
+<section class="lecture-section" id="what-is-vibe" aria-labelledby="what-is-vibe-title" data-reveal>
+<div class="section-heading"><p class="kicker">01 / PLAY AND IMAGINE</p><h2 id="what-is-vibe-title">게임을 하던 사람에서, 만드는 사람으로</h2><p class="section-description">코드를 읽을 줄 몰라도 시작할 수 있어요. AI에게 원하는 것을 말하고, 직접 해보며 고쳐갑니다.</p></div>
+<div class="example-stack"><div data-slide data-slide-title="바이브코딩은 어떻게 하는 걸까?"><p class="lead-question">“이런 게임을 만들어줘.”<br>내 말이 출발점이에요.</p><p><strong>바이브코딩</strong>은 AI에게 원하는 동작을 설명하고, 만들어진 프로그램을 실행·확인·수정하는 방식이에요. AI에게 보내는 부탁을 <strong>프롬프트</strong>라고 부릅니다.</p><p class="after-note">나는 만들 것과 잘됐는지를 판단하고, AI는 코드를 작성하고 고쳐요. “완성했어”라는 답을 받아도 직접 확인해야 해요.</p></div>
+<div id="try-game" data-widget="stairs-game" data-slide data-slide-title="무한의 계단부터 한 판" data-slide-fit="contain"><div class="callout"><div><strong>←는 방향만 바꾸기, →는 올라가기</strong><p>시작 버튼을 누르고 다음 계단의 방향을 보세요. 시간제한은 없어요. 이 게임은 체험용이고, 잠시 뒤 내 게임을 직접 만듭니다.</p></div></div></div>
+<div data-slide data-slide-title="내 게임을 친구도 쓴다면?"><p class="lead-question">내가 만든 게임에서<br>우리 반 1등을 정할 수 있을까?</p><div class="build-cycle"><div><strong>01. 만들기</strong><span>한 판 되는 게임</span></div><div><strong>02. 꾸미기</strong><span>내 제목과 분위기</span></div><div><strong>03. 저장하기</strong><span>시트에 남는 점수</span></div><div><strong>04. 함께 쓰기</strong><span>친구와 같은 랭킹</span></div></div><p class="after-note">시간보다 <strong>실제로 되는지</strong>를 기준으로 넘어가요. 게임 실행, 내 취향, 시트 한 줄, 친구 기록을 차례로 확인합니다.</p></div></div>
+</section>
 
-      <section class="lecture-section" id="what-is-vibe" aria-labelledby="what-is-vibe-title" data-reveal>
-        <div class="section-heading"><p class="kicker">01 / INTRODUCTION · 10 MIN</p><h2 id="what-is-vibe-title">만들고 싶은 것을 말하는 데서 시작</h2><p class="section-description">코드를 처음 보는 사람도, 만들고 싶은 것은 있을 거예요.</p></div>
-        <div class="example-stack">
-          <div class="intro-statement" data-slide data-slide-title="바이브코딩이란?">
-            <p class="lead-question">“방향을 바꾸며 끝없이 오르는<br>무한의 계단 게임을 만들어줘.”</p>
-            <p><strong>바이브코딩</strong>은 AI에게 원하는 동작을 말하고, AI가 만든 코드를 <strong>실행·확인·수정</strong>하며 프로그램을 만드는 방식입니다.</p>
-            <p>우리가 AI에게 전달하는 요청을 <strong>프롬프트</strong>라고 해요. 잠시 후 이 한 문장을 실제 게임으로 바꿔봅니다.</p>
-          </div>
-          <div class="role-comparison" data-slide data-slide-title="내가 할 일과 AI가 도울 일">
-            <div><p class="kicker">YOU</p><h3>만들고, 판단하는 사람</h3><p>누구를 위한 것인지 정해요.<br>원하는 동작을 설명해요.<br>실행하고 제대로 되는지 확인해요.</p></div>
-            <div><p class="kicker">AI</p><h3>코드를 함께 만드는 도구</h3><p>요청을 바탕으로 코드를 작성해요.<br>코드의 역할을 설명해요.<br>오류의 원인과 수정 방법을 제안해요.</p></div>
-          </div>
-          <div data-slide data-slide-title="작게 만들고, 실행하고, 다시 요청하기">
-            <ol class="build-cycle"><li><strong>01. 설명</strong><span>원하는 기능 하나</span></li><li><strong>02. 실행</strong><span>직접 눌러보기</span></li><li><strong>03. 확인</strong><span>예상과 비교하기</span></li><li><strong>04. 수정</strong><span>바꿀 점 하나</span></li></ol>
-            <p class="after-note">코드는 실제로 만들어집니다. AI의 답변도 틀릴 수 있어요. <strong>“완성했어”라는 답을 받으면 직접 확인하는 것까지가 제작입니다.</strong></p>
-          </div>
-          <div class="possibility-list" data-slide data-slide-title="이 작은 게임에서 시작하는 것들"><h3>앞으로 연결할 수 있는 것</h3><p><strong>게임에 기록을 더하면</strong> 우리 반 순위표가 됩니다.</p><p><strong>입력과 저장을 연결하면</strong> 동아리 신청 앱이 됩니다.</p><p><strong>저장한 기록과 문서를 연결하면</strong> 보고서 자동 생성기가 됩니다.</p><p class="after-note">이번 시리즈에서는 Google Workspace의 도구를 하나씩 연결해봅니다. 오늘은 화면에서 작동하는 첫 게임에 집중해요.</p></div>
-        </div>
-      </section>
+<section class="lecture-section" id="get-ready" aria-labelledby="get-ready-title" data-reveal>
+<div class="section-heading"><p class="kicker">02 / MY WORKSPACE</p><h2 id="get-ready-title">복사하고, 실행하고, 결과 보기</h2><p class="section-description">강의 페이지와 AI 채팅을 함께 열어요. 이번 프로젝트는 같은 채팅에서 이어갑니다.</p></div>
+<div class="example-stack"><div data-slide data-slide-title="실습 준비"><ol class="instruction-list"><li><strong>학교에서 안내한 계정으로 AI를 열어요.</strong><span>Gemini에서 Canvas가 보이면 선택해요. 접속이나 도구 사용이 막히면 선생님과 학교에서 허용한 환경을 확인합니다.</span></li><li><strong>Drive에 폴더, Docs에 제작 기록을 만들어요.</strong><span>문서 이름은 ‘1회_내 게임 프로젝트’. 잘되는 코드와 실행 화면을 차례로 보관해요.</span></li><li><strong>프롬프트의 복사 버튼을 눌러 AI에게 보내요.</strong><span>답변이 끝나면 미리보기에서 실행해요. 한 번에 하나씩 부탁하고 바뀐 모습을 확인합니다.</span></li></ol><div class="lesson-actions"><a class="button button-primary" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini 열기 ↗</a><a class="button" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Google Drive 열기 ↗</a></div></div>
+<div data-slide data-slide-title="코드를 읽는 대신 전체를 복사해요"><div class="role-comparison"><div><h3>내가 바꿔 쓸 것</h3><p>프롬프트의 [대괄호] 안에 내 제목, 분위기, 겪은 일을 써요.</p></div><div><h3>그대로 옮길 것</h3><p>AI가 만든 코드는 복사 버튼으로 전체를 가져와요. 줄을 찾아 고치지 않아요.</p></div></div><p class="after-note">답변이 일부뿐이면 “통째로 복사할 수 있게 파일 전체를 줘”라고 말해요. 새 채팅을 열면 지금 쓰는 파일 전체도 함께 줍니다.</p></div>
+<div data-slide data-slide-title="미리보기가 없으면 HTML 파일로 열기" data-slide-skip><ol class="instruction-list"><li><strong>AI 답변의 HTML 코드 전체를 복사해요.</strong><span>코드 옆 복사 버튼을 쓰면 설명 문장을 따로 골라낼 필요가 없어요.</span></li><li><strong>메모장에 붙이고 index.html로 저장해요.</strong><span>Windows는 파일 형식을 ‘모든 파일’, 인코딩을 ‘UTF-8’로 선택해요. 다른 기기는 선생님이 안내한 저장 도구를 써요.</span></li><li><strong>파일을 Chrome으로 열어요.</strong><span>파일 이름이 index.html.txt가 아닌지 봐요. 이 방법은 첫 게임 확인용이고, 시트 저장 단계에서는 배포한 게임 주소를 사용해요.</span></li></ol></div></div>
+</section>
 
-      <section class="lecture-section" id="try-game" aria-labelledby="try-game-title" data-reveal>
-        <div class="section-heading"><p class="kicker">02 / PLAY FIRST · 5 MIN</p><h2 id="try-game-title">만들기 전에, 한 판 해볼까요?</h2><p class="section-description">왼쪽 방향키(←)로 방향 전환, 오른쪽 방향키(→)로 올라가기. 다음 계단을 보고 얼마나 높이 올라갈 수 있는지 도전해보세요.</p></div>
-        <div class="example-stack">
-          <div data-widget="stairs-game" data-slide data-slide-title="무한의 계단 게임 체험" data-slide-fit="contain"><div class="callout"><div><strong>무한의 계단 게임</strong><p>시작 → ←로 바라보는 방향 바꾸기 → →로 한 칸 올라가기. 다음 계단과 방향이 다르면 게임이 끝납니다. 제한 시간은 없습니다. JavaScript가 꺼져 있으면 이 체험 대신 다음 프롬프트로 직접 만들어보세요.</p></div></div></div>
-          <aside class="callout" data-slide data-slide-title="플레이어에서 제작자로"><div><strong>방금 플레이하면서 무엇을 바꾸고 싶었나요?</strong><p>제목, 안내 문구, 기록 표시, 버튼 크기… 하나만 골라 기억해두세요. 이 페이지의 게임은 체험용 예제이며, 여러분이 AI로 만드는 게임은 모양이 달라도 괜찮습니다.</p></div></aside>
-        </div>
-      </section>
+<section class="lecture-section" id="first-prompt" aria-labelledby="first-prompt-title" data-reveal>
+<div class="section-heading"><p class="kicker">03 / BUILD MY FIRST GAME</p><h2 id="first-prompt-title">첫 부탁으로 움직이는 게임 만들기</h2><p class="section-description">처음 목표는 한 판을 끝까지 해보는 것입니다. 복사해서 AI에게 보내고 결과를 기다려요.</p></div>
+<div class="example-stack"><pre class="prompt-block" id="prompt-build" data-code data-language="text" data-label="PROMPT 01 · 첫 게임 만들기" data-slide data-slide-title="PROMPT 01 · 첫 게임 만들기"><code>친구들과 할 수 있는 ‘무한의 계단’ 게임을 만들어줘.
+캐릭터가 지그재그 계단을 한 칸씩 올라가는 게임이야.
+처음에는 0칸이고, 캐릭터와 첫 계단은 오른쪽 방향으로 해줘.
+←를 누르면 제자리에서 바라보는 방향만 바뀌게 해줘.
+→를 누르면 바라보는 쪽으로 한 칸 올라가게 해줘.
+계단이 없는 쪽으로 올라가면 게임이 끝나게 해줘.
+올라갈수록 새 계단이 계속 보이고, 오른 칸 수는 크게 보여줘.
+버튼을 꾹 눌러도 한 번만 움직이고, 페이지는 위아래로 밀리지 않게 해줘.
+화면에도 ‘← 방향 전환’과 ‘→ 올라가기’ 버튼을 크게 넣어줘.
+‘다시 시작’을 누르면 0칸부터 처음 위치와 방향으로 돌아가게 해줘.
+시간제한은 넣지 말고, 캐릭터는 간단한 도형으로 그려줘.
+미리보기와 파일 하나에서 실행할 수 있는 게임 HTML 전체를 줘.</code></pre>
+<div data-slide data-slide-title="생성이 끝나면 직접 한 판"><ol class="instruction-list"><li><strong>미리보기에서 시작 버튼을 눌러요.</strong><span>모양이 체험 예제와 달라도 괜찮아요. 화면이 안 나오면 아래 도움 프롬프트를 사용해요.</span></li><li><strong>←와 →를 각각 눌러봐요.</strong><span>←는 제자리에서 방향만 바꾸고, →는 바라보는 쪽으로 한 칸 올라가야 해요.</span></li><li><strong>일부러 틀린 쪽으로 올라간 뒤 다시 시작해요.</strong><span>게임이 끝나는지, 다시 시작하면 0칸·처음 위치·오른쪽 방향으로 돌아오는지 확인해요.</span></li></ol><p class="after-note">막히면 <a href="#prompt-fix">문제 해결 프롬프트</a>로 이동하세요. 잘되면 게임 전체와 화면을 Docs의 <strong>‘v1 · 첫 게임’</strong> 아래에 보관합니다.</p></div>
+<div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ① 한 판 되는 게임"><div class="check-list"><label><input type="checkbox" data-check="merged-play"> 시작하고 한 칸 올라가는 데 성공했다.</label><label><input type="checkbox" data-check="merged-turn"> ←는 방향만 바꾸고 →는 한 칸 올라간다.</label><label><input type="checkbox" data-check="merged-restart"> 실패 후 다시 시작하면 처음 상태로 돌아온다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div>
+</section>
 
-      <section class="lecture-section" id="get-ready" aria-labelledby="get-ready-title" data-reveal>
-        <div class="section-heading"><p class="kicker">03 / GET READY · 10 MIN</p><h2 id="get-ready-title">강의 탭 하나, 제작 탭 하나</h2><p class="section-description">이 페이지를 열어둔 채 Gemini에서 작업합니다. 오늘은 API 키나 결제 설정이 필요하지 않아요.</p></div>
-        <div class="example-stack">
-          <div data-slide data-slide-title="실습 준비"><ol class="instruction-list"><li><strong>학교에서 안내한 계정으로 로그인해요.</strong><span>개인정보나 실제 학생 명단을 입력하지 않습니다.</span></li><li><strong>Gemini를 새 탭으로 열어요.</strong><span>새 채팅에서 입력창 주변의 도구 메뉴에 있는 Canvas를 선택합니다. 메뉴 위치는 계정과 화면에 따라 다를 수 있어요.</span></li><li><strong>다음 프롬프트를 복사해서 붙여넣어요.</strong><span>이후 수정 요청은 같은 채팅에서 이어갑니다.</span></li></ol><div class="lesson-actions"><a class="button button-primary" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini 열기 <span aria-hidden="true">↗</span></a></div></div>
-          <aside class="callout" data-slide data-slide-title="도구가 보이지 않을 때"><div><strong>Canvas가 보이지 않거나 접속이 막혀 있나요?</strong><p>선생님에게 현재 화면을 보여주세요. 학교에서 허용한 AI로 같은 프롬프트를 사용할 수 있습니다. 미리보기가 없는 경우에는 아래 ‘HTML 파일로 실행하기’를 이용해요.</p></div></aside>
-          <details class="lesson-details" data-slide data-slide-title="미리보기가 없을 때" data-slide-skip><summary>HTML 파일로 실행하기</summary><ol class="instruction-list"><li><strong>AI가 준 HTML 코드 전체를 복사합니다.</strong><span>코드를 감싼 백틱(```)과 설명 문장은 제외합니다.</span></li><li><strong>메모장에 붙여넣고 stairs-game.html로 저장합니다.</strong><span>Windows는 ‘다른 이름으로 저장’에서 파일 형식을 ‘모든 파일’, 인코딩을 ‘UTF-8’로 선택합니다.</span></li><li><strong>저장한 파일을 Chrome으로 엽니다.</strong><span>파일 이름이 stairs-game.html.txt가 아닌지 확인하세요. Chromebook 등 다른 기기에서는 선생님이 안내한 HTML 저장 도구를 사용합니다.</span></li></ol></details>
-          <div class="route-strip" data-slide data-slide-title="오늘의 120분"><p><strong>소개·체험 15분</strong> / 준비 10분 / 제작 25분 / 확인 10분</p><p><strong>휴식 10분</strong> / 내 스타일 20분 / 오류 해결 15분 / 저장·공유 15분</p></div>
-        </div>
-      </section>
+<section class="lecture-section" id="make-it-yours" aria-labelledby="make-it-yours-title" data-reveal>
+<div class="section-heading"><p class="kicker">04 / MAKE IT MINE</p><h2 id="make-it-yours-title">같은 게임을 내 취향으로</h2><p class="section-description">내 제목과 분위기를 정해요. 게임 규칙은 유지하고, 먼저 보이는 모습 하나를 바꿉니다.</p></div>
+<div class="example-stack"><div data-widget="stairs-remix" data-slide data-slide-title="같은 조작, 다른 분위기" data-slide-fit="contain"><div class="callout"><div><strong>우주 탐험? 도서관 탐험?</strong><p>테마 버튼을 바꿔보세요. 게임의 모양이 달라져도 조작과 점수는 같아요.</p></div></div></div>
+<pre class="prompt-block" id="prompt-style" data-code data-language="text" data-label="PROMPT 02 · 내 제목과 분위기 넣기" data-slide data-slide-title="PROMPT 02 · 내 제목과 분위기 넣기"><code>지금 게임을 내 취향으로 꾸미고 싶어.
+제목은 [별을 향해], 분위기는 [어두운 우주와 반짝이는 별]로 해줘.
+캐릭터와 계단도 그 분위기에 어울리게 직접 그려줘.
+칸 수는 위에 크게, 방향 전환과 올라가기 버튼은 아래에 나란히 놓아줘.
+캐릭터가 어느 쪽을 보는지와 다음 계단이 잘 보이게 해줘.
+글자는 배경 위에서 또렷하게 보였으면 좋겠어.
+← 방향 바꾸기, → 올라가기, 점수와 다시 시작은 지금처럼 유지해줘.
+아직 새 놀이 규칙은 넣지 말고, 바꾼 게임 HTML 전체를 줘.</code></pre>
+<div data-slide data-slide-title="확인 ② 내 생각이 화면에 반영됐나요?"><div class="spec-grid"><div><h3>보이는 변화</h3><p>내 제목과 원하는 분위기가 나타났나요?</p></div><div><h3>지켜진 동작</h3><p>←·→, 점수, 다시 시작이 여전히 잘되나요?</p></div><div><h3>친구의 한마디</h3><p>설명 없이 해보게 하고 헷갈린 점 하나를 받아요.</p></div></div><p class="after-note">잘되면 전체 HTML과 화면을 Docs에 <strong>‘v2 · 내 디자인’</strong>으로 추가해요. 이제 이 버전에 저장을 연결합니다. 20칸 도착 등은 <a href="#optional-missions">완성 후 선택 미션</a>이에요.</p></div></div>
+</section>
 
-      <section class="lecture-section" id="first-prompt" aria-labelledby="first-prompt-title" data-reveal>
-        <div class="section-heading"><p class="kicker">04 / FIRST PROMPT · 25 MIN</p><h2 id="first-prompt-title">첫 프롬프트, 첫 게임</h2><p class="section-description">‘복사’를 누른 뒤 Gemini에 붙여넣고 보내세요. 생성이 끝나면 미리보기에서 실행합니다.</p></div>
-        <div class="example-stack">
-          <div class="prompt-purpose" data-slide data-slide-title="어떻게 요청하면 좋을까?"><h3>무엇을 · 어떻게 · 어떤 조건으로</h3><p><strong>무엇을:</strong> 무한의 계단 게임<br><strong>어떻게:</strong> ←로 방향만 바꾸고, →로 바라보는 쪽으로 한 칸 올라가기<br><strong>어떤 조건으로:</strong> 한 파일로 만들고 키보드도 지원하기</p><p class="after-note">아래 프롬프트에서 이 세 가지를 찾아본 다음 복사해보세요.</p></div>
-          <pre class="prompt-block" id="prompt-build" data-code data-language="text" data-label="PROMPT 01 · 첫 게임 만들기" data-slide data-slide-title="복사해서 첫 게임 만들기"><code>도형 캐릭터로 ‘무한의 계단’ 방식의 게임을 만들어줘.
-HTML, CSS, JavaScript를 한 HTML 파일로, 외부 연결 없이 만들어줘.
-Canvas 미리보기와 저장한 HTML 파일에서 실행되게 해줘.
+<section class="lecture-section" id="prepare-sheet" aria-labelledby="prepare-sheet-title" data-reveal>
+<div class="section-heading"><p class="kicker">05 / GIVE MY GAME A MEMORY</p><h2 id="prepare-sheet-title">내 게임의 기록을 어디에 남길까?</h2><p class="section-description">화면에 점수가 보이는 것에서 한 걸음 더 나아가, 창을 다시 열어도 기록이 남도록 만듭니다.</p></div>
+<div class="example-stack"><div data-widget="ranking-lab" data-slide data-slide-title="저장한 기록과 화면의 랭킹" data-slide-fit="contain"><div class="callout"><div><strong>먼저 저장하고, 다시 불러오기</strong><p>저장소에는 판마다 기록이 쌓이고 랭킹에는 별명별 최고가 보여요. 이 체험은 설명용이며 실제 Google Sheets에 저장하지 않습니다.</p></div></div></div>
+<div data-slide data-slide-title="내가 AI에게 만들도록 부탁할 두 파일"><div class="data-route"><div><p class="kicker">화면</p><h3>index.html</h3><p>지금까지 만든 내 게임.<br>저장 버튼과 랭킹을 더해요.</p></div><div><p class="kicker">저장 담당</p><h3>Code.gs</h3><p>이제 AI에게 요청할 코드.<br>시트에 기록을 쓰고 읽어요.</p></div><div><p class="kicker">기록장</p><h3>Google Sheets</h3><p>별명과 게임 점수가<br>한 줄씩 쌓이는 곳이에요.</p></div></div><p class="after-note">두 파일은 같은 Apps Script 프로젝트에 넣어요. 파일 이름은 <strong>어디에 붙일지 구분하는 이름표</strong>로 생각하세요.</p></div>
+<div data-slide data-slide-title="우리 팀의 빈 기록장 준비"><ol class="instruction-list"><li><strong>짝과 새 Google 스프레드시트를 하나 만들어요.</strong><span>팀 대표의 계정에서 이름을 ‘우리 팀 계단 랭킹’으로 정해요. 학생 명단이나 성적표는 쓰지 않아요.</span></li><li><strong>확장 프로그램 → Apps Script를 열어요.</strong><span>프로젝트 이름은 ‘계단 랭킹’. 시트와 Apps Script 창을 둘 다 열어둬요.</span></li><li><strong>시트 주소 전체를 개인 메모에 복사해둬요.</strong><span>일부분을 고르지 않고 주소 전체를 가져와요. 잠시 뒤 설정 칸에 붙입니다.</span></li></ol><div class="lesson-actions"><a class="button" href="https://sheets.google.com/" target="_blank" rel="noopener noreferrer">Google Sheets 열기 ↗</a></div><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/bound" target="_blank" rel="noopener noreferrer">Google · Sheets에서 Apps Script 열기 ↗</a></p></div></div>
+</section>
 
-1. 시작하면 0칸, 캐릭터와 첫 계단은 오른쪽 방향으로 해줘.
-2. 왼쪽 방향키(←)는 제자리에서 좌우 방향만 바꾸게 해줘.
-3. 오른쪽 방향키(→)는 바라보는 방향으로 한 칸 올라가게 해줘.
-4. 다음 계단과 방향이 다르면 게임을 끝내고 오른 칸 수를 보여줘.
-5. 계단은 좌우로 계속 생성하고, 올라가도 다음 계단이 화면에 보이게 해줘.
-6. 화면에도 ‘← 방향 전환’과 ‘→ 올라가기’ 버튼을 만들어줘.
-7. 한 번 누르면 한 번만 동작하고, 방향키로 페이지가 스크롤되지 않게 해줘.
-8. ‘다시 시작’은 점수·위치·방향을 처음 상태로 되돌려줘.
+<section class="lecture-section" id="build-connection" aria-labelledby="build-connection-title" data-reveal>
+<div class="section-heading"><p class="kicker">06 / ASK AI TO CONNECT</p><h2 id="build-connection-title">저장할 코드도 직접 요청하기</h2><p class="section-description">Docs의 v2 또는 미리보기에서 내 최신 게임 HTML 전체를 가져와 PROMPT 03과 함께 보내세요. 같은 채팅에서 04로 이어갑니다.</p></div>
+<div class="example-stack"><pre class="prompt-block" id="prompt-server" data-code data-language="text" data-label="PROMPT 03 · 시트에 저장할 Code.gs 만들기" data-slide data-slide-title="PROMPT 03 · 시트에 저장할 Code.gs 만들기"><code>지금 함께 붙이는 HTML은 내가 꾸민 무한의 계단 게임이야.
+이 게임의 기록을 Google Sheets에 저장할 Code.gs 전체를 만들어줘.
+두 파일을 같은 Google Apps Script 프로젝트에 넣어 실행할 거야.
+시트 주소는 ‘프로젝트 설정 → 스크립트 속성’에 SHEET_URL이라는 이름으로 넣을게.
+그 주소의 시트를 사용하고, 코드 속에서 주소를 찾아 고치지 않게 해줘.
+‘기록’ 탭과 열 제목이 없으면 처음 저장할 때 만들고, 기존 기록은 지우지 마.
+끝난 판의 별명, 칸 수, 저장 시각을 한 판에 한 줄씩 남겨줘.
+같은 판을 여러 번 보내거나 친구와 동시에 저장해도 기록이 겹치지 않게 해줘.
+별명은 한글·영문·숫자 2~12자, 칸 수는 0~10000의 정수만 받아줘.
+저장이 됐는지 알려주고, 실패하면 알아볼 수 있는 안내를 보내줘.
+별명별 최고 기록을 높은 순서로 10명까지 불러오는 기능도 만들어줘.
+동점은 같은 순위야. 12, 12, 8칸이면 1, 1, 3위로 해줘.
+게임 주소를 열면 같은 프로젝트의 index.html이 보이게 해줘.
+이번에는 Code.gs만 전체로 줘. 다음에 내 게임을 여기에 연결할 거야.</code></pre>
+<pre class="prompt-block" id="prompt-connect" data-code data-language="text" data-label="PROMPT 04 · 내 게임에 저장 버튼 연결하기" data-slide data-slide-title="PROMPT 04 · 내 게임에 저장 버튼 연결하기"><code>방금 함께 준 내 게임 HTML을 지금 만든 Code.gs와 연결해줘.
+게임 모양과 ← 방향 바꾸기·→ 올라가기, 점수와 다시 시작은 그대로 해줘.
+한 판이 끝나면 별명 입력칸과 ‘기록 저장’ 버튼을 보여줘.
+점수는 끝난 판에서 오른 칸 수를 쓰고, 직접 고칠 수 없게 해줘.
+저장 중에는 ‘저장 중…’을 보여주고 별명 수정·저장·새 게임은 잠깐 막아줘.
+실제로 저장됐다는 확인을 받은 뒤에만 ‘저장 완료’라고 알려줘.
+확인이 안 되면 같은 판의 별명과 점수를 그대로 다시 보낼 수 있게 해줘.
+여러 번 시도해도 같은 판은 한 줄만 남고, 실패해도 점수가 사라지면 안 돼.
+새 판을 시작하면 이전 판의 저장 결과와 섞이지 않게 해줘.
+Apps Script의 게임 주소에서 실행할 거야. 미리보기에서는 저장이 안 된다고 알려줘.
+방금 만든 Code.gs를 사용하고, 게임과 저장 기능이 담긴 index.html 전체를 줘.</code></pre>
+<div data-slide data-slide-title="AI가 만든 두 파일 붙여넣기"><ol class="instruction-list"><li><strong>Code.gs에는 PROMPT 03의 답변 전체를 넣어요.</strong><span>Apps Script 왼쪽 Code.gs를 클릭하고 기존 내용을 전부 지운 뒤 새 내용을 붙여넣어요.</span></li><li><strong>파일 옆 + → HTML → 이름을 index로 입력해요.</strong><span>소문자 index.html이 생기면 PROMPT 04의 답변 전체를 붙여넣어요.</span></li><li><strong>저장하고 파일 이름을 확인해요.</strong><span>Code.gs는 저장 담당, index.html은 내 게임이에요. 같은 채팅에서 만든 두 파일을 한 쌍으로 사용해요.</span></li></ol><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/html" target="_blank" rel="noopener noreferrer">Google · HTML 파일과 웹앱 ↗</a></p></div>
+<div data-slide data-slide-title="코드 대신 설정 화면에 시트 주소 넣기"><ol class="instruction-list"><li><strong>왼쪽 톱니바퀴 ‘프로젝트 설정’을 열어요.</strong><span>아래 ‘스크립트 속성’에서 속성 추가를 선택해요.</span></li><li><strong>‘속성’은 SHEET_URL, ‘값’은 내 시트 주소 전체예요.</strong><span>대문자와 밑줄까지 그대로 입력하고, 메모해둔 스프레드시트 주소를 붙여넣어요.</span></li><li><strong>스크립트 속성을 저장해요.</strong><span>이제 코드가 어느 시트에 기록할지 알 수 있어요. 주소 속 일부나 코드 줄을 고칠 필요는 없어요.</span></li></ol><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/properties#manage_script_properties_manually" target="_blank" rel="noopener noreferrer">Google · 설정 화면에 속성 추가하기 ↗</a></p></div></div>
+</section>
 
-제한 시간 없이, 현재 방향과 칸 수를 큰 글씨로 보여줘.</code></pre>
-          <div data-slide data-slide-title="생성이 끝나면 해야 할 일"><ol class="instruction-list"><li><strong>AI가 코드를 다 만들 때까지 기다려요.</strong><span>답변이 중간에 끊기면 ‘끊긴 부분을 이어서 완성해줘’라고 요청합니다.</span></li><li><strong>미리보기에서 시작 버튼을 눌러요.</strong><span>코드만 보이면 미리보기 화면으로 바꾸거나 HTML 파일로 저장해서 실행합니다.</span></li><li><strong>직접 한 판을 끝까지 해봐요.</strong><span>여기 있는 예제와 디자인이 달라도, 요청한 동작이 되면 첫 단계 성공입니다.</span></li></ol></div>
-          <aside class="callout" data-slide data-slide-title="화면이 안 나와도 계속할 수 있어요"><div><strong>첫 시도에 완성되지 않아도 괜찮아요.</strong><p>화면이 비거나 버튼이 안 되면 <a href="#fix-it">‘오류를 설명하는 법’</a>의 프롬프트를 사용하세요. 작동하는 버전이 생기면 수정하기 전에 코드를 복사해 Docs에 ‘게임 v1’로 남깁니다.</p></div></aside>
-        </div>
-      </section>
+<section class="lecture-section" id="first-save" aria-labelledby="first-save-title" data-reveal>
+<div class="section-heading"><p class="kicker">07 / PLAY AND SAVE</p><h2 id="first-save-title">내 게임에서 실제 점수 저장하기</h2><p class="section-description">이제 AI 미리보기에서 배포한 게임 주소로 옮겨갑니다. 그 주소에서 한 판을 해보고 시트를 확인해요.</p></div>
+<div class="example-stack"><div data-slide data-slide-title="친구와 열 수 있는 게임 주소 만들기"><ol class="instruction-list"><li><strong>배포 → 새 배포 → 유형 ‘웹 앱’을 선택해요.</strong><span>설명은 ‘첫 저장’으로 적어요.</span></li><li><strong>실행 사용자는 ‘나’, 접근 범위는 학교 내부로 설정해요.</strong><span>권한 요청을 확인해요. 내부 옵션이 없거나 차단되면 선생님과 학교에서 허용한 계정을 확인해요.</span></li><li><strong>배포 후 /exec로 끝나는 웹앱 주소를 열어요.</strong><span>내 게임이 나오는지 확인해요. 이 주소를 개인 Docs에 ‘게임 주소’로 보관합니다.</span></li></ol><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/web" target="_blank" rel="noopener noreferrer">Google · 웹앱 배포와 실행 권한 ↗</a></p></div>
+<div data-slide data-slide-title="저장 완료라는 말과 실제 시트 비교하기"><ol class="instruction-list"><li><strong>배포한 게임에서 짧게 한 판을 마쳐요.</strong><span>실명 대신 별명을 쓰고 ‘기록 저장’을 눌러요. 끝난 판의 칸 수를 기억해요.</span></li><li><strong>시트에 생긴 ‘기록’ 탭을 열어요.</strong><span>내 별명과 실제 칸 수가 새 줄에 들어왔는지 확인해요. 열 이름은 AI가 정한 것이어도 괜찮아요.</span></li><li><strong>게임을 새로고침하고 시트의 기록도 확인해요.</strong><span>게임이 다시 열려도 시트의 한 줄은 남아야 해요. 랭킹 표는 다음 단계에서 붙입니다.</span></li></ol><p class="after-note">여기까지 되면 <strong>‘v3 · 첫 저장’</strong>으로 두 파일과 화면을 보관해요. 쉬었다 이어간다면 이 지점이 좋습니다.</p></div>
+<div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ③ 게임 밖에 기록이 남아요"><div class="check-list"><label><input type="checkbox" data-check="merged-app"> 배포한 게임 주소에서 내 게임을 했다.</label><label><input type="checkbox" data-check="merged-row"> 별명·실제 칸 수가 시트에 한 줄로 저장됐다.</label><label><input type="checkbox" data-check="merged-persist"> 게임을 새로고침해도 시트의 기록이 남는다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div>
+</section>
 
-      <section class="lecture-section" id="test-game" aria-labelledby="test-game-title" data-reveal>
-        <div class="section-heading"><p class="kicker">05 / CHECK IT · 10 MIN</p><h2 id="test-game-title">‘완성’이라는 답변보다 직접 확인</h2><p class="section-description">내가 만든 게임에서 아래 행동을 해보고, 실제로 확인한 항목만 체크하세요.</p></div>
-        <div class="example-stack">
-          <div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="내 게임 테스트"><div class="check-list"><label><input type="checkbox" data-check="stairs-turn"> ←를 누르면 방향만 바뀌고 위치와 점수는 그대로다.</label><label><input type="checkbox" data-check="stairs-climb"> →를 누르면 바라보는 쪽으로 한 칸 올라가고 점수가 1 늘어난다.</label><label><input type="checkbox" data-check="stairs-fail"> 다음 계단과 다른 방향으로 올라가면 게임이 끝난다.</label><label><input type="checkbox" data-check="stairs-restart"> 다시 시작하면 0칸·시작 위치·오른쪽 방향으로 돌아온다.</label><label><input type="checkbox" data-check="stairs-input"> 방향키와 화면 버튼 모두 한 번에 한 번만 동작하며 화면이 밀리지 않는다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div>
-          <div data-slide data-slide-title="키 방향과 캐릭터 방향 구분하기"><h3>왼쪽을 보고 있어도, 올라갈 때는 →</h3><p><strong>←는 방향 전환, →는 올라가기</strong>라는 명령이에요. 왼쪽 계단을 오르려면 왼쪽을 바라보도록 바꾼 뒤 →를 누릅니다.</p><p class="after-note">←만 눌렀는데 이동하거나 점수가 늘면 요청과 다르게 만들어진 거예요. <strong>오른 칸 수가 많을수록 높은 기록</strong>입니다. 먼저 조작 규칙이 맞는지 확인해요.</p></div>
-        </div>
-      </section>
+<section class="lecture-section" id="share-ranking" aria-labelledby="share-ranking-title" data-reveal>
+<div class="section-heading"><p class="kicker">08 / PLAY TOGETHER</p><h2 id="share-ranking-title">친구의 기록이 내 화면에도 보이게</h2><p class="section-description">한 팀의 게임 주소에 함께 접속하고 서로 다른 별명을 써요. 다른 팀의 주소에서는 다른 랭킹이 보입니다.</p></div>
+<div class="example-stack"><pre class="prompt-block" id="prompt-ranking" data-code data-language="text" data-label="PROMPT 05 · 우리 반 랭킹 보여주기" data-slide data-slide-title="PROMPT 05 · 우리 반 랭킹 보여주기"><code>내 게임 아래에 ‘우리 반 랭킹’과 ‘랭킹 새로고침’ 버튼을 넣어줘.
+우리가 만든 Code.gs의 불러오기 기능으로 시트 기록을 읽어줘.
+순위·별명·칸 수를 표에 보여줘. 별명마다 최고 기록 하나씩, 10명까지야.
+동점은 같은 순위야. 12, 12, 8칸이면 1, 1, 3위로 보여줘.
+처음 열 때, 저장이 끝났을 때, 새로고침 버튼을 누를 때 읽어줘.
+‘불러오는 중’, ‘아직 기록이 없어요’, ‘다시 불러와주세요’를 상황에 맞게 보여줘.
+저장은 됐는데 표만 못 읽으면, 다시 저장하지 말고 표만 다시 불러와줘.
+게임 모양과 조작은 그대로 두고, 바뀐 파일은 이름과 전체 내용을 줘.</code></pre>
+<div data-slide data-slide-title="고친 파일을 게임 주소에 반영하기"><ol class="instruction-list"><li><strong>AI가 바꾼 파일 전체를 같은 이름의 파일에 붙여요.</strong><span>둘 다 바뀌었다면 Code.gs와 index.html을 모두 교체하고 저장해요.</span></li><li><strong>배포 → 배포 관리 → 연필 아이콘을 눌러요.</strong><span>‘새 버전’을 선택해 배포합니다. 코드 저장만으로 친구 화면이 바뀌지는 않아요.</span></li><li><strong>기존 게임 주소를 새로고침해요.</strong><span>랭킹이 보이는지, 시트의 이전 기록이 남아 있는지 확인해요.</span></li></ol><p class="source-note">참고: <a href="https://developers.google.com/apps-script/concepts/deployments" target="_blank" rel="noopener noreferrer">Google · 배포 버전 업데이트 ↗</a></p></div>
+<div data-slide data-slide-title="친구가 직접 써보는 네 가지 장면"><div class="test-scenarios"><div><h3>친구의 새 기록</h3><p>친구가 저장한 뒤 내 랭킹 새로고침을 눌러요. 시트에도 그 기록이 있어야 해요.</p></div><div><h3>같은 별명으로 낮은 점수 / 같은 점수</h3><p>낮은 기록을 저장해도 최고 기록은 유지돼요. 12·12·8칸은 1·1·3위예요.</p></div><div><h3>저장 버튼 여러 번 누르기</h3><p>같은 판은 시트에 한 줄만 생겨야 해요. 서로 다른 판은 각각 남아야 해요.</p></div></div><p class="after-note">반 전체가 비교할 때도 완성한 앱 하나의 같은 게임 주소를 써요. 이 랭킹은 저장 실습용이며 점수 조작을 판별하는 대회용 앱은 아니에요.</p></div>
+<div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ④ 친구와 함께 쓰는 서비스"><div class="check-list"><label><input type="checkbox" data-check="merged-friend"> 친구가 저장한 기록을 내 랭킹에서 다시 불러왔다.</label><label><input type="checkbox" data-check="merged-best"> 별명마다 최고 기록 하나가 보이고, 동점 순위가 맞다.</label><label><input type="checkbox" data-check="merged-once"> 같은 판을 여러 번 저장해도 시트에는 한 줄만 남는다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div>
+</section>
 
-      <section class="lecture-section rest-section" id="take-a-break" aria-labelledby="take-a-break-title" data-reveal>
-        <div class="section-heading"><p class="kicker">BREAK · 10 MIN</p><h2 id="take-a-break-title">잠깐 쉬고, 내 아이디어를 더해요</h2></div>
-        <div data-slide data-slide-title="작동하는 첫 버전을 남기기"><p>작동하는 게임의 코드를 Docs에 ‘게임 v1’로 복사해두세요. 아직 안 되는 부분이 있다면 무엇이 안 되는지 한 문장으로 적어둡니다.</p><p class="after-note">쉬고 돌아오면 제목·디자인·기록 중 원하는 기능 하나를 바꿔봅니다.</p></div>
-      </section>
+<section class="lecture-section" id="save-and-share" aria-labelledby="save-and-share-title" data-reveal>
+<div class="section-heading"><p class="kicker">09 / KEEP IT AND GO FURTHER</p><h2 id="save-and-share-title">내가 만든 것을 남기고, 다음 아이디어로</h2><p class="section-description">게임 만들기부터 저장과 공유까지 연결했어요. 실제로 작동한 버전과 내가 배운 제작 방법을 남깁니다.</p></div>
+<div class="example-stack"><pre class="prompt-block" id="prompt-save" data-code data-language="text" data-label="PROMPT 06 · 완성한 두 파일 보관하기" data-slide data-slide-title="PROMPT 06 · 완성한 두 파일 보관하기"><code>지금 만든 게임과 저장 기능을 다음에도 이어서 만들고 싶어.
+완성한 Code.gs와 index.html 전체를 파일별로 나눠서 줘.
+생략하거나 새 기능을 넣지 말고, 지금 잘되는 모습을 유지해줘.
+각 파일을 어디에 붙이고, 시트 주소는 어느 설정에 넣는지 짧게 알려줘.
+고친 내용을 기존 게임 주소에 반영하는 순서도 알려줘.
+내가 직접 확인할 것 3개와 결과를 적을 빈칸도 만들어줘.</code></pre>
+<div data-slide data-slide-title="다시 이어갈 수 있도록 보관하기"><ol class="instruction-list"><li><strong>실제로 실행한 두 파일 전체를 Docs에 보관해요.</strong><span>Apps Script의 Code.gs와 index.html을 복사해 ‘v4 · 공유 랭킹’으로 남겨요. 이전 v1·v2·v3도 유지합니다.</span></li><li><strong>시트 주소와 게임 주소를 구분해 적어요.</strong><span>다른 프로젝트로 옮기면 시트 주소 설정도 다시 해야 해요.</span></li><li><strong>직접 본 결과를 함께 남겨요.</strong><span>저장된 한 줄, 친구의 랭킹, 고친 문제를 적어요. AI의 “완료” 답변과 내 확인 결과는 구분합니다.</span></li></ol></div>
+<div class="reflection-panel" data-widget="lesson-reflection" data-slide data-slide-title="나의 첫 프로젝트 기록"><label for="my-change">내가 바꾼 것과 직접 확인한 결과</label><textarea id="my-change" data-note="merged-result" rows="2" maxlength="600" placeholder="예: 우주 게임으로 꾸몄다. 친구가 저장한 18칸이 내 랭킹에도 보였다."></textarea><label for="my-next">다음에는 누구를 위해 무엇을 저장하는 앱을 만들까?</label><textarea id="my-next" data-note="merged-next" rows="2" maxlength="600" placeholder="예: 축제 부스 신청을 받고, 남은 자리를 보여주는 앱. 이름·부스·시간을 저장하고 싶다."></textarea><p class="note-storage" aria-live="polite">기록은 Docs에도 옮겨두세요. 개인정보나 실제 시트 주소는 적지 않아요.</p></div>
+<div data-slide data-slide-title="다음 아이디어도 이 순서로"><p class="lead-question">원하는 것을 말하고,<br>직접 해보고, 다시 고치기.</p><div class="possibility-list"><p><strong>화면에서 할 일:</strong> 사용자가 무엇을 누르거나 입력할까?</p><p><strong>남길 기록:</strong> 무엇을 저장해야 다음에도 볼 수 있을까?</p><p><strong>잘됐다는 증거:</strong> 어떤 결과가 실제로 보여야 할까?</p></div><p class="after-note">다음 주제는 학교 축제 부스 예약이에요. 기본 프로젝트를 완성했다면 아래 선택 미션을 해봐도 좋아요.</p></div></div>
+</section>
 
-      <section class="lecture-section" id="make-it-yours" aria-labelledby="make-it-yours-title" data-reveal>
-        <div class="section-heading"><p class="kicker">06 / MAKE IT YOURS · 20 MIN</p><h2 id="make-it-yours-title">복사한 게임에 내 생각 한 가지</h2><p class="section-description">아래 미션 중 하나를 고르세요. 같은 채팅에 보내고, 바뀐 결과를 실행해서 확인합니다.</p></div>
-        <div class="example-stack">
-          <div data-slide data-slide-title="미션 A · 내 이름을 붙인 게임"><h3>A. 제목과 분위기 바꾸기</h3><p>‘하늘 계단 챌린지’를 자신이 정한 제목으로 바꿔서 보내보세요.</p></div>
-          <pre class="prompt-block" id="prompt-style" data-code data-language="text" data-label="PROMPT 02 · 내 스타일로" data-slide data-slide-title="디자인 수정 프롬프트"><code>지금 만든 게임의 제목을 ‘하늘 계단 챌린지’로 바꿔줘.
-도형 캐릭터와 계단을 레트로 게임 분위기로 꾸며줘.
-현재 방향, 다음 계단, 게임 종료 상태를 알아보기 쉽게 해줘.
-배경과 글자 색의 차이를 충분히 크게 해줘.
-←는 방향 전환, →는 올라가기인 조작과 점수 규칙은 유지해줘.</code></pre>
-          <div data-slide data-slide-title="미션 B · 내 기록 돌아보기"><h3>B. 최근 기록과 최고 기록 추가하기</h3><p>앞에서 만든 게임에 데이터가 쌓이는 경험을 더합니다. 오늘은 창을 닫으면 기록이 사라져도 괜찮아요.</p></div>
-          <pre class="prompt-block" id="prompt-records" data-code data-language="text" data-label="PROMPT 03 · 기록 기능 추가" data-slide data-slide-title="기록 추가 프롬프트"><code>게임이 끝날 때 오른 칸 수를 최근 5판의 기록에 추가해줘.
-그중 가장 큰 값을 ‘최근 5판 최고 기록’으로 보여줘.
-한 판은 한 번만 기록하고, 중간에 다시 시작한 판은 제외해줘.
-‘기록 초기화’ 버튼은 기록을 지우고 게임도 시작 전으로 돌려줘.
-새로고침하면 기록이 사라져도 괜찮아.
-← 방향 전환·→ 올라가기 규칙과 기존 디자인은 유지해줘.</code></pre>
-          <div data-slide data-slide-title="미션 C · 손가락으로도 편하게"><h3>C. 작은 화면에서도 편하게 만들기</h3><p>미리보기 폭을 줄이거나 휴대폰 크기로 생각하며 확인해보세요.</p></div>
-          <pre class="prompt-block" id="prompt-mobile" data-code data-language="text" data-label="PROMPT 04 · 작은 화면 개선" data-slide data-slide-title="모바일 개선 프롬프트"><code>지금 게임을 작은 화면에서도 편하게 할 수 있게 바꿔줘.
-가로 375px 화면에서 옆으로 스크롤되지 않게 해줘.
-‘← 방향 전환’과 ‘→ 올라가기’ 버튼을 터치하기 충분히 크게 해줘.
-캐릭터, 다음 계단, 칸 수와 현재 방향이 가려지지 않게 해줘.
-터치 한 번이 두 번의 입력으로 처리되지 않게 해줘.
-기존 방향키 조작과 기록 기능이 있다면 그대로 유지해줘.</code></pre>
-          <aside class="callout" data-slide data-slide-title="한 번에 한 가지씩"><div><strong>추가 → 실행 → 기존 기능도 확인</strong><p>기능 하나를 바꾼 뒤 처음부터 한 판 해보세요. 잘 되면 다음 아이디어를 추가합니다. 문제가 생기면 이전 버전과 무엇이 달라졌는지 비교해요.</p></div></aside>
-        </div>
-      </section>
+<section class="lecture-section" id="optional-missions" aria-labelledby="optional-missions-title" data-reveal>
+<div class="section-heading"><p class="kicker">OPTIONAL / AFTER MY FIRST SERVICE</p><h2 id="optional-missions-title">완성한 뒤 골라서 더해보기</h2><p class="section-description">공유 랭킹까지 확인했다면 하나만 골라 바꿔보세요. 수정 전 버전을 남기고, 바뀐 파일 반영 → 새 버전 배포 → 게임과 저장 재확인 순서로 진행해요.</p></div>
+<div class="example-stack"><pre class="prompt-block" id="prompt-records" data-code data-language="text" data-label="선택 A · 내 화면의 최근 5판" data-slide data-slide-title="선택 A · 내 화면의 최근 5판" data-slide-skip><code>내 화면에서 최근 5판의 점수를 돌아보고 싶어.
+끝까지 한 판만 목록에 넣고, 같은 판을 두 번 넣지 않게 해줘.
+그 5판 중 가장 높은 점수를 ‘최근 5판 최고 기록’으로 보여줘.
+중간에 다시 시작한 판은 목록에 넣지 마.
+‘내 화면 기록 지우기’를 누르면 이 목록만 지워줘.
+시트의 기록과 친구들의 랭킹은 지우거나 바꾸면 안 돼.
+이 목록은 새로고침하면 사라져도 괜찮아.
+잘되던 게임과 저장 기능을 유지하고, 바뀐 파일 전체를 줘.</code></pre>
+<pre class="prompt-block" id="prompt-mobile" data-code data-language="text" data-label="선택 B · 휴대폰에서 더 편하게" data-slide data-slide-title="선택 B · 휴대폰에서 더 편하게" data-slide-skip><code>우리 랭킹 게임을 휴대폰에서도 편하게 하고 싶어.
+화면을 옆으로 밀지 않아도 게임과 랭킹이 보이게 해줘.
+‘← 방향 전환’과 ‘→ 올라가기’를 손가락으로 누르기 쉽게 크게 해줘.
+버튼 때문에 캐릭터, 다음 계단, 칸 수가 가려지지 않게 해줘.
+한 번 누르면 한 번만 움직여야 해.
+별명 입력과 저장 버튼도 편하게 쓸 수 있게 해줘.
+컴퓨터 방향키와 시트 저장·랭킹은 그대로 유지하고, 바뀐 파일 전체를 줘.</code></pre>
+<div data-widget="stairs-game" data-goal="20" data-slide data-slide-title="선택 C · 20칸 도착 체험" data-slide-skip data-slide-fit="contain"><div class="callout"><div><strong>20칸에서 멈추는 연습 놀이</strong><p>기본 게임과 어떻게 다른지 체험해보세요. 이 모드를 만들지 않아도 본 프로젝트를 완성할 수 있어요.</p></div></div></div>
+<pre class="prompt-block" id="prompt-rule" data-code data-language="text" data-label="선택 C · 20칸 도착 놀이 추가" data-slide data-slide-title="선택 C · 20칸 도착 놀이 추가" data-slide-skip><code>완성한 게임에 ‘끝없이’와 ‘20칸 도착’을 고르는 버튼을 넣어줘.
+기본은 끝없이 올라가는 지금 게임이고, 이 기록만 랭킹에 저장해줘.
+20칸 도착은 현재 칸 수와 목표를 보여주고, 20칸이면 ‘도착!’이라고 해줘.
+20칸 도착의 성공·실패 기록은 시트와 랭킹에 저장하지 마.
+게임 전과 끝난 뒤에만 놀이를 바꿀 수 있게 해줘.
+어느 놀이든 계단이 없는 쪽으로 올라가면 실패야.
+성공·실패 뒤에는 버튼을 눌러도 움직이거나 점수가 늘면 안 돼.
+다시 시작하면 고른 놀이 그대로 0칸·처음 위치·오른쪽 방향으로 돌아가게 해줘.
+디자인과 조작은 유지하고, 두 파일을 함께 확인해 바뀐 파일 전체를 줘.</code></pre>
+<div data-slide data-slide-title="선택 미션 뒤에도 저장 규칙 확인하기" data-slide-skip><div class="spec-grid"><div><h3>최근 5판</h3><p>내 화면의 목록을 지워도 시트와 친구 랭킹은 그대로여야 해요.</p></div><div><h3>휴대폰</h3><p>한 번 터치에 한 번만 동작하고 저장·랭킹도 잘돼야 해요.</p></div><div><h3>20칸 도착</h3><p>20칸에서 멈추고, 시트에 저장되지 않아야 해요. 끝없이 놀이는 계속 저장돼요.</p></div></div><p class="after-note">잘되면 새 버전으로 보관해요. 원하던 결과와 다르면 아래 도움 프롬프트를 사용합니다.</p></div></div>
+</section>
 
-      <section class="lecture-section" id="fix-it" aria-labelledby="fix-it-title" data-reveal>
-        <div class="section-heading"><p class="kicker">07 / FIX IT · 15 MIN</p><h2 id="fix-it-title">“안 돼요”를 해결 가능한 설명으로</h2><p class="section-description">언제, 무엇을 했고, 어떤 결과가 나왔는지 알려주면 AI가 원인을 찾는 데 도움이 됩니다.</p></div>
-        <div class="example-stack">
-          <div class="debug-example" data-slide data-slide-title="오류를 구체적으로 설명하기"><p class="muted-example">“게임이 이상해. 고쳐줘.”</p><p class="specific-example">“왼쪽 방향키를 눌렀더니, 방향도 바뀌고 한 칸 올라갔어. ←는 제자리에서 방향만 바꾸게 해줘.”</p><p class="after-note"><strong>내 행동 · 실제 결과 · 기대한 결과</strong>가 모두 들어 있습니다.</p></div>
-          <pre class="prompt-block" id="prompt-fix" data-code data-language="text" data-label="PROMPT 05 · 오류 수정 요청" data-slide data-slide-title="내 상황을 넣어 수정 요청"><code>지금 게임에서 아래 문제가 생겼어. 원인을 찾고 수정해줘.
-
-내가 한 행동: [예: 왼쪽 방향키(←)를 한 번 눌렀어]
-실제로 나온 결과: [예: 방향이 바뀌면서 한 칸 올라갔어]
-기대한 결과: [예: 제자리에서 방향만 바뀌고 점수는 그대로여야 해]
-오류 메시지: [있으면 그대로 붙여넣고, 없으면 ‘없음’]
-
-대괄호 안 내용은 내가 겪은 상황으로 바꿔서 보낼게.
-관련 없는 디자인과 기능은 유지해줘.
-수정한 이유와 내가 다시 확인할 행동 3가지를 알려줘.</code></pre>
-          <aside class="callout" data-slide data-slide-title="전송 전에 확인"><div><strong>[대괄호] 안을 내 상황으로 바꿉니다.</strong><p>접속 제한이나 로그인이 안 되는 문제는 선생님에게 보여주세요. 코드 오류를 해결할 때는 오류 문구를 그대로 붙이되, 계정 정보나 비밀 키가 포함되어 있지 않은지 확인합니다.</p></div></aside>
-          <pre class="prompt-block" id="prompt-understand" data-code data-language="text" data-label="PROMPT 06 · 잘 된다면 원리 알아보기" data-slide data-slide-title="게임이 잘 될 때의 도전"><code>지금 게임의 코드를 바꾸지 말고 설명만 해줘.
-1. 캐릭터가 바라보는 방향을 어떻게 기억하고 바꿔?
-2. →를 눌렀을 때 올라갈지, 게임을 끝낼지 어떻게 판단해?
-3. 계단은 어떻게 계속 만들고 화면에 보여줘?
-실제 코드의 해당 부분을 짧게 인용하고 쉽게 설명해줘.
-설명한 내용이 맞는지 내가 해볼 테스트도 하나 제안해줘.</code></pre>
-        </div>
-      </section>
-
-      <section class="lecture-section" id="save-and-share" aria-labelledby="save-and-share-title" data-reveal>
-        <div class="section-heading"><p class="kicker">08 / KEEP YOUR BUILD · 15 MIN</p><h2 id="save-and-share-title">내가 만든 것을 남기고, 보여주기</h2><p class="section-description">옆 친구에게 화면을 보여주거나 자리를 바꿔 체험해보세요. 온라인 공개 링크를 만들지 않아도 됩니다.</p></div>
-        <div class="example-stack">
-          <div data-slide data-slide-title="친구에게 테스트 부탁하기"><h3>설명 없이 한 판 해보게 해주세요.</h3><ol class="instruction-list"><li><strong>시작 방법을 바로 알 수 있었나요?</strong></li><li><strong>어느 순간 헷갈렸나요?</strong></li><li><strong>내가 추가한 기능이 실제로 작동했나요?</strong></li></ol><p class="after-note">듣고 싶은 칭찬 대신, 다음에 바꿀 구체적인 점 하나를 받아 적습니다.</p></div>
-          <pre class="prompt-block" id="prompt-save" data-code data-language="text" data-label="PROMPT 07 · 최종 코드 보관" data-slide data-slide-title="보관할 코드 받기"><code>지금까지 수정한 게임의 최종 HTML 코드 전체를 보여줘.
-HTML, CSS, JavaScript가 모두 들어 있는 하나의 파일로 줘.
-생략하거나 ‘이전 코드와 동일’이라고 쓰지 말아줘.
-외부 라이브러리나 API 연결 없이 실행되게 유지해줘.
-기능을 더하거나 바꾸지 말고 현재 버전을 그대로 정리해줘.</code></pre>
-          <div data-slide data-slide-title="내 작품 보관하기"><ol class="instruction-list"><li><strong>Google Drive에 ‘바이브코딩’ 폴더를 만들어요.</strong><span>그 안에 Docs 문서를 하나 만들고 ‘1회_내 게임 제목’으로 이름을 정합니다.</span></li><li><strong>최종 코드와 실행 화면을 보관해요.</strong><span>AI가 준 전체 코드를 붙이고, 직접 실행한 화면을 캡처해 함께 넣어요. HTML 파일을 저장했다면 그것도 Drive에 업로드합니다.</span></li><li><strong>내가 바꾼 점과 다음 아이디어를 적어요.</strong><span>Docs는 코드 보관용입니다. 게임을 실행할 때는 Gemini 미리보기나 저장한 HTML 파일을 사용합니다.</span></li></ol><div class="lesson-actions"><a class="button" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Google Drive 열기 <span aria-hidden="true">↗</span></a></div></div>
-          <div class="reflection-panel" data-widget="lesson-reflection" data-slide data-slide-title="나의 첫 제작 기록"><label for="my-change">내가 직접 바꾼 한 가지</label><textarea id="my-change" data-note="change" rows="2" maxlength="600" placeholder="예: 최근 5번의 기록 중 가장 많이 오른 칸 수를 보여주게 했다."></textarea><label for="my-next-idea">친구의 의견을 듣고 다음에 바꾸고 싶은 것</label><textarea id="my-next-idea" data-note="next" rows="2" maxlength="600" placeholder="예: 시작 버튼을 더 크게 하고 싶다."></textarea><p class="note-storage" aria-live="polite">기록은 Docs에도 옮겨두세요.</p></div>
-          <div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="오늘의 완료 기준"><h3>이 세 가지를 했다면 오늘의 목표 달성</h3><div class="check-list"><label><input type="checkbox" data-check="built"> 프롬프트로 게임을 만들고 직접 실행했다.</label><label><input type="checkbox" data-check="changed"> 내가 정한 기능이나 디자인을 하나 바꿨다.</label><label><input type="checkbox" data-check="kept"> 친구의 의견을 듣고 내 결과물을 보관했다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div>
-          <div class="closing-note" data-slide data-slide-title="다음에도 쓸 수 있는 방법"><p class="lead-question">“만들어줘”에서<br>“이렇게 바꿔줘”까지.</p><p>오늘 여러분은 아이디어를 설명하고, 실행해보고, 결과를 바꿨습니다. 다음 작품에서도 같은 과정을 사용할 수 있어요.</p></div>
-          <div class="lesson-bottom-nav"><a class="button" href="../index.html">← 전체 강의 목록</a><a class="button button-primary" href="../lesson-02/index.html">2회 · 내 게임 리믹스 →</a><p>다음 수업에서는 원하는 화면과 게임 규칙을 더 구체적으로 설계합니다.</p></div>
-        </div>
-      </section>
-    </div>
-  </main>
+<section class="lecture-section" id="fix-it" aria-labelledby="fix-it-title" data-reveal>
+<div class="section-heading"><p class="kicker">HELP / WHEN SOMETHING GOES WRONG</p><h2 id="fix-it-title">막힌 곳을 내 말로 설명하기</h2><p class="section-description">어느 단계에서든 돌아와 사용할 수 있어요. [대괄호]에 내가 한 일과 화면에 나온 일을 적고, 실제 사용 중인 파일 전체를 함께 보냅니다.</p></div>
+<div class="example-stack"><div data-slide data-slide-title="“안 돼요” 대신 보여줄 것" data-slide-skip><p class="muted-example">“게임이 이상해. 고쳐줘.”</p><p class="specific-example">“왼쪽 방향키를 한 번 눌렀더니 방향도 바뀌고 한 칸 올라갔어. 제자리에서 방향만 바뀌어야 해.”</p><p class="after-note"><strong>내 행동 · 실제 결과 · 원하는 결과</strong>를 말해요. 저장 문제라면 배포한 게임 주소인지, 시트 주소 설정과 새 버전 배포를 했는지도 확인합니다. 계정·권한 문제는 선생님과 확인해요.</p></div>
+<pre class="prompt-block" id="prompt-fix" data-code data-language="text" data-label="도움 · 안 되는 모습을 설명하기" data-slide data-slide-title="도움 · 안 되는 모습을 설명하기" data-slide-skip><code>내가 만든 게임에서 아래 문제가 생겼어. 해결을 도와줘.
+문제가 난 곳: [게임 조작 / 화면 모양 / 저장 / 랭킹]
+실행한 곳: [AI 미리보기 / 내려받은 파일 / 배포한 게임 주소]
+내가 한 일: [누른 버튼과 순서를 적기]
+실제로 보인 모습: [화면에서 일어난 일이나 오류 문구]
+내가 원한 모습: [어떻게 되어야 하는지 적기]
+저장 문제라면 시트에 새 줄이 생겼는지: [생김 / 안 생김 / 해당 없음]
+지금 쓰는 게임 HTML 전체를 줄게. Code.gs가 있다면 그것도 함께 줄게.
+내가 화면에서 확인할 것부터 한 단계씩 알려줘.
+고칠 때는 파일 이름과 전체 내용을 줘. 코드 일부를 찾게 하지 마.
+잘되던 다른 기능과 저장된 기록은 유지해줘.</code></pre>
+<div class="lesson-bottom-nav"><a class="button" href="#top">프로젝트 처음으로 ↑</a><a class="button" href="../index.html">전체 강의 목록</a><p>다음 주제: 학교 축제 부스 예약 · 준비 중</p></div></div>
+</section>
+</div></main>
   <footer class="site-footer"><div class="container footer-grid"><div class="footer-instructor"><div data-instructor-avatar></div><div><strong data-instructor-name></strong><p data-instructor-affiliation></p><a class="footer-email" data-instructor-email></a></div></div><div data-other-lectures-region><h2 class="footer-heading">다른 강의 둘러보기</h2><div class="other-lectures" data-other-lectures></div></div></div></footer>
   <div class="sr-only" role="status" aria-live="polite" data-copy-status></div>
   <noscript>소개와 프롬프트는 그대로 읽을 수 있습니다. 프롬프트를 직접 선택해 복사하거나, JavaScript를 켜서 복사 버튼과 게임 체험을 사용하세요.</noscript>

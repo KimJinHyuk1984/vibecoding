@@ -158,6 +158,73 @@ window.WIDGETS = window.WIDGETS || {};
     lab.append(choices, preview, feedback);
     host.replaceChildren(lab);
   };
+  window.WIDGETS["ranking-lab"] = function (host) {
+    const panel = node("div", "ranking-lab");
+    panel.append(node("h3", "", "저장하고, 다시 읽으면 랭킹이 바뀌어요"), node("p", "ranking-caption", "이 화면 안에서만 동작하는 연습입니다. Google Sheets에 전송하지 않으며 새로고침하면 초기화돼요."));
+    const form = node("form", "ranking-form");
+    const nameLabel = node("label", "", "연습 별명");
+    const alias = node("input", "ranking-alias");
+    alias.value = "별01"; alias.required = true; alias.maxLength = 12;
+    alias.pattern = "[가-힣A-Za-z0-9]{2,12}"; alias.autocomplete = "off";
+    nameLabel.append(alias);
+    const scoreLabel = node("label", "", "연습 칸 수");
+    const score = node("input", "ranking-score");
+    score.type = "number"; score.min = "0"; score.max = "10000"; score.step = "1"; score.value = "16"; score.required = true;
+    scoreLabel.append(score);
+    const actions = node("div", "ranking-actions");
+    const save = node("button", "button button-primary ranking-save", "① 기록 저장");
+    save.type = "submit";
+    const read = node("button", "button ranking-read", "② 랭킹 불러오기"); read.type = "button";
+    const reset = node("button", "button ranking-reset", "예제 초기화"); reset.type = "button";
+    actions.append(save, read, reset); form.append(nameLabel, scoreLabel, actions);
+    const status = node("p", "ranking-status", "별01의 16칸을 저장한 뒤 랭킹을 다시 불러보세요.");
+    status.setAttribute("role", "status");
+    const grid = node("div", "ranking-tables");
+    function table(title, headings) {
+      const wrapper = node("div", "ranking-table-wrap");
+      const el = node("table"); el.append(node("caption", "", title));
+      const head = node("thead"), row = node("tr"), body = node("tbody");
+      headings.forEach(function (heading) { const cell = node("th", "", heading); cell.scope = "col"; row.append(cell); });
+      head.append(row); el.append(head, body); wrapper.append(el); grid.append(wrapper);
+      return body;
+    }
+    const rawBody = table("저장소 예시 · 최근 4행", ["별명", "칸 수"]);
+    const rankBody = table("랭킹 예시 · 별명별 최고", ["순위", "별명", "칸 수"]);
+    let rows = [], busy = false, submitted = false;
+    function display(body, values) {
+      body.replaceChildren();
+      values.forEach(function (values) { const row = node("tr"); values.forEach(function (value) { row.append(node("td", "", String(value))); }); body.append(row); });
+    }
+    function renderRows() { display(rawBody, rows.slice(-4).map(function (row) { return [row.nickname, row.score]; })); }
+    function renderRank() {
+      const best = new Map();
+      rows.forEach(function (row) { if (!best.has(row.nickname) || row.score > best.get(row.nickname).score) best.set(row.nickname, row); });
+      const sorted = Array.from(best.values()).sort(function (a, b) { return b.score - a.score || a.order - b.order; });
+      let rank = 0;
+      display(rankBody, sorted.slice(0, 4).map(function (row, index) { if (!index || row.score !== sorted[index - 1].score) rank = index + 1; return [rank, row.nickname, row.score]; }));
+    }
+    function buttons() { save.disabled = busy || submitted; read.disabled = reset.disabled = alias.disabled = score.disabled = busy; }
+    function initialize() {
+      rows = [{ nickname: "별01", score: 12, order: 0 }, { nickname: "달02", score: 8, order: 1 }, { nickname: "별01", score: 6, order: 2 }];
+      alias.value = "별01"; score.value = "16"; submitted = false; buttons(); renderRows(); renderRank();
+      status.textContent = "별01의 16칸을 저장한 뒤 랭킹을 다시 불러보세요.";
+    }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (busy || submitted || !form.reportValidity()) return;
+      if (rows.length >= 30) { status.textContent = "연습 기록이 30행이에요. 예제 초기화 후 다시 해보세요."; return; }
+      const record = { nickname: alias.value.trim(), score: Number(score.value), order: rows.length };
+      busy = true; buttons(); status.textContent = "저장 중… (연습 화면)";
+      setTimeout(function () {
+        rows.push(record); busy = false; submitted = true; buttons(); renderRows();
+        status.textContent = "저장 완료! 랭킹은 아직 이전 화면이에요. ‘② 랭킹 불러오기’를 눌러주세요.";
+      }, 400);
+    });
+    form.addEventListener("input", function () { if (!busy) { submitted = false; buttons(); } });
+    read.addEventListener("click", function () { renderRank(); status.textContent = "랭킹을 다시 읽었어요. 같은 별명은 최고 기록 하나만, 같은 점수는 같은 순위예요."; });
+    reset.addEventListener("click", initialize);
+    initialize(); panel.append(form, status, grid); host.replaceChildren(panel);
+  };
   window.WIDGETS["lesson-checks"] = function (host) {
     const inputs = Array.from(host.querySelectorAll("input[data-check]"));
     const summary = host.querySelector(".check-summary");
@@ -221,7 +288,8 @@ window.WIDGETS = window.WIDGETS || {};
         const href = card.getAttribute("href");
         if (href && href.endsWith("/")) card.setAttribute("href", href + "index.html");
       });
-      const note = node("p", "hub-series-note", "13회 · 총 26시간 · 처음이라도 괜찮아요. 1회 소개부터 시작하세요.");
+      const count = window.SITE && Array.isArray(window.SITE.levels) ? window.SITE.levels.length : 0;
+      const note = node("p", "hub-series-note", (count ? count + "개 프로젝트 · " : "") + "1회에서 게임 만들기부터 기록 저장과 공유까지 이어갑니다.");
       const cards = hub.querySelector("[data-level-cards]");
       if (cards) cards.before(note);
     }
