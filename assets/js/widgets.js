@@ -225,6 +225,95 @@ window.WIDGETS = window.WIDGETS || {};
     reset.addEventListener("click", initialize);
     initialize(); panel.append(form, status, grid); host.replaceChildren(panel);
   };
+  window.WIDGETS["festival-lab"] = function (host) {
+    const names = ["방탈출", "인생네컷", "미니게임"];
+    const panel = node("div", "festival-lab");
+    const heading = node("h3", "", "관심과 예약, 숫자가 다르게 움직여요");
+    const caption = node("p", "festival-caption", "이 화면 안의 연습 · 실제 예약·시트 연결 아님 · 새로고침하면 초기화");
+    const controls = node("div", "festival-controls");
+    const label = node("label", "festival-choice");
+    label.append(node("span", "", "체험할 부스"));
+    const select = node("select", "festival-select");
+    names.forEach(function (name, i) { const option = node("option", "", name); option.value = String(i); select.append(option); });
+    label.append(select);
+    const vote = node("button", "button festival-vote", "관심 +1표");
+    const book = node("button", "button button-primary festival-book", "1명 예약");
+    const cancel = node("button", "button festival-cancel", "1명 취소");
+    const duel = node("button", "button festival-duel", "마지막 자리 · 2명 신청");
+    const reset = node("button", "button festival-reset", "체험 초기화");
+    const buttons = [vote, book, cancel, duel, reset];
+    buttons.forEach(function (button) { button.type = "button"; });
+    controls.append(label, vote, book, cancel, duel, reset);
+    const charts = node("div", "festival-charts");
+    const status = node("p", "festival-status");
+    status.setAttribute("role", "status");
+    status.setAttribute("aria-live", "polite");
+    const help = node("p", "festival-help", "두 명 신청 체험은 한 자리 남았을 때 켜져요. 막대의 기준은 관심=전체 표, 예약=정원 2명이에요.");
+    let votes, booked, busy = false;
+    function render(message) {
+      charts.replaceChildren();
+      const total = votes.reduce(function (sum, n) { return sum + n; }, 0);
+      names.forEach(function (name, i) {
+        const card = node("div", "festival-booth");
+        card.dataset.booth = String(i);
+        card.append(node("h4", "", name + " · 남은 자리 " + (2 - booked[i]) + "명"));
+        [["관심", votes[i] + " / " + total + "표", total ? votes[i] / total : 0, "interest"],
+          ["예약", booked[i] + " / 2명", booked[i] / 2, "booked"]].forEach(function (metric) {
+          const row = node("div", "festival-metric");
+          row.append(node("span", "", metric[0] + " " + metric[1]));
+          const track = node("div", "festival-track");
+          track.setAttribute("aria-hidden", "true");
+          const bar = node("div", "festival-bar festival-bar-" + metric[3]);
+          bar.style.width = metric[2] * 100 + "%";
+          track.append(bar); row.append(track); card.append(row);
+        });
+        charts.append(card);
+      });
+      const chosen = Number(select.value);
+      buttons.forEach(function (button) { button.disabled = busy; });
+      select.disabled = busy;
+      book.disabled = busy || booked[chosen] >= 2;
+      cancel.disabled = busy || booked[chosen] === 0;
+      duel.disabled = busy || booked[chosen] !== 1;
+      panel.dataset.busy = String(busy);
+      if (message) status.textContent = message;
+    }
+    function initialize() {
+      votes = [5, 3, 2]; booked = [1, 0, 0]; select.value = "0"; busy = false;
+      render("방탈출은 관심 5표, 예약 1명. 마지막 한 자리에 두 명이 신청하면 어떻게 될까요?");
+    }
+    select.addEventListener("change", function () { render(names[Number(select.value)] + "의 관심과 예약을 바꿔보세요."); });
+    vote.addEventListener("click", function () {
+      if (busy) return;
+      const i = Number(select.value); votes[i]++;
+      render("관심 1표를 더했어요. 예약과 남은 자리는 그대로예요.");
+    });
+    book.addEventListener("click", function () {
+      const i = Number(select.value);
+      if (busy || booked[i] >= 2) return;
+      booked[i]++;
+      render("연습 예약 1명이 늘었어요. 관심 표는 그대로예요.");
+    });
+    cancel.addEventListener("click", function () {
+      const i = Number(select.value);
+      if (busy || booked[i] === 0) return;
+      booked[i]--;
+      render("연습 예약 1명을 취소했어요. 남은 자리만 1명 늘었어요.");
+    });
+    duel.addEventListener("click", function () {
+      const i = Number(select.value);
+      if (busy || booked[i] !== 1) return;
+      busy = true; render("두 신청을 차례로 확인하는 중… 실제 동시 접속은 내 앱에서 친구와 시험해요.");
+      setTimeout(function () {
+        booked[i]++; busy = false;
+        render("연습 결과: 첫 신청 성공, 다음 신청 마감. 마지막 한 자리는 한 명에게만! 실제 서버도 이 규칙을 지켜야 해요.");
+      }, 350);
+    });
+    reset.addEventListener("click", function () { if (!busy) initialize(); });
+    panel.append(heading, caption, charts, controls, status, help);
+    host.replaceChildren(panel);
+    initialize();
+  };
   window.WIDGETS["lesson-checks"] = function (host) {
     const inputs = Array.from(host.querySelectorAll("input[data-check]"));
     const summary = host.querySelector(".check-summary");

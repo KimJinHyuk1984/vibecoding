@@ -29,20 +29,14 @@ window.SITE = {
   },
 
   // ── 이 아래는 강의마다 교체한다 ──
-  // 이전 1~3회를 통합 1회로 묶고 뒤 주제의 순서를 당겼습니다.
-  // 현재 1회만 공개하며, 다음 회차는 사용자 피드백 후 작성합니다.
+  // plan2.md의 6개 프로젝트. 1·2회 공개, 다음 본문은 피드백 후 작성합니다.
   levels: [
     {"slug":"lesson-01","badge":"1회","title":"내 게임을 우리 반 서비스로","subtitle":"말로 만든 무한의 계단을 내 취향으로 꾸미고, 기록을 저장해 친구들과 함께 사용합니다.","kicker":"BUILD · SAVE · SHARE","duration":"","target":"고등학생","difficulty":"입문","tags":["첫 게임","Sheets 저장","공유 랭킹"],"accent":"neon-green","emoji":"","cover":"","status":"ready"},
-    {"slug":"lesson-02","badge":"2회","title":"학교 축제 부스 예약","subtitle":"신청과 취소, 정원 확인이 가능한 작은 예약 서비스를 만듭니다.","kicker":"BUILD A SERVICE","duration":"","target":"고등학생","difficulty":"기초","tags":["데이터","예약"],"accent":"neon-green","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-03","badge":"3회","title":"우리 반 취향 대시보드","subtitle":"설문 응답을 모아 한눈에 볼 수 있는 결과 화면을 만듭니다.","kicker":"READ DATA","duration":"","target":"고등학생","difficulty":"기초","tags":["Forms","Sheets"],"accent":"violet","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-04","badge":"4회","title":"동아리 운영 자동 비서","subtitle":"신청 내용을 일정으로 연결하고 반복 작업을 자동화합니다.","kicker":"AUTOMATE","duration":"","target":"고등학생","difficulty":"기초","tags":["Calendar","트리거"],"accent":"violet","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-05","badge":"5회","title":"버튼 하나로 활동 보고서","subtitle":"기록한 데이터를 문서 양식에 넣어 보고서를 자동으로 만듭니다.","kicker":"MAKE DOCUMENTS","duration":"","target":"고등학생","difficulty":"기초","tags":["Docs","Drive"],"accent":"violet","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-06","badge":"6회","title":"사진으로 찾는 분실물","subtitle":"파일을 저장하고 검색할 수 있는 분실물 게시판을 만듭니다.","kicker":"CONNECT FILES","duration":"","target":"고등학생","difficulty":"활용","tags":["Drive","검색"],"accent":"violet","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-07","badge":"7회","title":"내 앱에 오늘의 학교 정보","subtitle":"외부 데이터를 가져와 급식이나 날씨를 보여주는 위젯을 만듭니다.","kicker":"CONNECT AN API","duration":"","target":"고등학생","difficulty":"활용","tags":["공공데이터","API"],"accent":"amber","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-08","badge":"8회","title":"질문에 답하는 앱의 원리","subtitle":"질문과 답변을 연결하고 AI의 답변을 확인하는 방법을 배웁니다.","kicker":"UNDERSTAND AI","duration":"","target":"고등학생","difficulty":"활용","tags":["AI 응답","검증"],"accent":"amber","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-09","badge":"9회","title":"고장 난 앱 구조대","subtitle":"오류를 재현하고, 원인을 좁히고, 고친 결과를 다시 확인합니다.","kicker":"DEBUG","duration":"","target":"고등학생","difficulty":"활용","tags":["오류 해결","복구"],"accent":"amber","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-10","badge":"10회","title":"처음 보는 문제에 도전","subtitle":"문제를 기능으로 나누고 새로운 주제의 미니 앱을 직접 만듭니다.","kicker":"BUILD YOUR IDEA","duration":"","target":"고등학생","difficulty":"도전","tags":["기획","독립 제작"],"accent":"amber","emoji":"","cover":"","status":"coming"},
-    {"slug":"lesson-11","badge":"11회","title":"친구가 써보고, 내가 다시 만들기","subtitle":"앞에서 만든 앱을 친구에게 테스트받고 불편한 점을 개선합니다.","kicker":"TEST AND IMPROVE","duration":"","target":"고등학생","difficulty":"도전","tags":["사용자 테스트","개선"],"accent":"amber","emoji":"","cover":"","status":"coming"}
+    {"slug":"lesson-02","badge":"2회","title":"우리 학교 축제 운영 서비스","subtitle":"친구들의 관심을 조사하고, 예약과 취소를 받아 운영 현황까지 한눈에 봅니다.","kicker":"SURVEY · BOOK · UNDERSTAND","duration":"","target":"고등학생","difficulty":"기초","tags":["Forms 설문","예약·취소","대시보드"],"accent":"neon-green","emoji":"","cover":"","status":"ready"},
+    {"slug":"lesson-03","badge":"3회","title":"일하는 동아리 자동 비서","subtitle":"신청을 일정과 연결하고 활동 기록을 보고서와 PDF로 완성합니다.","kicker":"AUTOMATE","duration":"","target":"고등학생","difficulty":"기초","tags":["트리거","Calendar","Docs·PDF"],"accent":"violet","emoji":"","cover":"","status":"coming"},
+    {"slug":"lesson-04","badge":"4회","title":"우리 학교 분실물 센터","subtitle":"사진을 등록하고 장소·종류로 검색하며 반환 상태를 관리합니다.","kicker":"CONNECT FILES","duration":"","target":"고등학생","difficulty":"활용","tags":["파일 업로드","Drive","검색"],"accent":"violet","emoji":"","cover":"","status":"coming"},
+    {"slug":"lesson-05","badge":"5회","title":"우리 학교 정보 도우미","subtitle":"외부 API로 정보를 가져오고 사용 가능한 AI 서비스로 답변 기능을 확장합니다.","kicker":"CONNECT AN API","duration":"","target":"고등학생","difficulty":"활용","tags":["외부 API","JSON","AI 연동"],"accent":"amber","emoji":"","cover":"","status":"coming"},
+    {"slug":"lesson-06","badge":"6회","title":"내 아이디어를 실제 서비스로","subtitle":"배운 기능으로 내 앱을 만들고 오류 해결과 친구 테스트로 개선합니다.","kicker":"BUILD YOUR IDEA","duration":"","target":"고등학생","difficulty":"도전","tags":["독립 제작","오류 해결","사용자 테스트"],"accent":"amber","emoji":"","cover":"","status":"coming"}
   ],
 
   // 다른 강의로 이동하는 링크 (전부 외부 절대 주소)
