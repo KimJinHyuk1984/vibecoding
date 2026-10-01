@@ -314,6 +314,82 @@ window.WIDGETS = window.WIDGETS || {};
     host.replaceChildren(panel);
     initialize();
   };
+  window.WIDGETS["club-lab"] = function (host) {
+    const panel = node("div", "club-lab");
+    const heading = node("h3", "", "신청 한 건이 일정과 보고서로");
+    const caption = node("p", "club-caption", "이 화면 안의 모의 실험 · Google 연결·실제 파일 생성 없음 · 새로고침하면 초기화");
+    const summary = node("div", "club-summary");
+    const current = node("p", "club-current");
+    const options = node("div", "club-options");
+    const autoLabel = node("label", "");
+    const automatic = node("input", "club-auto"); automatic.type = "checkbox";
+    autoLabel.append(automatic, document.createTextNode("새 신청의 일정 자동 등록"));
+    const failLabel = node("label", "");
+    const fail = node("input", "club-fail"); fail.type = "checkbox";
+    failLabel.append(fail, document.createTextNode("다음 PDF 저장을 한 번 실패시키기"));
+    options.append(autoLabel, failLabel);
+    const actions = node("div", "club-actions");
+    const submit = node("button", "button button-primary club-submit", "① 새 신청 도착");
+    const calendar = node("button", "button club-calendar", "② 일정 등록");
+    const result = node("button", "button club-result", "③ 활동 결과 기록");
+    const report = node("button", "button club-report", "④ 보고서·PDF 만들기");
+    const reset = node("button", "button club-reset", "체험 초기화");
+    const buttons = [submit, calendar, result, report, reset];
+    buttons.forEach(function (button) { button.type = "button"; actions.append(button); });
+    const status = node("p", "club-status"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
+    let activities = [], busy = false;
+    function latest() { return activities[activities.length - 1]; }
+    function render(message) {
+      const record = latest();
+      const totals = [activities.length, activities.filter(function (a) { return a.event; }).length, activities.filter(function (a) { return a.doc; }).length, activities.filter(function (a) { return a.pdf; }).length];
+      summary.replaceChildren();
+      [["신청", totals[0], "requests"], ["일정", totals[1], "events"], ["Docs", totals[2], "docs"], ["PDF", totals[3], "pdfs"]].forEach(function (metric) {
+        const item = node("div", "club-stat");
+        item.append(node("span", "", metric[0]));
+        const count = node("strong", "club-count-" + metric[2], String(metric[1]) + "개");
+        item.append(count); summary.append(item);
+      });
+      current.textContent = record ? "지금 활동 " + record.id + " · 일정 " + (record.event ? "완료" : "미등록") + " · 결과 " + (record.result ? "기록됨" : "비어 있음") + " · 보고서 " + (record.pdf ? "완료" : record.doc ? "PDF 재시도 필요" : "미생성") : "① 새 신청부터 시작해요. 이후 버튼은 가장 최근 신청을 처리합니다.";
+      buttons.forEach(function (button) { button.disabled = busy; });
+      calendar.disabled = busy || !record;
+      result.disabled = busy || !record || !record.event;
+      report.disabled = busy || !record;
+      automatic.disabled = fail.disabled = busy;
+      panel.dataset.busy = String(busy);
+      if (message) status.textContent = message;
+    }
+    submit.addEventListener("click", function () {
+      if (busy) return;
+      activities.push({id: "활동-" + (activities.length + 1), event: automatic.checked, result: false, doc: false, pdf: false});
+      render(automatic.checked ? "새 신청으로 일정도 자동 등록됐어요. 이전 신청은 바꾸지 않았어요." : "새 신청이 도착했어요. 이번에는 ② 일정 등록 메뉴를 직접 눌러요.");
+    });
+    calendar.addEventListener("click", function () {
+      const record = latest(); if (busy || !record) return;
+      const existed = record.event; record.event = true;
+      render(existed ? "같은 활동번호의 일정이 이미 있어요. 새로 만들지 않고 기존 일정을 사용해요." : "선택한 활동의 일정 하나를 등록했어요. 같은 버튼을 다시 눌러보세요.");
+    });
+    result.addEventListener("click", function () {
+      const record = latest(); if (busy || !record || !record.event) return;
+      record.result = true;
+      render("연습 결과를 기록했어요: 4명이 식물 세 종류를 관찰함. 실제 보고서는 내가 확인한 결과를 써야 해요.");
+    });
+    report.addEventListener("click", function () {
+      const record = latest(); if (busy || !record) return;
+      if (!record.result) { render("활동 결과가 비어 있어요. ③ 결과 기록 후 보고서를 만들어요. 빈 내용을 지어내지 않아요."); return; }
+      if (record.pdf) { render("같은 내용의 Docs와 PDF가 이미 있어요. 파일을 늘리지 않고 기존 결과를 사용해요."); return; }
+      const shouldFail = fail.checked; fail.checked = false;
+      busy = true; render(record.doc ? "이미 만든 Docs를 재사용해 PDF 저장부터 다시 하는 중…" : "기록으로 Docs를 채우고 PDF로 저장하는 중…");
+      setTimeout(function () {
+        record.doc = true; record.pdf = !shouldFail; busy = false;
+        render(shouldFail ? "Docs는 완료, PDF는 실패했어요. ④를 다시 누르면 문서를 더 만들지 않고 PDF 단계만 이어가요." : "Docs와 PDF가 모두 완료됐어요. 같은 버튼을 다시 눌러 파일 수가 늘지 않는지 보세요.");
+      }, 350);
+    });
+    automatic.addEventListener("change", function () { render(automatic.checked ? "이제 새로 도착하는 신청의 일정만 자동 등록돼요. 기존 신청은 그대로예요." : "자동 등록을 껐어요. 새 신청은 메뉴로 일정을 등록해야 해요."); });
+    reset.addEventListener("click", function () { if (busy) return; activities = []; automatic.checked = fail.checked = false; render("처음으로 돌아왔어요. 직접 실행과 자동 실행을 비교해보세요."); });
+    panel.append(heading, caption, summary, current, options, actions, status);
+    host.replaceChildren(panel);
+    render("먼저 직접 실행해보고, 자동 등록을 켠 뒤 새 신청을 넣어보세요.");
+  };
   window.WIDGETS["lesson-checks"] = function (host) {
     const inputs = Array.from(host.querySelectorAll("input[data-check]"));
     const summary = host.querySelector(".check-summary");
