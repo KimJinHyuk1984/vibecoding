@@ -205,6 +205,28 @@
 .presentation-stage .lost-picture, .presentation-stage .lost-picture svg { min-height: 48px; height: 48px; }
 .presentation-stage .lost-status { min-height: 0; }
 
+/* 외부 정보 연결: 두 출처와 캐시를 비교하는 모형 */
+.info-lab { display: grid; gap: var(--space-4); padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface-2); }
+.info-caption, .info-origin, .info-stamp { color: var(--text-muted); font-size: var(--font-small); }
+.info-controls, .info-questions { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-3); }
+.info-lab label { display: grid; gap: var(--space-2); }
+.info-lab select { width: 100%; min-width: 0; min-height: 48px; padding: var(--space-3); font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--control-border); border-radius: var(--radius-md); }
+.info-lab select:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 4px; }
+.info-lab .button { min-height: 48px; font-size: var(--font-small); }
+.info-lab :disabled { opacity: 0.55; cursor: default; }
+.info-cards, .info-settings { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+.info-card { display: grid; align-content: start; gap: var(--space-3); min-width: 0; background: var(--bg); padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.info-card h3 { font-size: var(--font-body); }
+.info-card[data-state="error"] .info-data { color: var(--warn); }
+.info-metrics { color: var(--accent-text); font-weight: var(--weight-heading); }
+.info-answer { padding: var(--space-3); background: var(--bg); border-left: 3px solid var(--accent-text); min-height: 3em; }
+.info-status { min-height: 3em; }
+.info-settings > div { padding-block: var(--space-5); border-block: 1px solid var(--border); min-width: 0; }
+.info-settings h3 { margin-bottom: var(--space-3); }
+.presentation-stage :is(.info-caption, .info-origin, .info-stamp, .info-card h3, .info-lab .button) { font-size: var(--slide-body); }
+.presentation-stage .info-lab { gap: var(--space-3); padding: var(--space-4); }
+.presentation-stage :is(.info-answer, .info-status) { min-height: 0; }
+
 /* 발표 모드에서도 프롬프트 전문과 입력 컨트롤을 읽을 수 있게 유지합니다. */
 .presentation-stage .lead-question { font-size: 44px; }
 .presentation-stage pre.prompt-block { font-size: var(--slide-code); }
@@ -236,6 +258,10 @@
   .lost-search-label, .lost-clear { grid-column: 1 / -1; }
   .lost-list { grid-template-columns: 1fr; }
   .lost-upload .button { flex: 1 1 120px; }
+  .info-lab { padding: var(--space-4); }
+  .info-cards, .info-settings { grid-template-columns: 1fr; }
+  .info-controls > *, .info-questions > * { flex: 1 1 130px; min-width: 0; }
+  .info-controls label, .info-questions label { flex-basis: 100%; }
   .role-comparison > div + div { padding-top: var(--space-5); border-top: 1px solid var(--border); }
   .build-cycle { grid-template-columns: 1fr 1fr; }
   .stairs-game { padding: var(--space-4); }

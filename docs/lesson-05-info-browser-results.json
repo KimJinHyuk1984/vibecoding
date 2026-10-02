@@ -1,0 +1,5054 @@
+{
+  "verifiedAt": "2026-10-02",
+  "environment": {
+    "browser": "Chrome 154.0.8037.93",
+    "method": "Headless Chrome CDP; actual mouse/keyboard and browser clipboard. Filter combination tests also use DOM change; native select keyboard tested separately.",
+    "presentationViewport": "1920x950",
+    "mobileViewport": "375x812",
+    "protocols": [
+      "http://127.0.0.1:8000/",
+      "http://127.0.0.1:8000/vibecoding/",
+      "file://"
+    ],
+    "motion": [
+      "reduce",
+      "no-preference"
+    ]
+  },
+  "checks": [
+    {
+      "name": "six-projects-five-ready",
+      "pass": true
+    },
+    {
+      "name": "hub-no-presentation",
+      "pass": true
+    },
+    {
+      "name": "info-structure",
+      "pass": true,
+      "details": {
+        "sections": 11,
+        "prompts": 9,
+        "widgets": [
+          "true",
+          "true",
+          "true",
+          "true",
+          "true"
+        ],
+        "nested": 0,
+        "broken": [],
+        "duplicates": [],
+        "downloads": 0
+      }
+    },
+    {
+      "name": "links-markers-no-teacher-code",
+      "pass": true,
+      "details": {
+        "sections": 11,
+        "prompts": 9,
+        "widgets": [
+          "true",
+          "true",
+          "true",
+          "true",
+          "true"
+        ],
+        "nested": 0,
+        "broken": [],
+        "duplicates": [],
+        "downloads": 0
+      }
+    },
+    {
+      "name": "initial-no-data",
+      "pass": true
+    },
+    {
+      "name": "pending-locks-controls",
+      "pass": true
+    },
+    {
+      "name": "two-source-first-fetch",
+      "pass": true
+    },
+    {
+      "name": "rule-answer-no-request",
+      "pass": true
+    },
+    {
+      "name": "threshold-60",
+      "pass": true
+    },
+    {
+      "name": "unknown-not-invented",
+      "pass": true
+    },
+    {
+      "name": "cache-reuses-original-time",
+      "pass": true
+    },
+    {
+      "name": "clock-expires-and-clears-answer",
+      "pass": true
+    },
+    {
+      "name": "expired-fetches-both",
+      "pass": true
+    },
+    {
+      "name": "date-clears-snapshot-answer",
+      "pass": true
+    },
+    {
+      "name": "new-date-and-threshold-59",
+      "pass": true
+    },
+    {
+      "name": "date-separated-cache",
+      "pass": true
+    },
+    {
+      "name": "auth-error-not-cached-weather-survives",
+      "pass": true
+    },
+    {
+      "name": "rule-reports-auth-error",
+      "pass": true
+    },
+    {
+      "name": "confirmed-empty-cached",
+      "pass": true
+    },
+    {
+      "name": "weather-error-keeps-meal",
+      "pass": true
+    },
+    {
+      "name": "null-is-not-zero",
+      "pass": true
+    },
+    {
+      "name": "zero-is-valid-number",
+      "pass": true
+    },
+    {
+      "name": "reset-cancels-pending-result",
+      "pass": true
+    },
+    {
+      "name": "native-select-keyboard",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-screen",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-meal",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-connect",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-weather",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-cache",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-rules",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-save",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-ai",
+      "pass": true
+    },
+    {
+      "name": "copy-prompt-fix",
+      "pass": true
+    },
+    {
+      "name": "checks-notes-persist",
+      "pass": true
+    },
+    {
+      "name": "menu-keyboard",
+      "pass": true
+    },
+    {
+      "name": "menu-focus-return",
+      "pass": true
+    },
+    {
+      "name": "dialog-focus-trap",
+      "pass": true
+    },
+    {
+      "name": "dialog-blocks-p",
+      "pass": true
+    },
+    {
+      "name": "textarea-blocks-p",
+      "pass": true
+    },
+    {
+      "name": "mobile-no-overflow-targets-light",
+      "pass": true
+    },
+    {
+      "name": "text-contrast-light",
+      "pass": true,
+      "details": {
+        "count": 293,
+        "min": 6.220056386526992,
+        "fail": []
+      }
+    },
+    {
+      "name": "mobile-no-overflow-targets-dark",
+      "pass": true
+    },
+    {
+      "name": "text-contrast-dark",
+      "pass": true,
+      "details": {
+        "count": 293,
+        "min": 8.786422997796324,
+        "fail": []
+      }
+    },
+    {
+      "name": "slide-count-default",
+      "pass": true,
+      "details": {
+        "count": 34,
+        "allCount": 41,
+        "skipCount": 7
+      }
+    },
+    {
+      "name": "presentation-widget-cache",
+      "pass": true
+    },
+    {
+      "name": "select-arrow-does-not-change-slide",
+      "pass": true
+    },
+    {
+      "name": "presentation-answer-fit",
+      "pass": true
+    },
+    {
+      "name": "split-full-copy-default-11",
+      "pass": true
+    },
+    {
+      "name": "split-full-copy-default-12",
+      "pass": true
+    },
+    {
+      "name": "fit-font-default",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "overflow-report-default",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "slide-count-all",
+      "pass": true,
+      "details": {
+        "count": 41,
+        "allCount": 41,
+        "skipCount": 7
+      }
+    },
+    {
+      "name": "split-full-copy-all-11",
+      "pass": true
+    },
+    {
+      "name": "split-full-copy-all-12",
+      "pass": true
+    },
+    {
+      "name": "split-full-copy-all-36",
+      "pass": true
+    },
+    {
+      "name": "split-full-copy-all-37",
+      "pass": true
+    },
+    {
+      "name": "fit-font-all",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "overflow-report-all",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "blackout",
+      "pass": true
+    },
+    {
+      "name": "presentation-restores-state",
+      "pass": true
+    },
+    {
+      "name": "reduce-motion",
+      "pass": true
+    },
+    {
+      "name": "normal-motion-widget",
+      "pass": true
+    },
+    {
+      "name": "static-widget-fallback",
+      "pass": true
+    },
+    {
+      "name": "factory-failure-restores-static",
+      "pass": true
+    },
+    {
+      "name": "repo-subpath",
+      "pass": true
+    },
+    {
+      "name": "back-to-hub",
+      "pass": true
+    },
+    {
+      "name": "file-protocol-widget-copy",
+      "pass": true
+    },
+    {
+      "name": "file-presentation",
+      "pass": true
+    },
+    {
+      "name": "lesson-01-widgets",
+      "pass": true
+    },
+    {
+      "name": "stairs-turn-only",
+      "pass": true
+    },
+    {
+      "name": "stairs-climb",
+      "pass": true
+    },
+    {
+      "name": "lesson-01-copy-regression",
+      "pass": true
+    },
+    {
+      "name": "lesson-01-count-default",
+      "pass": true,
+      "details": 29
+    },
+    {
+      "name": "lesson-01-count-all",
+      "pass": true,
+      "details": 37
+    },
+    {
+      "name": "lesson-02-widgets",
+      "pass": true
+    },
+    {
+      "name": "festival-last-seat",
+      "pass": true
+    },
+    {
+      "name": "lesson-02-copy-regression",
+      "pass": true
+    },
+    {
+      "name": "lesson-02-count-default",
+      "pass": true,
+      "details": 34
+    },
+    {
+      "name": "lesson-02-count-all",
+      "pass": true,
+      "details": 38
+    },
+    {
+      "name": "lesson-03-widgets",
+      "pass": true
+    },
+    {
+      "name": "club-automatic-and-dedup",
+      "pass": true
+    },
+    {
+      "name": "lesson-03-copy-regression",
+      "pass": true
+    },
+    {
+      "name": "lesson-03-count-default",
+      "pass": true,
+      "details": 36
+    },
+    {
+      "name": "lesson-03-count-all",
+      "pass": true,
+      "details": 40
+    },
+    {
+      "name": "lesson-04-widgets",
+      "pass": true
+    },
+    {
+      "name": "lost-dedup-regression",
+      "pass": true
+    },
+    {
+      "name": "lesson-04-copy-regression",
+      "pass": true
+    },
+    {
+      "name": "lesson-04-count-default",
+      "pass": true,
+      "details": 34
+    },
+    {
+      "name": "lesson-04-count-all",
+      "pass": true,
+      "details": 38
+    },
+    {
+      "name": "earlier-presentations-regression",
+      "pass": true
+    },
+    {
+      "name": "lesson4-next-link",
+      "pass": true
+    },
+    {
+      "name": "javascript-errors",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "unexpected-http-errors",
+      "pass": true,
+      "details": [
+        {
+          "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "name": "control-focus-contrast-light",
+      "pass": true,
+      "details": {
+        "controls": [
+          {
+            "class": "info-date",
+            "border": 3.3962486408494375,
+            "fill": 1.0437652216219326
+          },
+          {
+            "class": "info-scenario",
+            "border": 3.3962486408494375,
+            "fill": 1.0437652216219326
+          },
+          {
+            "class": "button button-primary info-lookup",
+            "border": 18.96800669384249,
+            "fill": 18.96800669384249
+          },
+          {
+            "class": "button info-advance",
+            "border": 3.3962486408494375,
+            "fill": 1.0437652216219326
+          },
+          {
+            "class": "button info-reset",
+            "border": 3.3962486408494375,
+            "fill": 1.0437652216219326
+          },
+          {
+            "class": "info-question",
+            "border": 3.3962486408494375,
+            "fill": 1.0437652216219326
+          }
+        ],
+        "focusVisible": true,
+        "outline": 3,
+        "focusContrast": 6.220056386526992
+      }
+    },
+    {
+      "name": "control-focus-contrast-dark",
+      "pass": true,
+      "details": {
+        "controls": [
+          {
+            "class": "info-date",
+            "border": 5.1969329764384495,
+            "fill": 1.0746699387796288
+          },
+          {
+            "class": "info-scenario",
+            "border": 5.1969329764384495,
+            "fill": 1.0746699387796288
+          },
+          {
+            "class": "button button-primary info-lookup",
+            "border": 18.422536070011546,
+            "fill": 18.422536070011546
+          },
+          {
+            "class": "button info-advance",
+            "border": 5.1969329764384495,
+            "fill": 1.0746699387796288
+          },
+          {
+            "class": "button info-reset",
+            "border": 5.1969329764384495,
+            "fill": 1.0746699387796288
+          },
+          {
+            "class": "info-question",
+            "border": 5.1969329764384495,
+            "fill": 1.0746699387796288
+          }
+        ],
+        "focusVisible": true,
+        "outline": 3,
+        "focusContrast": 12.844319967522884
+      }
+    },
+    {
+      "name": "section-progress-restored",
+      "pass": true
+    },
+    {
+      "name": "mobile-error-and-full-select-light",
+      "pass": true,
+      "details": {
+        "errorContrast": 6.492278532784264,
+        "overflow": false,
+        "widths": [
+          294,
+          294,
+          294
+        ],
+        "targets": true
+      }
+    },
+    {
+      "name": "mobile-error-and-full-select-dark",
+      "pass": true,
+      "details": {
+        "errorContrast": 13.80340455316378,
+        "overflow": false,
+        "widths": [
+          294,
+          294,
+          294
+        ],
+        "targets": true
+      }
+    },
+    {
+      "name": "normal-motion-presentation",
+      "pass": true
+    },
+    {
+      "name": "extra-javascript-errors",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/assets/img/instructor.jpg",
+      "status": 404
+    }
+  ],
+  "slides": [
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 1,
+      "title": "오늘 급식 뭐야? 우산도 챙겨야 해? · 이번 프로젝트의 출발점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 2,
+      "title": "오늘 급식 뭐야? 우산도 챙겨야 해? · 먼저 체험 · API와 캐시",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 3,
+      "title": "오늘 급식 뭐야? 우산도 챙겨야 해? · 두 종류의 API를 구분해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 4,
+      "title": "API는 다른 서비스에 부탁하는 창구 · 내 화면에서 외부 정보가 오기까지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 5,
+      "title": "API는 다른 서비스에 부탁하는 창구 · GET·JSON·POST, 역할만 먼저 알기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 6,
+      "title": "우리 학교와 날씨 지역 정하기 · 새 작업 공간과 급식 인증키",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 7,
+      "title": "우리 학교와 날씨 지역 정하기 · 급식에 필요한 설정 세 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 8,
+      "title": "우리 학교와 날씨 지역 정하기 · 날씨에 필요한 설정 세 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 9,
+      "title": "우리 학교와 날씨 지역 정하기 · 설정은 총 일곱 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 10,
+      "title": "급식 카드와 날씨 카드부터 · PROMPT 01 · 학교 정보 도우미 화면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 11,
+      "title": "급식 카드와 날씨 카드부터 · 앱의 첫 모습 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 12,
+      "title": "나이스에서 점심 메뉴 받아오기 · PROMPT 02 · 급식을 가져올 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 13,
+      "title": "나이스에서 점심 메뉴 받아오기 · PROMPT 02 · 급식을 가져올 Code.gs · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 14,
+      "title": "나이스에서 점심 메뉴 받아오기 · 응답의 이름을 화면의 의미로 바꾸기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 15,
+      "title": "나이스에서 점심 메뉴 받아오기 · PROMPT 03 · 내 카드와 급식 서버 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 16,
+      "title": "나이스에서 점심 메뉴 받아오기 · 두 파일을 넣고 실제 급식과 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 17,
+      "title": "나이스에서 점심 메뉴 받아오기 · 확인 ① 출처와 날짜",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 18,
+      "title": "같은 날짜의 날씨도 가져오기 · PROMPT 04 · 날씨 예보 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 19,
+      "title": "같은 날짜의 날씨도 가져오기 · PROMPT 04 · 날씨 예보 연결 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 20,
+      "title": "같은 날짜의 날씨도 가져오기 · 배포 갱신과 출처 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 21,
+      "title": "같은 날짜의 날씨도 가져오기 · 무료 API도 출처와 이용 범위가 있어요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 22,
+      "title": "같은 날짜의 날씨도 가져오기 · 확인 ② 서로 다른 두 출처",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 23,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · PROMPT 05 · 캐시와 오류 처리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 24,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · PROMPT 05 · 캐시와 오류 처리 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 25,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · 두 번 눌러 보고, 시간이 지난 뒤 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 26,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · 없음·실패·0은 서로 달라요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 27,
+      "title": "확인한 자료로 질문에 답하기 · PROMPT 06 · 자료 기반 질문 도우미",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 28,
+      "title": "확인한 자료로 질문에 답하기 · PROMPT 06 · 자료 기반 질문 도우미 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 29,
+      "title": "확인한 자료로 질문에 답하기 · 답할 수 있는 범위도 내가 정해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 30,
+      "title": "확인한 자료로 질문에 답하기 · 확인 ③ 자료에 근거한 답변",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 31,
+      "title": "진짜 정보인지 끝까지 확인하기 · 친구와 나누어 시험할 네 가지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 32,
+      "title": "진짜 정보인지 끝까지 확인하기 · PROMPT 07 · 최종본과 확인 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 33,
+      "title": "진짜 정보인지 끝까지 확인하기 · 공유할 주소와 공유하지 않을 값",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "default",
+      "slide": 34,
+      "title": "진짜 정보인지 끝까지 확인하기 · 나의 정보 도우미 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 1,
+      "title": "오늘 급식 뭐야? 우산도 챙겨야 해? · 이번 프로젝트의 출발점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 2,
+      "title": "오늘 급식 뭐야? 우산도 챙겨야 해? · 먼저 체험 · API와 캐시",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 3,
+      "title": "오늘 급식 뭐야? 우산도 챙겨야 해? · 두 종류의 API를 구분해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 4,
+      "title": "API는 다른 서비스에 부탁하는 창구 · 내 화면에서 외부 정보가 오기까지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 5,
+      "title": "API는 다른 서비스에 부탁하는 창구 · GET·JSON·POST, 역할만 먼저 알기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 6,
+      "title": "우리 학교와 날씨 지역 정하기 · 새 작업 공간과 급식 인증키",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 7,
+      "title": "우리 학교와 날씨 지역 정하기 · 급식에 필요한 설정 세 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 8,
+      "title": "우리 학교와 날씨 지역 정하기 · 날씨에 필요한 설정 세 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 9,
+      "title": "우리 학교와 날씨 지역 정하기 · 설정은 총 일곱 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 10,
+      "title": "급식 카드와 날씨 카드부터 · PROMPT 01 · 학교 정보 도우미 화면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 11,
+      "title": "급식 카드와 날씨 카드부터 · 앱의 첫 모습 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 12,
+      "title": "나이스에서 점심 메뉴 받아오기 · PROMPT 02 · 급식을 가져올 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 13,
+      "title": "나이스에서 점심 메뉴 받아오기 · PROMPT 02 · 급식을 가져올 Code.gs · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 14,
+      "title": "나이스에서 점심 메뉴 받아오기 · 응답의 이름을 화면의 의미로 바꾸기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 15,
+      "title": "나이스에서 점심 메뉴 받아오기 · PROMPT 03 · 내 카드와 급식 서버 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 16,
+      "title": "나이스에서 점심 메뉴 받아오기 · 두 파일을 넣고 실제 급식과 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 17,
+      "title": "나이스에서 점심 메뉴 받아오기 · 확인 ① 출처와 날짜",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 18,
+      "title": "같은 날짜의 날씨도 가져오기 · PROMPT 04 · 날씨 예보 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 19,
+      "title": "같은 날짜의 날씨도 가져오기 · PROMPT 04 · 날씨 예보 연결 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 20,
+      "title": "같은 날짜의 날씨도 가져오기 · 배포 갱신과 출처 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 21,
+      "title": "같은 날짜의 날씨도 가져오기 · 무료 API도 출처와 이용 범위가 있어요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 22,
+      "title": "같은 날짜의 날씨도 가져오기 · 확인 ② 서로 다른 두 출처",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 23,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · PROMPT 05 · 캐시와 오류 처리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 24,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · PROMPT 05 · 캐시와 오류 처리 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 25,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · 두 번 눌러 보고, 시간이 지난 뒤 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 26,
+      "title": "같은 질문에 매번 외부 요청이 필요할까? · 없음·실패·0은 서로 달라요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 27,
+      "title": "확인한 자료로 질문에 답하기 · PROMPT 06 · 자료 기반 질문 도우미",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 28,
+      "title": "확인한 자료로 질문에 답하기 · PROMPT 06 · 자료 기반 질문 도우미 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 29,
+      "title": "확인한 자료로 질문에 답하기 · 답할 수 있는 범위도 내가 정해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 30,
+      "title": "확인한 자료로 질문에 답하기 · 확인 ③ 자료에 근거한 답변",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 31,
+      "title": "진짜 정보인지 끝까지 확인하기 · 친구와 나누어 시험할 네 가지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 32,
+      "title": "진짜 정보인지 끝까지 확인하기 · PROMPT 07 · 최종본과 확인 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 33,
+      "title": "진짜 정보인지 끝까지 확인하기 · 공유할 주소와 공유하지 않을 값",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 34,
+      "title": "진짜 정보인지 끝까지 확인하기 · 나의 정보 도우미 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 35,
+      "title": "선택 · 사용 가능한 AI API가 정해졌다면 · AI를 붙이기 전 확인할 네 가지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 36,
+      "title": "선택 · 사용 가능한 AI API가 정해졌다면 · GET으로 받은 자료를 POST의 참고 자료로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 37,
+      "title": "선택 · 사용 가능한 AI API가 정해졌다면 · 선택 A · 승인된 AI 서비스 연결 요청",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 38,
+      "title": "선택 · 사용 가능한 AI API가 정해졌다면 · 선택 A · 승인된 AI 서비스 연결 요청 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 39,
+      "title": "선택 · 사용 가능한 AI API가 정해졌다면 · AI 확장은 실제 결과를 확인한 뒤 켜요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 40,
+      "title": "무엇을 요청했고, 무엇이 돌아왔나요? · 증상별로 먼저 볼 곳",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-05",
+      "mode": "all",
+      "slide": 41,
+      "title": "무엇을 요청했고, 무엇이 돌아왔나요? · 도움 · API 연결 문제 설명하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24,
+      "codeOverflow": false
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 1,
+      "title": "게임을 하던 사람에서, 만드는 사람으로 · 바이브코딩은 어떻게 하는 걸까?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 2,
+      "title": "게임을 하던 사람에서, 만드는 사람으로 · 무한의 계단부터 한 판",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 3,
+      "title": "게임을 하던 사람에서, 만드는 사람으로 · 내 게임을 친구도 쓴다면?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 4,
+      "title": "복사하고, 실행하고, 결과 보기 · 실습 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 5,
+      "title": "복사하고, 실행하고, 결과 보기 · 코드를 읽는 대신 전체를 복사해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 6,
+      "title": "첫 부탁으로 움직이는 게임 만들기 · PROMPT 01 · 첫 게임 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 7,
+      "title": "첫 부탁으로 움직이는 게임 만들기 · 생성이 끝나면 직접 한 판",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 8,
+      "title": "첫 부탁으로 움직이는 게임 만들기 · 확인 ① 한 판 되는 게임",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 9,
+      "title": "같은 게임을 내 취향으로 · 같은 조작, 다른 분위기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 10,
+      "title": "같은 게임을 내 취향으로 · PROMPT 02 · 내 제목과 분위기 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 11,
+      "title": "같은 게임을 내 취향으로 · 확인 ② 내 생각이 화면에 반영됐나요?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 12,
+      "title": "내 게임의 기록을 어디에 남길까? · 저장한 기록과 화면의 랭킹",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 13,
+      "title": "내 게임의 기록을 어디에 남길까? · 내가 AI에게 만들도록 부탁할 두 파일",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 14,
+      "title": "내 게임의 기록을 어디에 남길까? · 우리 팀의 빈 기록장 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 15,
+      "title": "저장할 코드도 직접 요청하기 · PROMPT 03 · 시트에 저장할 Code.gs 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 16,
+      "title": "저장할 코드도 직접 요청하기 · PROMPT 04 · 내 게임에 저장 버튼 연결하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 17,
+      "title": "저장할 코드도 직접 요청하기 · AI가 만든 두 파일 붙여넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 18,
+      "title": "저장할 코드도 직접 요청하기 · 코드 대신 설정 화면에 시트 주소 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 19,
+      "title": "내 게임에서 실제 점수 저장하기 · 친구와 열 수 있는 게임 주소 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 20,
+      "title": "내 게임에서 실제 점수 저장하기 · 저장 완료라는 말과 실제 시트 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 21,
+      "title": "내 게임에서 실제 점수 저장하기 · 확인 ③ 게임 밖에 기록이 남아요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 22,
+      "title": "친구의 기록이 내 화면에도 보이게 · PROMPT 05 · 우리 반 랭킹 보여주기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 23,
+      "title": "친구의 기록이 내 화면에도 보이게 · 고친 파일을 게임 주소에 반영하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 24,
+      "title": "친구의 기록이 내 화면에도 보이게 · 친구가 직접 써보는 네 가지 장면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 25,
+      "title": "친구의 기록이 내 화면에도 보이게 · 확인 ④ 친구와 함께 쓰는 서비스",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 26,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · PROMPT 06 · 완성한 두 파일 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 27,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · 다시 이어갈 수 있도록 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 28,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · 나의 첫 프로젝트 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "default",
+      "slide": 29,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · 다음 아이디어도 이 순서로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 1,
+      "title": "게임을 하던 사람에서, 만드는 사람으로 · 바이브코딩은 어떻게 하는 걸까?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 2,
+      "title": "게임을 하던 사람에서, 만드는 사람으로 · 무한의 계단부터 한 판",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 3,
+      "title": "게임을 하던 사람에서, 만드는 사람으로 · 내 게임을 친구도 쓴다면?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 4,
+      "title": "복사하고, 실행하고, 결과 보기 · 실습 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 5,
+      "title": "복사하고, 실행하고, 결과 보기 · 코드를 읽는 대신 전체를 복사해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 6,
+      "title": "복사하고, 실행하고, 결과 보기 · 미리보기가 없으면 HTML 파일로 열기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 7,
+      "title": "첫 부탁으로 움직이는 게임 만들기 · PROMPT 01 · 첫 게임 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 8,
+      "title": "첫 부탁으로 움직이는 게임 만들기 · 생성이 끝나면 직접 한 판",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 9,
+      "title": "첫 부탁으로 움직이는 게임 만들기 · 확인 ① 한 판 되는 게임",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 10,
+      "title": "같은 게임을 내 취향으로 · 같은 조작, 다른 분위기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 11,
+      "title": "같은 게임을 내 취향으로 · PROMPT 02 · 내 제목과 분위기 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 12,
+      "title": "같은 게임을 내 취향으로 · 확인 ② 내 생각이 화면에 반영됐나요?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 13,
+      "title": "내 게임의 기록을 어디에 남길까? · 저장한 기록과 화면의 랭킹",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 14,
+      "title": "내 게임의 기록을 어디에 남길까? · 내가 AI에게 만들도록 부탁할 두 파일",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 15,
+      "title": "내 게임의 기록을 어디에 남길까? · 우리 팀의 빈 기록장 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 16,
+      "title": "저장할 코드도 직접 요청하기 · PROMPT 03 · 시트에 저장할 Code.gs 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 17,
+      "title": "저장할 코드도 직접 요청하기 · PROMPT 04 · 내 게임에 저장 버튼 연결하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 18,
+      "title": "저장할 코드도 직접 요청하기 · AI가 만든 두 파일 붙여넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 19,
+      "title": "저장할 코드도 직접 요청하기 · 코드 대신 설정 화면에 시트 주소 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 20,
+      "title": "내 게임에서 실제 점수 저장하기 · 친구와 열 수 있는 게임 주소 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 21,
+      "title": "내 게임에서 실제 점수 저장하기 · 저장 완료라는 말과 실제 시트 비교하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 22,
+      "title": "내 게임에서 실제 점수 저장하기 · 확인 ③ 게임 밖에 기록이 남아요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 23,
+      "title": "친구의 기록이 내 화면에도 보이게 · PROMPT 05 · 우리 반 랭킹 보여주기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 24,
+      "title": "친구의 기록이 내 화면에도 보이게 · 고친 파일을 게임 주소에 반영하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 25,
+      "title": "친구의 기록이 내 화면에도 보이게 · 친구가 직접 써보는 네 가지 장면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 26,
+      "title": "친구의 기록이 내 화면에도 보이게 · 확인 ④ 친구와 함께 쓰는 서비스",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 27,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · PROMPT 06 · 완성한 두 파일 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 28,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · 다시 이어갈 수 있도록 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 29,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · 나의 첫 프로젝트 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 30,
+      "title": "내가 만든 것을 남기고, 다음 아이디어로 · 다음 아이디어도 이 순서로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 31,
+      "title": "완성한 뒤 골라서 더해보기 · 선택 A · 내 화면의 최근 5판",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 32,
+      "title": "완성한 뒤 골라서 더해보기 · 선택 B · 휴대폰에서 더 편하게",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 33,
+      "title": "완성한 뒤 골라서 더해보기 · 선택 C · 20칸 도착 체험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 34,
+      "title": "완성한 뒤 골라서 더해보기 · 선택 C · 20칸 도착 놀이 추가",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 35,
+      "title": "완성한 뒤 골라서 더해보기 · 선택 미션 뒤에도 저장 규칙 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 36,
+      "title": "막힌 곳을 내 말로 설명하기 · “안 돼요” 대신 보여줄 것",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-01",
+      "mode": "all",
+      "slide": 37,
+      "title": "막힌 곳을 내 말로 설명하기 · 도움 · 안 되는 모습을 설명하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 1,
+      "title": "마지막 한 자리, 두 명이 누르면? · 이번에는 축제를 운영하는 사람",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 2,
+      "title": "마지막 한 자리, 두 명이 누르면? · 먼저 체험 · 마지막 한 자리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 3,
+      "title": "마지막 한 자리, 두 명이 누르면? · 이번 프로젝트의 완성 순서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 4,
+      "title": "친구들이 가고 싶은 부스부터 · 준비할 창과 제작 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 5,
+      "title": "친구들이 가고 싶은 부스부터 · PROMPT 01 · 설문 안내 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 6,
+      "title": "친구들이 가고 싶은 부스부터 · 질문 하나를 실제로 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 7,
+      "title": "친구들이 가고 싶은 부스부터 · 친구의 응답이 한 줄로 남아요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 8,
+      "title": "친구들이 가고 싶은 부스부터 · 확인 ① 실제 설문 응답",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 9,
+      "title": "먼저 예약 화면을 만들어요 · PROMPT 02 · 축제 예약 화면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 10,
+      "title": "먼저 예약 화면을 만들어요 · 바꿀 곳과 확인할 것",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 11,
+      "title": "내 화면에 저장 기능 연결하기 · 1회의 연결 구조를 다시 사용해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 12,
+      "title": "내 화면에 저장 기능 연결하기 · PROMPT 03 · 실제 예약을 저장할 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 13,
+      "title": "내 화면에 저장 기능 연결하기 · PROMPT 03 · 정원과 중복 신청 규칙",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 14,
+      "title": "내 화면에 저장 기능 연결하기 · PROMPT 04 · 내 화면에서 실제로 예약하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 15,
+      "title": "첫 예약을 시트에서 확인해요 · 새 프로젝트에 두 파일 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 16,
+      "title": "첫 예약을 시트에서 확인해요 · 예약 앱 주소로 옮겨가기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 17,
+      "title": "첫 예약을 시트에서 확인해요 · 확인 ② 화면 밖에 남는 예약",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 18,
+      "title": "첫 예약을 시트에서 확인해요 · 첫 번째 완성 지점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 19,
+      "title": "취소하면 자리가 다시 열려요 · PROMPT 05 · 예약 취소와 자리 복구",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 20,
+      "title": "취소하면 자리가 다시 열려요 · 고친 파일을 새 버전으로 배포하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 21,
+      "title": "취소하면 자리가 다시 열려요 · 사용한 기술 · CRUD",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 22,
+      "title": "잘되는 장면과 막혀야 할 장면 · 작은 정원으로 시험하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 23,
+      "title": "잘되는 장면과 막혀야 할 장면 · 화면 버튼만 막으면 충분할까요?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 24,
+      "title": "잘되는 장면과 막혀야 할 장면 · 확인 ③ 규칙이 지켜지는 앱",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 25,
+      "title": "관심과 예약을 한눈에 비교해요 · PROMPT 06 · 같은 데이터로 대시보드 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 26,
+      "title": "관심과 예약을 한눈에 비교해요 · PROMPT 06 · 빈 결과와 갱신 처리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 27,
+      "title": "관심과 예약을 한눈에 비교해요 · 같은 숫자라도 분모가 달라요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 28,
+      "title": "관심과 예약을 한눈에 비교해요 · 시트와 그래프를 직접 대조하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 29,
+      "title": "버튼 뒤에서 오가는 부탁과 결과 · 내 앱의 호출과 외부 API 구분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 30,
+      "title": "버튼 뒤에서 오가는 부탁과 결과 · 기다리는 동안에도 할 일이 있어요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 31,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · 확인 ④ 관심과 실제 예약 비교",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 32,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · PROMPT 07 · 완성한 서비스 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 33,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · 다음에 복구할 수 있게 남기기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "default",
+      "slide": 34,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · 내가 설명할 수 있는 서비스",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 1,
+      "title": "마지막 한 자리, 두 명이 누르면? · 이번에는 축제를 운영하는 사람",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 2,
+      "title": "마지막 한 자리, 두 명이 누르면? · 먼저 체험 · 마지막 한 자리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 3,
+      "title": "마지막 한 자리, 두 명이 누르면? · 이번 프로젝트의 완성 순서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 4,
+      "title": "친구들이 가고 싶은 부스부터 · 준비할 창과 제작 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 5,
+      "title": "친구들이 가고 싶은 부스부터 · PROMPT 01 · 설문 안내 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 6,
+      "title": "친구들이 가고 싶은 부스부터 · 질문 하나를 실제로 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 7,
+      "title": "친구들이 가고 싶은 부스부터 · 친구의 응답이 한 줄로 남아요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 8,
+      "title": "친구들이 가고 싶은 부스부터 · 확인 ① 실제 설문 응답",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 9,
+      "title": "먼저 예약 화면을 만들어요 · PROMPT 02 · 축제 예약 화면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 10,
+      "title": "먼저 예약 화면을 만들어요 · 바꿀 곳과 확인할 것",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 11,
+      "title": "내 화면에 저장 기능 연결하기 · 1회의 연결 구조를 다시 사용해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 12,
+      "title": "내 화면에 저장 기능 연결하기 · PROMPT 03 · 실제 예약을 저장할 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 13,
+      "title": "내 화면에 저장 기능 연결하기 · PROMPT 03 · 정원과 중복 신청 규칙",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 14,
+      "title": "내 화면에 저장 기능 연결하기 · PROMPT 04 · 내 화면에서 실제로 예약하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 15,
+      "title": "첫 예약을 시트에서 확인해요 · 새 프로젝트에 두 파일 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 16,
+      "title": "첫 예약을 시트에서 확인해요 · 예약 앱 주소로 옮겨가기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 17,
+      "title": "첫 예약을 시트에서 확인해요 · 확인 ② 화면 밖에 남는 예약",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 18,
+      "title": "첫 예약을 시트에서 확인해요 · 첫 번째 완성 지점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 19,
+      "title": "취소하면 자리가 다시 열려요 · PROMPT 05 · 예약 취소와 자리 복구",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 20,
+      "title": "취소하면 자리가 다시 열려요 · 고친 파일을 새 버전으로 배포하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 21,
+      "title": "취소하면 자리가 다시 열려요 · 사용한 기술 · CRUD",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 22,
+      "title": "잘되는 장면과 막혀야 할 장면 · 작은 정원으로 시험하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 23,
+      "title": "잘되는 장면과 막혀야 할 장면 · 화면 버튼만 막으면 충분할까요?",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 24,
+      "title": "잘되는 장면과 막혀야 할 장면 · 확인 ③ 규칙이 지켜지는 앱",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 25,
+      "title": "관심과 예약을 한눈에 비교해요 · PROMPT 06 · 같은 데이터로 대시보드 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 26,
+      "title": "관심과 예약을 한눈에 비교해요 · PROMPT 06 · 빈 결과와 갱신 처리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 27,
+      "title": "관심과 예약을 한눈에 비교해요 · 같은 숫자라도 분모가 달라요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 28,
+      "title": "관심과 예약을 한눈에 비교해요 · 시트와 그래프를 직접 대조하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 29,
+      "title": "버튼 뒤에서 오가는 부탁과 결과 · 내 앱의 호출과 외부 API 구분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 30,
+      "title": "버튼 뒤에서 오가는 부탁과 결과 · 기다리는 동안에도 할 일이 있어요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 31,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · 확인 ④ 관심과 실제 예약 비교",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 32,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · PROMPT 07 · 완성한 서비스 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 33,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · 다음에 복구할 수 있게 남기기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 34,
+      "title": "친구가 쓰는 모습을 보고 완성하기 · 내가 설명할 수 있는 서비스",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 35,
+      "title": "완성한 뒤 한 가지만 더하기 · 선택 A · 원하는 부스 빨리 찾기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 36,
+      "title": "완성한 뒤 한 가지만 더하기 · 확장 뒤에도 기본 기능 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 37,
+      "title": "막히면 내가 본 일을 말해요 · 먼저 확인할 세 가지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-02",
+      "mode": "all",
+      "slide": 38,
+      "title": "막히면 내가 본 일을 말해요 · 도움 · 실제 결과 설명하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 1,
+      "title": "같은 내용을 세 번 쓰고 있나요? · 이번 프로젝트의 출발점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 2,
+      "title": "같은 내용을 세 번 쓰고 있나요? · 먼저 체험 · 신청부터 보고서까지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 3,
+      "title": "같은 내용을 세 번 쓰고 있나요? · 이번에는 구글 도구가 앱의 화면이에요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 4,
+      "title": "신청 한 줄은 활동 한 건 · 새 프로젝트의 작업 공간",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 5,
+      "title": "신청 한 줄은 활동 한 건 · Forms에 넣을 질문 여섯 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 6,
+      "title": "신청 한 줄은 활동 한 건 · 첫 응답을 직접 제출하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 7,
+      "title": "시트에 나만의 메뉴 만들기 · PROMPT 01 · 활동 관리용 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 8,
+      "title": "시트에 나만의 메뉴 만들기 · PROMPT 01 · 기록을 보존하며 준비하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 9,
+      "title": "시트에 나만의 메뉴 만들기 · 코드 대신 설정 화면에 주소 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 10,
+      "title": "시트에 나만의 메뉴 만들기 · 확인 ① 내 메뉴와 활동번호",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 11,
+      "title": "메뉴로 일정 하나부터 등록하기 · 동아리 연습용 캘린더 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 12,
+      "title": "메뉴로 일정 하나부터 등록하기 · PROMPT 02 · 선택한 활동을 일정으로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 13,
+      "title": "메뉴로 일정 하나부터 등록하기 · PROMPT 02 · 같은 활동은 일정 하나",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 14,
+      "title": "메뉴로 일정 하나부터 등록하기 · 선택한 한 줄과 캘린더 대조하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 15,
+      "title": "메뉴로 일정 하나부터 등록하기 · 확인 ② 정확한 일정 하나",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 16,
+      "title": "새 신청이 오면 저절로 실행하기 · PROMPT 03 · 새 폼 응답으로 자동 실행",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 17,
+      "title": "새 신청이 오면 저절로 실행하기 · 담당자 한 명이 트리거 하나 설치하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 18,
+      "title": "새 신청이 오면 저절로 실행하기 · 아무도 메뉴를 누르지 않았는데",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 19,
+      "title": "새 신청이 오면 저절로 실행하기 · 확인 ③ 폼 제출로 자동 실행",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 20,
+      "title": "계획과 실제 결과는 달라요 · 내가 채울 결과 칸 세 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 21,
+      "title": "계획과 실제 결과는 달라요 · 보고서에 넣을 내용을 먼저 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 22,
+      "title": "보고서의 모양을 먼저 정해요 · PROMPT 04 · Docs 보고서 양식",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 23,
+      "title": "보고서의 모양을 먼저 정해요 · 원본 Docs와 결과 폴더 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 24,
+      "title": "보고서의 모양을 먼저 정해요 · 설정 화면에 주소 두 개 더하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 25,
+      "title": "내 기록으로 문서 한 장 만들기 · PROMPT 05 · 선택 활동 보고서 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 26,
+      "title": "내 기록으로 문서 한 장 만들기 · PROMPT 05 · 재실행과 수정본 구분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 27,
+      "title": "내 기록으로 문서 한 장 만들기 · 원본·사본·시트를 나란히 보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 28,
+      "title": "같은 보고서를 PDF로 남기기 · PROMPT 06 · 보고서와 PDF를 한 번에",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 29,
+      "title": "같은 보고서를 PDF로 남기기 · PROMPT 06 · 실패한 단계만 다시 하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 30,
+      "title": "같은 보고서를 PDF로 남기기 · PDF 안의 내용까지 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 31,
+      "title": "같은 보고서를 PDF로 남기기 · 확인 ④ 보고서와 PDF",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 32,
+      "title": "다시 실행해도 믿을 수 있게 · 세 가지 상황으로 마지막 시험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 33,
+      "title": "다시 실행해도 믿을 수 있게 · 이번에 쓴 기술을 한 문장으로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 34,
+      "title": "다시 실행해도 믿을 수 있게 · PROMPT 07 · 자동 비서 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 35,
+      "title": "다시 실행해도 믿을 수 있게 · 자동화도 켜고 끌 수 있어야 해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "default",
+      "slide": 36,
+      "title": "다시 실행해도 믿을 수 있게 · 나의 자동화 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 1,
+      "title": "같은 내용을 세 번 쓰고 있나요? · 이번 프로젝트의 출발점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 2,
+      "title": "같은 내용을 세 번 쓰고 있나요? · 먼저 체험 · 신청부터 보고서까지",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 3,
+      "title": "같은 내용을 세 번 쓰고 있나요? · 이번에는 구글 도구가 앱의 화면이에요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 4,
+      "title": "신청 한 줄은 활동 한 건 · 새 프로젝트의 작업 공간",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 5,
+      "title": "신청 한 줄은 활동 한 건 · Forms에 넣을 질문 여섯 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 6,
+      "title": "신청 한 줄은 활동 한 건 · 첫 응답을 직접 제출하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 7,
+      "title": "시트에 나만의 메뉴 만들기 · PROMPT 01 · 활동 관리용 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 8,
+      "title": "시트에 나만의 메뉴 만들기 · PROMPT 01 · 기록을 보존하며 준비하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 9,
+      "title": "시트에 나만의 메뉴 만들기 · 코드 대신 설정 화면에 주소 넣기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 10,
+      "title": "시트에 나만의 메뉴 만들기 · 확인 ① 내 메뉴와 활동번호",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 11,
+      "title": "메뉴로 일정 하나부터 등록하기 · 동아리 연습용 캘린더 준비",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 12,
+      "title": "메뉴로 일정 하나부터 등록하기 · PROMPT 02 · 선택한 활동을 일정으로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 13,
+      "title": "메뉴로 일정 하나부터 등록하기 · PROMPT 02 · 같은 활동은 일정 하나",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 14,
+      "title": "메뉴로 일정 하나부터 등록하기 · 선택한 한 줄과 캘린더 대조하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 15,
+      "title": "메뉴로 일정 하나부터 등록하기 · 확인 ② 정확한 일정 하나",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 16,
+      "title": "새 신청이 오면 저절로 실행하기 · PROMPT 03 · 새 폼 응답으로 자동 실행",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 17,
+      "title": "새 신청이 오면 저절로 실행하기 · 담당자 한 명이 트리거 하나 설치하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 18,
+      "title": "새 신청이 오면 저절로 실행하기 · 아무도 메뉴를 누르지 않았는데",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 19,
+      "title": "새 신청이 오면 저절로 실행하기 · 확인 ③ 폼 제출로 자동 실행",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 20,
+      "title": "계획과 실제 결과는 달라요 · 내가 채울 결과 칸 세 개",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 21,
+      "title": "계획과 실제 결과는 달라요 · 보고서에 넣을 내용을 먼저 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 22,
+      "title": "보고서의 모양을 먼저 정해요 · PROMPT 04 · Docs 보고서 양식",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 23,
+      "title": "보고서의 모양을 먼저 정해요 · 원본 Docs와 결과 폴더 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 24,
+      "title": "보고서의 모양을 먼저 정해요 · 설정 화면에 주소 두 개 더하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 25,
+      "title": "내 기록으로 문서 한 장 만들기 · PROMPT 05 · 선택 활동 보고서 만들기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 26,
+      "title": "내 기록으로 문서 한 장 만들기 · PROMPT 05 · 재실행과 수정본 구분",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 27,
+      "title": "내 기록으로 문서 한 장 만들기 · 원본·사본·시트를 나란히 보기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 28,
+      "title": "같은 보고서를 PDF로 남기기 · PROMPT 06 · 보고서와 PDF를 한 번에",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 29,
+      "title": "같은 보고서를 PDF로 남기기 · PROMPT 06 · 실패한 단계만 다시 하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 30,
+      "title": "같은 보고서를 PDF로 남기기 · PDF 안의 내용까지 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 31,
+      "title": "같은 보고서를 PDF로 남기기 · 확인 ④ 보고서와 PDF",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 32,
+      "title": "다시 실행해도 믿을 수 있게 · 세 가지 상황으로 마지막 시험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 33,
+      "title": "다시 실행해도 믿을 수 있게 · 이번에 쓴 기술을 한 문장으로",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 34,
+      "title": "다시 실행해도 믿을 수 있게 · PROMPT 07 · 자동 비서 보관하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 35,
+      "title": "다시 실행해도 믿을 수 있게 · 자동화도 켜고 끌 수 있어야 해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 36,
+      "title": "다시 실행해도 믿을 수 있게 · 나의 자동화 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 37,
+      "title": "선택 · 일정이 빠진 신청 주기적으로 확인 · 선택 A · 미등록 일정만 주기적으로 확인",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 38,
+      "title": "선택 · 일정이 빠진 신청 주기적으로 확인 · 시간 기반 트리거를 짧게 시험하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 39,
+      "title": "어디까지 성공했는지 알려줘요 · 막힌 단계 찾기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-03",
+      "mode": "all",
+      "slide": 40,
+      "title": "어디까지 성공했는지 알려줘요 · 도움 · 실패한 단계부터 고치기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 1,
+      "title": "내 이어폰, 누가 봤어? · 이번 프로젝트의 출발점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 2,
+      "title": "내 이어폰, 누가 봤어? · 먼저 체험 · 등록하고 찾아 돌려주기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 0.8804100884331597,
+      "body": 24.65148247612847,
+      "code": 21.129842122395832
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 3,
+      "title": "내 이어폰, 누가 봤어? · 이번에는 파일도 함께 움직여요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 4,
+      "title": "사진만으로 설명되지 않는 것들 · 물건 한 건에 필요한 정보",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 5,
+      "title": "사진만으로 설명되지 않는 것들 · 공개할 정보와 관리할 정보",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 6,
+      "title": "우선 눈에 보이는 분실물 센터 · PROMPT 01 · 분실물 센터 화면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 7,
+      "title": "우선 눈에 보이는 분실물 센터 · 화면과 미리보기를 먼저 확인해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 8,
+      "title": "우선 눈에 보이는 분실물 센터 · 확인 ① 보이는 것과 저장된 것",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 9,
+      "title": "글자는 시트에, 사진은 Drive에 · 이번 프로젝트만의 저장 공간",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 10,
+      "title": "글자는 시트에, 사진은 Drive에 · 주소는 코드 대신 설정 화면에",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 11,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 02 · 글자를 저장할 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 12,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 02 · 글자를 저장할 Code.gs · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 13,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 03 · 내 화면을 실제 저장과 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 14,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 03 · 내 화면을 실제 저장과 연결 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 15,
+      "title": "먼저 물건 정보 한 건을 저장해요 · 파일 두 개를 넣고 나만 볼 수 있게 배포",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 16,
+      "title": "먼저 물건 정보 한 건을 저장해요 · 수정할 때마다 같은 배포를 갱신해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 17,
+      "title": "이제 사진도 진짜 저장하기 · PROMPT 04 · 사진 한 장을 물건과 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 18,
+      "title": "이제 사진도 진짜 저장하기 · PROMPT 04 · 사진 한 장을 물건과 연결 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 19,
+      "title": "이제 사진도 진짜 저장하기 · 등록 전후 세 곳을 비교해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 20,
+      "title": "이제 사진도 진짜 저장하기 · 기술 한 걸음 · 사진 주소가 곧 사진은 아니에요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 21,
+      "title": "이제 사진도 진짜 저장하기 · 확인 ② 사진 한 장과 물건 한 줄",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 22,
+      "title": "찾고 싶은 물건만 남겨보기 · PROMPT 05 · 검색과 필터",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 23,
+      "title": "찾고 싶은 물건만 남겨보기 · 검색은 원본을 지우는 일이 아니에요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 24,
+      "title": "찾고 싶은 물건만 남겨보기 · 확인 ③ 조건에 맞는 목록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 25,
+      "title": "주인에게 돌려줬다면 상태 바꾸기 · PROMPT 06 · 운영자만 반환 처리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 26,
+      "title": "주인에게 돌려줬다면 상태 바꾸기 · PROMPT 06 · 운영자만 반환 처리 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 27,
+      "title": "주인에게 돌려줬다면 상태 바꾸기 · 반환 뒤 목록에서 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 28,
+      "title": "내 화면에서만 보이면 아직 확인이 부족해요 · 사진을 보여주는 문은 두 곳",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 29,
+      "title": "내 화면에서만 보이면 아직 확인이 부족해요 · 허용된 친구 계정으로 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 30,
+      "title": "내 화면에서만 보이면 아직 확인이 부족해요 · 확인 ④ 반환과 공개 범위",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 31,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · 반드시 해볼 네 가지 시험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 32,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · PROMPT 07 · 최종본과 시험 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 33,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · 세 버전과 확인 결과를 남겨요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "default",
+      "slide": 34,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · 나의 분실물 센터 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 1,
+      "title": "내 이어폰, 누가 봤어? · 이번 프로젝트의 출발점",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 2,
+      "title": "내 이어폰, 누가 봤어? · 먼저 체험 · 등록하고 찾아 돌려주기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 0.8804100884331597,
+      "body": 24.65148247612847,
+      "code": 21.129842122395832
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 3,
+      "title": "내 이어폰, 누가 봤어? · 이번에는 파일도 함께 움직여요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 4,
+      "title": "사진만으로 설명되지 않는 것들 · 물건 한 건에 필요한 정보",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 5,
+      "title": "사진만으로 설명되지 않는 것들 · 공개할 정보와 관리할 정보",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 6,
+      "title": "우선 눈에 보이는 분실물 센터 · PROMPT 01 · 분실물 센터 화면",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 7,
+      "title": "우선 눈에 보이는 분실물 센터 · 화면과 미리보기를 먼저 확인해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 8,
+      "title": "우선 눈에 보이는 분실물 센터 · 확인 ① 보이는 것과 저장된 것",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 9,
+      "title": "글자는 시트에, 사진은 Drive에 · 이번 프로젝트만의 저장 공간",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 10,
+      "title": "글자는 시트에, 사진은 Drive에 · 주소는 코드 대신 설정 화면에",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 11,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 02 · 글자를 저장할 Code.gs",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 12,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 02 · 글자를 저장할 Code.gs · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 13,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 03 · 내 화면을 실제 저장과 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 14,
+      "title": "먼저 물건 정보 한 건을 저장해요 · PROMPT 03 · 내 화면을 실제 저장과 연결 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 15,
+      "title": "먼저 물건 정보 한 건을 저장해요 · 파일 두 개를 넣고 나만 볼 수 있게 배포",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 16,
+      "title": "먼저 물건 정보 한 건을 저장해요 · 수정할 때마다 같은 배포를 갱신해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 17,
+      "title": "이제 사진도 진짜 저장하기 · PROMPT 04 · 사진 한 장을 물건과 연결",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 18,
+      "title": "이제 사진도 진짜 저장하기 · PROMPT 04 · 사진 한 장을 물건과 연결 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 19,
+      "title": "이제 사진도 진짜 저장하기 · 등록 전후 세 곳을 비교해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 20,
+      "title": "이제 사진도 진짜 저장하기 · 기술 한 걸음 · 사진 주소가 곧 사진은 아니에요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 21,
+      "title": "이제 사진도 진짜 저장하기 · 확인 ② 사진 한 장과 물건 한 줄",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 22,
+      "title": "찾고 싶은 물건만 남겨보기 · PROMPT 05 · 검색과 필터",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 23,
+      "title": "찾고 싶은 물건만 남겨보기 · 검색은 원본을 지우는 일이 아니에요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 24,
+      "title": "찾고 싶은 물건만 남겨보기 · 확인 ③ 조건에 맞는 목록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 25,
+      "title": "주인에게 돌려줬다면 상태 바꾸기 · PROMPT 06 · 운영자만 반환 처리",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 26,
+      "title": "주인에게 돌려줬다면 상태 바꾸기 · PROMPT 06 · 운영자만 반환 처리 · 이어서",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 27,
+      "title": "주인에게 돌려줬다면 상태 바꾸기 · 반환 뒤 목록에서 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 28,
+      "title": "내 화면에서만 보이면 아직 확인이 부족해요 · 사진을 보여주는 문은 두 곳",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 29,
+      "title": "내 화면에서만 보이면 아직 확인이 부족해요 · 허용된 친구 계정으로 확인하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 30,
+      "title": "내 화면에서만 보이면 아직 확인이 부족해요 · 확인 ④ 반환과 공개 범위",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 31,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · 반드시 해볼 네 가지 시험",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 32,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · PROMPT 07 · 최종본과 시험 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 33,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · 세 버전과 확인 결과를 남겨요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 34,
+      "title": "잘될 때 말고, 헷갈릴 때도 시험하기 · 나의 분실물 센터 기록",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 35,
+      "title": "선택 · 최신순과 오래된 순으로 보기 · 선택 A · 검색 결과의 순서 바꾸기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 36,
+      "title": "선택 · 최신순과 오래된 순으로 보기 · 선택 기능도 결과로 확인해요",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 37,
+      "title": "어느 단계에서 멈췄는지 알려줘요 · 보이는 증상에서 출발하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    },
+    {
+      "page": "lesson-04",
+      "mode": "all",
+      "slide": 38,
+      "title": "어느 단계에서 멈췄는지 알려줘요 · 도움 · 멈춘 단계를 설명하기",
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "banner": false,
+      "scale": 1,
+      "body": 28,
+      "code": 24
+    }
+  ],
+  "protectedHashes": {
+    "DESIGN.md": "C473FCA5C871CAB360DAE65320E6A38189D7E987857CC53700C69E9606A40100",
+    "assets/css/tokens.css": "6C3EEDE764AE1875570731BA175D569DA58030C7FDA96669FCED3FE36DEB8590",
+    "assets/css/base.css": "2B1D4CFCF12DC00C9A65A288D106BB1F6E9C75AB14D900CA24095738B35B25CB",
+    "assets/js/shared.js": "E74FACE44F5B81E6A96CFA500CA616A089975EB85EF5EF985CE05DB182D75569"
+  },
+  "instructorUnchanged": true,
+  "brokenLocalLinks": [],
+  "notExecuted": [
+    "Google account authorization and Apps Script deployment",
+    "Student-generated index.html / Code.gs execution",
+    "Actual NEIS / Open-Meteo response validation (network fetch attempts failed)",
+    "Provider-specific AI API: school-approved provider not selected"
+  ]
+}

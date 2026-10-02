@@ -494,6 +494,104 @@ window.WIDGETS = window.WIDGETS || {};
     });
     items = initial(); panel.append(heading, caption, upload, filters, tools, list, status, help); draw(); host.replaceChildren(panel);
   };
+  // 실제 API를 호출하지 않는 GET·캐시·부분 실패·규칙 답변 모형입니다.
+  window.WIDGETS["info-lab"] = function (host) {
+    const panel = node("div", "info-lab");
+    const caption = node("p", "info-caption", "가상 급식·날씨로 체험해요. 실제 API·AI 호출 없음 · 캐시 보관 5분인 모형");
+    const controls = node("div", "info-controls");
+    function select(label, cls, options, parent) {
+      const wrap = node("label", "", label), control = node("select", cls);
+      options.forEach(function (entry) { const option = node("option", "", entry[1]); option.value = entry[0]; control.append(option); });
+      wrap.append(control); parent.append(wrap); return control;
+    }
+    const date = select("연습 날짜", "info-date", [["2026-10-05", "10월 5일 (연습)"], ["2026-10-06", "10월 6일 (연습)"]], controls);
+    const scenario = select("응답 상황", "info-scenario", [["normal", "정상"], ["none", "급식 자료 없음"], ["auth", "급식 인증 오류"], ["weather-error", "날씨 연결 오류"], ["null", "강수확률 값 없음"], ["zero", "강수확률 0%"]], controls);
+    const lookup = node("button", "button button-primary info-lookup", "정보 조회");
+    const advance = node("button", "button info-advance", "5분 지나기");
+    const reset = node("button", "button info-reset", "체험 초기화");
+    [lookup, advance, reset].forEach(function (button) { button.type = "button"; controls.append(button); });
+    const metrics = node("p", "info-metrics");
+    const cards = node("div", "info-cards");
+    const questions = node("div", "info-questions");
+    const question = select("조회한 자료로 질문하기", "info-question", [["meal", "급식 알려줘"], ["umbrella", "우산 필요해?"], ["unknown", "시험 범위는?"]], questions);
+    const ask = node("button", "button info-ask", "규칙으로 답하기"); ask.type = "button"; questions.append(ask);
+    const answer = node("p", "info-answer", "규칙 기반 답변 · AI 아님. 먼저 정보를 조회해요."); answer.setAttribute("role", "status");
+    const status = node("p", "info-status"); status.setAttribute("role", "status");
+    let cache = new Map(), now = 0, requests = 0, hits = 0, snapshot = null, busy = false, sequence = 0, timer;
+    function blankAnswer() { answer.textContent = "규칙 기반 답변 · AI 아님. 조회한 날짜의 자료로만 답해요."; }
+    function render(message) {
+      panel.dataset.requests = String(requests); panel.dataset.hits = String(hits); panel.dataset.minute = String(now); panel.dataset.busy = String(busy);
+      [date, scenario, lookup, advance, question, ask].forEach(function (control) { control.disabled = busy; });
+      ask.disabled = busy || !snapshot;
+      metrics.textContent = "외부 요청(모의) " + requests + "회 · 캐시 재사용 " + hits + "건 · 연습 시각 " + now + "분";
+      cards.replaceChildren();
+      ["meal", "weather"].forEach(function (source) {
+        const card = node("div", "info-card info-" + source), record = snapshot && snapshot[source];
+        card.append(node("h3", "", source === "meal" ? "점심 카드" : "예보 카드"));
+        if (!record) { card.append(node("p", "", busy ? "불러오는 중…" : "조회 전")); }
+        else {
+          card.dataset.state = record.state;
+          const line = node("p", "info-data", record.text);
+          const origin = node("p", "info-origin", snapshot.date + " · 가상 " + (source === "meal" ? "급식" : "날씨") + " 자료");
+          const stamp = node("p", "info-stamp", record.state === "error" ? "조회 실패 · 성공 자료로 보관하지 않음" : (record.cached ? "캐시 재사용" : "새로 조회") + " · 가져온 시각 " + record.fetched + "분");
+          card.append(line, origin, stamp);
+        }
+        cards.append(card);
+      });
+      if (message) status.textContent = message;
+    }
+    function getRecord(source, pickedDate, mode) {
+      if (source === "meal") {
+        if (mode === "auth") return {state:"error",text:"인증 오류 · 키 설정을 확인해요."};
+        if (mode === "none") return {state:"empty",text:"이 날짜의 급식 자료 없음 · 운영 여부는 별도 확인"};
+        return {state:"ok",text:pickedDate === "2026-10-05" ? "쌀밥 · 미역국(5.6) · 과일" : "카레라이스(2.5.6) · 김치 · 우유(2)"};
+      }
+      if (mode === "weather-error") return {state:"error",text:"날씨 연결 오류 · 다시 시도해요."};
+      const probability = mode === "null" ? null : mode === "zero" ? 0 : pickedDate === "2026-10-05" ? 60 : 59;
+      return {state:"ok",probability:probability,text:"15–24°C · 하루 중 최대 강수확률 " + (probability === null ? "확인 불가" : probability + "%")};
+    }
+    lookup.addEventListener("click", function () {
+      if (busy) return;
+      const pickedDate = date.value, mode = scenario.value, token = ++sequence, result = {date:pickedDate};
+      snapshot = null; busy = true; blankAnswer();
+      ["meal", "weather"].forEach(function (source) {
+        const key = source + ":" + pickedDate, saved = cache.get(key);
+        if (saved && now - saved.fetched < 5) { hits += 1; result[source] = Object.assign({}, saved, {cached:true}); }
+        else {
+          requests += 1;
+          const record = Object.assign(getRecord(source, pickedDate, mode), {fetched:now,cached:false});
+          if (record.state !== "error") cache.set(key, record);
+          result[source] = record;
+        }
+      });
+      render("두 출처의 응답을 기다려요. 실제 호출은 하지 않는 모형입니다.");
+      timer = setTimeout(function () {
+        if (token !== sequence) return;
+        snapshot = result; busy = false;
+        render("같은 날짜로 다시 조회해 요청 수와 가져온 시각을 비교해요.");
+      }, 300);
+    });
+    date.addEventListener("change", function () { snapshot = null; blankAnswer(); render("날짜가 바뀌어 이전 카드와 답변을 지웠어요. 정보 조회를 눌러요."); });
+    scenario.addEventListener("change", function () { cache.clear(); snapshot = null; blankAnswer(); render("새 상황을 시험하도록 체험 캐시를 비웠어요. 정보 조회를 눌러요."); });
+    advance.addEventListener("click", function () { if (busy) return; now += 5; snapshot = null; blankAnswer(); render("5분이 지나 캐시가 만료됐어요. 조회하면 외부 요청이 늘어요. 실제 캐시는 더 일찍 사라질 수도 있어요."); });
+    question.addEventListener("change", blankAnswer);
+    ask.addEventListener("click", function () {
+      if (busy || !snapshot) return;
+      let text;
+      if (question.value === "unknown") text = "시험 범위는 참고 자료에 없어 답할 수 없어요.";
+      else if (question.value === "meal") text = snapshot.meal.text;
+      else {
+        const weather = snapshot.weather;
+        text = weather.state === "error" || weather.probability === null ? "날씨 값을 확인하지 못해 우산 여부를 판단할 수 없어요." : weather.probability >= 60 ? "최대 강수확률 " + weather.probability + "% · 우산을 챙겨보세요. (60% 이상이라는 연습 규칙)" : "최대 강수확률 " + weather.probability + "% · 예보를 한 번 더 확인해보세요. 비가 안 온다는 보장은 아니에요.";
+      }
+      answer.textContent = "규칙 답변 · AI 아님 | " + snapshot.date + " 가상 자료: " + text;
+    });
+    reset.addEventListener("click", function () {
+      clearTimeout(timer); sequence += 1; cache.clear(); now = requests = hits = 0; snapshot = null; busy = false;
+      date.value = "2026-10-05"; scenario.value = "normal"; question.value = "meal"; blankAnswer(); render("처음으로 돌아왔어요. 정보 조회부터 시작해요.");
+    });
+    panel.append(caption, controls, metrics, cards, questions, answer, status); render("조회 → 다시 조회 → 5분 지나기 순서로 요청 수를 비교해요."); host.replaceChildren(panel);
+  };
   window.WIDGETS["lesson-checks"] = function (host) {
     const inputs = Array.from(host.querySelectorAll("input[data-check]"));
     const summary = host.querySelector(".check-summary");
