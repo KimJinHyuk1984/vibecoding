@@ -390,6 +390,110 @@ window.WIDGETS = window.WIDGETS || {};
     host.replaceChildren(panel);
     render("먼저 직접 실행해보고, 자동 등록을 켠 뒤 새 신청을 넣어보세요.");
   };
+  // 사진 선택과 저장, 검색과 상태 변경을 구분하는 브라우저 메모리 모형입니다.
+  window.WIDGETS["lost-lab"] = function (host) {
+    const panel = node("div", "lost-lab");
+    const heading = node("h3", "", "분실물 탐정이 되어보기");
+    const caption = node("p", "lost-caption", "그림으로 만든 모의 체험 · 실제 파일 업로드와 Google 연결은 하지 않아요. 새로고침하면 처음으로 돌아와요.");
+    const upload = node("div", "lost-upload");
+    const preview = node("p", "lost-preview", "연습 사진을 선택하면 미리보기만 준비돼요.");
+    const choose = node("button", "button lost-choose", "① 연습 사진 선택");
+    const save = node("button", "button button-primary lost-save", "② 등록");
+    const reset = node("button", "button lost-reset", "체험 초기화");
+    [choose, save, reset].forEach(function (b) { b.type = "button"; });
+    upload.append(choose, save, reset, preview);
+    const filters = node("div", "lost-filters");
+    const searchLabel = node("label", "lost-search-label", "물건·특징·장소 검색");
+    const search = node("input", "lost-search"); search.type = "search"; search.maxLength = 80; search.placeholder = "예: 체육관";
+    searchLabel.append(search);
+    function select(label, cls, values) {
+      const wrap = node("label", "", label), control = node("select", cls);
+      values.forEach(function (v) { const opt = node("option", "", v); opt.value = v; control.append(opt); });
+      wrap.append(control); filters.append(wrap); return control;
+    }
+    filters.append(searchLabel);
+    const kind = select("종류", "lost-kind", ["전체", "문구", "의류", "전자기기", "기타"]);
+    const state = select("상태", "lost-state", ["보관중", "반환완료", "전체"]);
+    const clear = node("button", "button lost-clear", "조건 초기화"); clear.type = "button"; filters.append(clear);
+    const tools = node("div", "lost-tools");
+    const failLabel = node("label", "lost-fail-label");
+    const fail = node("input", "lost-fail"); fail.type = "checkbox";
+    failLabel.append(fail, document.createTextNode("사진 읽기 실패 체험"));
+    const count = node("p", "lost-count"); count.setAttribute("aria-live", "polite");
+    tools.append(count, failLabel);
+    const list = node("div", "lost-list");
+    const status = node("p", "lost-status", "① 사진 선택 뒤 목록이 늘어나는지 먼저 보세요."); status.setAttribute("role", "status");
+    const help = node("p", "lost-caption", "아래 반환 버튼은 운영자 동작 체험이에요. 실제 앱의 반환 처리는 운영자의 시트 메뉴에서만 합니다.");
+    let items, selected = false, registered = false;
+    function initial() {
+      return [
+        {id:"L-01",title:"검정 우산",kind:"기타",place:"체육관",detail:"손잡이에 별 무늬",shape:"umbrella",returned:false},
+        {id:"L-02",title:"초록 물병",kind:"기타",place:"운동장",detail:"뚜껑에 고리",shape:"bottle",returned:false},
+        {id:"L-03",title:"흰 이어폰",kind:"전자기기",place:"도서관",detail:"둥근 충전 케이스",shape:"earbuds",returned:false}
+      ];
+    }
+    function picture(item) {
+      const frame = node("div", "lost-picture");
+      if (fail.checked) { frame.append(node("span", "", "사진을 불러올 수 없음")); return frame; }
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 180 90"); svg.setAttribute("role", "img"); svg.setAttribute("aria-label", item.title + " 모형 그림");
+      const paths = {
+        umbrella: "M40 45 Q90 -12 140 45 Z M90 45 V72 Q90 88 77 78 M40 45 Q55 32 65 45 Q78 32 90 45 Q102 32 115 45 Q127 32 140 45",
+        bottle: "M77 19 V8 H103 V19 M70 25 Q70 19 77 19 H103 Q110 19 110 25 V74 Q110 82 102 82 H78 Q70 82 70 74 Z M70 40 H110 M70 65 H110",
+        earbuds: "M60 40 H120 Q130 40 130 52 V70 Q130 80 118 80 H62 Q50 80 50 70 V52 Q50 40 60 40 Z M64 40 V20 Q64 10 74 10 Q84 10 84 20 V34 M96 34 V20 Q96 10 106 10 Q116 10 116 20 V40 M50 56 H130",
+        pencil: "M35 30 H145 V70 H35 Z M35 40 H145 M130 40 V51 H138 V40 M54 53 H111"
+      };
+      const shape = document.createElementNS("http://www.w3.org/2000/svg", "path"); shape.setAttribute("d", paths[item.shape]); svg.append(shape); frame.append(svg); return frame;
+    }
+    function draw(message, returnFocus) {
+      const term = search.value.trim().toLocaleLowerCase();
+      const matches = items.filter(function (item) {
+        return [item.title, item.place, item.detail].join(" ").toLocaleLowerCase().includes(term) && (kind.value === "전체" || item.kind === kind.value) && (state.value === "전체" || (item.returned ? "반환완료" : "보관중") === state.value);
+      });
+      panel.dataset.total = String(items.length); panel.dataset.registered = String(registered);
+      save.disabled = !selected;
+      count.textContent = "결과 " + matches.length + "개 / 전체 " + items.length + "개";
+      list.replaceChildren();
+      matches.forEach(function (item) {
+        const card = node("article", "lost-card"); card.dataset.item = item.id;
+        card.append(picture(item), node("h4", "", item.title), node("p", "lost-item-meta", item.place + " · " + item.kind), node("p", "lost-item-detail", item.detail));
+        card.append(node("p", "lost-badge", item.id + " · " + (item.returned ? "반환완료" : "보관중")));
+        const button = node("button", "button lost-return", item.returned ? "이미 반환완료" : "반환 처리 체험");
+        button.type = "button"; button.disabled = item.returned; button.setAttribute("aria-label", item.title + " " + button.textContent);
+        button.addEventListener("click", function () {
+          if (item.returned) return;
+          item.returned = true;
+          draw(item.title + "을 반환완료로 바꿨어요. 전체 기록은 " + items.length + "개 그대로예요. 상태를 반환완료로 바꾸어 찾아보세요.", item.id);
+        });
+        card.append(button); list.append(card);
+      });
+      if (!matches.length) list.append(node("p", "lost-empty", "조건에 맞는 물건이 없어요. 조건 초기화를 눌러 다시 찾아보세요."));
+      if (message) status.textContent = message;
+      // 반환하면서 카드가 목록에서 사라져도 키보드 사용자의 위치를 잃지 않습니다.
+      if (returnFocus) state.focus();
+    }
+    choose.addEventListener("click", function () {
+      selected = true; preview.textContent = "미리보기: 파란 필통 · 2학년 복도 · 지퍼에 별 장식 (모형 그림). 아직 새로 저장하지 않았어요.";
+      draw(registered ? "같은 연습 사진을 다시 선택했어요. 등록을 눌러도 같은 요청은 한 번만 저장돼요." : "사진 선택만으로는 목록이 늘지 않아요. ② 등록을 눌러보세요.");
+    });
+    save.addEventListener("click", function () {
+      if (!selected) return;
+      if (registered) { draw("같은 요청은 이미 저장됐어요. 사진과 물건 기록을 더 만들지 않아요."); return; }
+      items.push({id:"L-04",title:"파란 필통",kind:"문구",place:"2학년 복도",detail:"지퍼에 별 장식",shape:"pencil",returned:false}); registered = true;
+      preview.textContent = "파란 필통 등록 완료 · 같은 요청을 다시 눌러도 기록은 하나예요.";
+      draw("파란 필통을 등록했어요. 현재 검색 조건과 다르면 목록에 안 보일 수 있어요. 같은 등록 버튼을 한 번 더 눌러보세요.");
+    });
+    search.addEventListener("input", function () { draw(); });
+    [kind, state].forEach(function (control) { control.addEventListener("change", function () { draw(); }); });
+    fail.addEventListener("change", function () { draw(fail.checked ? "사진 읽기만 실패했어요. 물건 설명과 상태는 남아요. 체크를 풀면 다시 보여요." : "사진을 다시 읽었어요. 물건 기록은 바뀌지 않았어요."); });
+    function clearFilters() { search.value = ""; kind.value = "전체"; state.value = "보관중"; }
+    clear.addEventListener("click", function () { clearFilters(); draw("검색 조건을 지웠어요. 보관중인 물건부터 보여요."); });
+    reset.addEventListener("click", function () {
+      items = initial(); selected = registered = false; fail.checked = false; clearFilters();
+      preview.textContent = "연습 사진을 선택하면 미리보기만 준비돼요."; draw("처음의 연습 물건 3개로 돌아왔어요.");
+    });
+    items = initial(); panel.append(heading, caption, upload, filters, tools, list, status, help); draw(); host.replaceChildren(panel);
+  };
   window.WIDGETS["lesson-checks"] = function (host) {
     const inputs = Array.from(host.querySelectorAll("input[data-check]"));
     const summary = host.querySelector(".check-summary");

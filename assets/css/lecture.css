@@ -172,6 +172,39 @@
 .club-table th { color: var(--accent-text); }
 .presentation-stage :is(.club-caption, .club-actions .button, .club-stat strong) { font-size: var(--slide-body); }
 
+/* 분실물 체험: 파일 선택/저장 및 조건/상태 변화의 로컬 모형 */
+.lost-lab { display: grid; gap: var(--space-4); padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface-2); }
+.lost-caption, .lost-preview, .lost-item-meta { color: var(--text-muted); font-size: var(--font-small); }
+.lost-upload, .lost-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.lost-preview { flex-basis: 100%; }
+.lost-filters { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: var(--space-3); align-items: end; }
+.lost-filters label { display: grid; gap: var(--space-2); min-width: 0; }
+.lost-filters :is(input, select) { width: 100%; min-width: 0; min-height: 48px; padding: var(--space-3); font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--control-border); border-radius: var(--radius-md); }
+.lost-search::placeholder { color: var(--text-muted); opacity: 1; }
+.lost-lab .button { min-height: 48px; font-size: var(--font-small); }
+.lost-lab :disabled { opacity: 0.55; cursor: default; }
+.lost-tools { justify-content: space-between; }
+.lost-fail-label { display: flex; align-items: center; gap: var(--space-3); min-height: 44px; cursor: pointer; }
+.lost-fail { width: 22px; height: 22px; accent-color: var(--accent-text); }
+.lost-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--space-4); }
+.lost-card { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid var(--border); background: var(--bg); border-radius: var(--radius-md); min-width: 0; }
+.lost-card h4 { margin: 0; font-size: var(--font-body); }
+.lost-card .button { width: 100%; margin-top: var(--space-2); }
+.lost-picture { display: grid; place-items: center; min-height: 80px; background: var(--surface-2); border-radius: var(--radius-sm); text-align: center; color: var(--text-muted); }
+.lost-picture svg { height: 80px; width: 100%; }
+.lost-picture path { fill: none; stroke: var(--accent-text); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.lost-badge { color: var(--accent-text); font-weight: var(--weight-heading); }
+.lost-status { min-height: 3em; font-weight: var(--weight-heading); }
+.lost-lab :is(input, select):focus-visible { outline: 3px solid var(--accent-text); outline-offset: 4px; }
+.lost-empty { grid-column: 1 / -1; padding: var(--space-5); }
+.presentation-stage :is(.lost-caption, .lost-preview, .lost-item-meta, .lost-card h4, .lost-lab .button) { font-size: var(--slide-body); }
+/* 발표 화면에서 설명과 조작 영역을 모두 유지합니다. */
+.presentation-stage .lost-lab { gap: var(--space-2); padding: var(--space-4); }
+.presentation-stage .lost-lab > .lost-caption { font-size: var(--slide-body); }
+.presentation-stage .lost-card { padding: var(--space-3); }
+.presentation-stage .lost-picture, .presentation-stage .lost-picture svg { min-height: 48px; height: 48px; }
+.presentation-stage .lost-status { min-height: 0; }
+
 /* 발표 모드에서도 프롬프트 전문과 입력 컨트롤을 읽을 수 있게 유지합니다. */
 .presentation-stage .lead-question { font-size: 44px; }
 .presentation-stage pre.prompt-block { font-size: var(--slide-code); }
@@ -198,6 +231,11 @@
   .club-table :is(th, td) { padding: var(--space-2); }
   .club-table th:nth-child(1) { width: 26%; }
   .club-table th:nth-child(2) { width: 22%; }
+  .lost-lab { padding: var(--space-4); }
+  .lost-filters { grid-template-columns: 1fr 1fr; }
+  .lost-search-label, .lost-clear { grid-column: 1 / -1; }
+  .lost-list { grid-template-columns: 1fr; }
+  .lost-upload .button { flex: 1 1 120px; }
   .role-comparison > div + div { padding-top: var(--space-5); border-top: 1px solid var(--border); }
   .build-cycle { grid-template-columns: 1fr 1fr; }
   .stairs-game { padding: var(--space-4); }

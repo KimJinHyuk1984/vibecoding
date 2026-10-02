@@ -29,12 +29,12 @@ window.SITE = {
   },
 
   // ── 이 아래는 강의마다 교체한다 ──
-  // plan2.md의 6개 프로젝트. 1~3회 공개, 다음 본문은 피드백 후 작성합니다.
+  // plan2.md의 6개 프로젝트. 1~4회 공개, 다음 본문은 피드백 후 작성합니다.
   levels: [
     {"slug":"lesson-01","badge":"1회","title":"내 게임을 우리 반 서비스로","subtitle":"말로 만든 무한의 계단을 내 취향으로 꾸미고, 기록을 저장해 친구들과 함께 사용합니다.","kicker":"BUILD · SAVE · SHARE","duration":"","target":"고등학생","difficulty":"입문","tags":["첫 게임","Sheets 저장","공유 랭킹"],"accent":"neon-green","emoji":"","cover":"","status":"ready"},
     {"slug":"lesson-02","badge":"2회","title":"우리 학교 축제 운영 서비스","subtitle":"친구들의 관심을 조사하고, 예약과 취소를 받아 운영 현황까지 한눈에 봅니다.","kicker":"SURVEY · BOOK · UNDERSTAND","duration":"","target":"고등학생","difficulty":"기초","tags":["Forms 설문","예약·취소","대시보드"],"accent":"neon-green","emoji":"","cover":"","status":"ready"},
     {"slug":"lesson-03","badge":"3회","title":"일하는 동아리 자동 비서","subtitle":"신청을 일정과 연결하고 활동 기록을 보고서와 PDF로 완성합니다.","kicker":"CONNECT · AUTOMATE · DOCUMENT","duration":"","target":"고등학생","difficulty":"기초","tags":["트리거","Calendar","Docs·PDF"],"accent":"violet","emoji":"","cover":"","status":"ready"},
-    {"slug":"lesson-04","badge":"4회","title":"우리 학교 분실물 센터","subtitle":"사진을 등록하고 장소·종류로 검색하며 반환 상태를 관리합니다.","kicker":"CONNECT FILES","duration":"","target":"고등학생","difficulty":"활용","tags":["파일 업로드","Drive","검색"],"accent":"violet","emoji":"","cover":"","status":"coming"},
+    {"slug":"lesson-04","badge":"4회","title":"우리 학교 분실물 센터","subtitle":"사진을 등록하고 장소·종류로 검색하며 반환 상태를 관리합니다.","kicker":"UPLOAD · FIND · RETURN","duration":"","target":"고등학생","difficulty":"활용","tags":["파일 업로드","Drive","검색"],"accent":"violet","emoji":"","cover":"","status":"ready"},
     {"slug":"lesson-05","badge":"5회","title":"우리 학교 정보 도우미","subtitle":"외부 API로 정보를 가져오고 사용 가능한 AI 서비스로 답변 기능을 확장합니다.","kicker":"CONNECT AN API","duration":"","target":"고등학생","difficulty":"활용","tags":["외부 API","JSON","AI 연동"],"accent":"amber","emoji":"","cover":"","status":"coming"},
     {"slug":"lesson-06","badge":"6회","title":"내 아이디어를 실제 서비스로","subtitle":"배운 기능으로 내 앱을 만들고 오류 해결과 친구 테스트로 개선합니다.","kicker":"BUILD YOUR IDEA","duration":"","target":"고등학생","difficulty":"도전","tags":["독립 제작","오류 해결","사용자 테스트"],"accent":"amber","emoji":"","cover":"","status":"coming"}
   ],

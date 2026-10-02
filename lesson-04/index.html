@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="사진과 물건 정보를 저장하고 검색·반환 상태·접근 권한을 연결하는 고등학생 바이브코딩 프로젝트.">
+  <meta name="color-scheme" content="light dark">
+  <title>4회 · 우리 학교 분실물 센터</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/lecture.css">
+  <script src="../data/site.js" defer></script>
+  <script src="../assets/js/shared.js" defer></script>
+  <script src="../assets/js/widgets.js" defer></script>
+</head>
+<body data-level="lesson-04">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__fill" data-progress></div></div>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="강의 처음으로"><span class="brand-title" data-lecture-title>우리 학교 분실물 센터</span></a>
+      <nav class="section-nav" aria-label="강의 섹션" data-section-nav></nav>
+      <div class="header-actions">
+        <button class="button" type="button" data-presentation-toggle>발표 모드 <kbd>P</kbd></button>
+        <button class="button button-primary" type="button" data-open-instructor>선생님 소개</button>
+        <button class="button button-icon" type="button" data-theme-toggle aria-label="테마 전환"><svg data-theme-icon width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><div class="container">
+<section class="hero lesson-hero" id="top" aria-labelledby="lecture-title"><p class="kicker" data-lecture-kicker>UPLOAD · FIND · RETURN</p><h1 id="lecture-title" data-lecture-title>우리 학교<br>분실물 센터</h1><p class="hero-subtitle" data-lecture-subtitle>사진을 등록하고 장소·종류로 검색하며 반환 상태를 관리합니다.</p><div class="hero-meta" data-lecture-badges aria-label="강의 정보"></div><div class="lesson-actions"><a class="button button-primary" href="#lost-demo">분실물 센터 먼저 체험 ↓</a><a class="button" href="#build-screen">내 화면 만들기</a><a class="button" href="#fix-it">막혔을 때 도움</a></div><p class="hero-promise">이번 프로젝트의 도착점<strong>내가 올린 사진을 친구가 찾고, 주인에게 돌아간 기록까지 남기는 것</strong></p><div class="hero-byline"><button class="text-button" type="button" data-open-instructor><span data-instructor-name></span> 선생님</button><span data-instructor-affiliation></span></div></section>
+<section class="lecture-section" id="meet-lost" aria-labelledby="meet-lost-title" data-reveal><div class="section-heading"><p class="kicker">01 / IS THIS YOURS?</p><h2 id="meet-lost-title">내 이어폰, 누가 봤어?</h2><p class="section-description">단체 채팅을 끝없이 올려보는 대신, 사진과 특징으로 분실물을 찾는 공간을 만들어요.</p></div><div class="example-stack"><div data-slide data-slide-title="이번 프로젝트의 출발점" ><p class="lead-question">“체육관에서 주운 이 우산,<br>혹시 네 거야?”</p><div class="spec-grid"><div><h3>등록하기</h3><p>사진과 발견 장소를 한 번에 남겨요.</p></div><div><h3>찾아보기</h3><p>종류·장소·특징으로 후보를 좁혀요.</p></div><div><h3>돌려주기</h3><p>실제 반환 뒤 상태를 바꿔 중복 안내를 줄여요.</p></div></div></div><div id="lost-demo" data-widget="lost-lab" data-slide data-slide-title="먼저 체험 · 등록하고 찾아 돌려주기" data-slide-fit="contain"><div class="callout"><div><strong>사진 선택 → 등록 → 검색 → 반환 상태</strong><p>사진을 고르는 것과 저장하는 것은 달라요. 이 체험은 그림으로 만든 연습이며 실제 파일을 업로드하거나 Google에 연결하지 않습니다. 반환 버튼은 운영자 동작을 체험하는 용도예요.</p></div></div></div><div data-slide data-slide-title="이번에는 파일도 함께 움직여요" ><div class="data-route"><div><h3>HTML 화면</h3><p>사진 선택·미리보기<br>등록·검색·목록</p></div><div><h3>Apps Script</h3><p>입력 확인·저장<br>요청한 사진 읽기</p></div><div><h3>Sheets + Drive</h3><p>시트에는 물건 정보<br>Drive에는 사진 파일</p></div></div><p class="after-note">1·2회의 웹 앱에 <strong>파일 업로드</strong>를 더해요. 사진 속 물건을 AI가 알아맞히는 기능은 이번 기본 과정에 포함하지 않아요.</p></div></div></section>
+
+<section class="lecture-section" id="plan-items" aria-labelledby="plan-items-title" data-reveal><div class="section-heading"><p class="kicker">02 / DESCRIBE WHAT YOU FOUND</p><h2 id="plan-items-title">사진만으로 설명되지 않는 것들</h2><p class="section-description">사진 옆에 어떤 정보가 있어야 친구가 자기 물건을 찾을 수 있을까요?</p></div><div class="example-stack"><div data-slide data-slide-title="물건 한 건에 필요한 정보" ><div class="spec-grid"><div><h3>무엇인가요?</h3><p>물건명 · 종류 · 특징
+예: 검정 우산 / 기타 / 손잡이에 별 무늬</p></div><div><h3>어디서 발견했나요?</h3><p>발견 장소 · 날짜
+예: 체육관 / 2026-10-10</p></div><div><h3>어떻게 확인하나요?</h3><p>사진 한 장 · 보관중/반환완료
+예: 사진 확인 후 담당자에게 문의</p></div></div><p class="after-note">연습에는 내 물건을 찍어요. 얼굴·이름표·학생증·연락처가 보이지 않게 하고, 실제 주인의 이름은 입력받지 않아요.</p></div><div data-slide data-slide-title="공개할 정보와 관리할 정보" ><div class="role-comparison"><div><h3>친구가 보는 화면</h3><p>물건명·특징·발견 장소·날짜·상태와 사진. 수령 안내는 “담당자에게 물건의 특징을 설명해주세요”.</p></div><div><h3>운영자의 시트</h3><p>고유 물건번호·사진 파일ID·저장 상태·반환 시각. 실제 주인 확인과 전달 뒤 운영자가 반환 처리해요.</p></div></div><p class="after-note">한 줄은 물건 한 개예요. 물건명이 같아도 번호가 다르면 서로 다른 물건입니다.</p></div></div></section>
+
+<section class="lecture-section" id="build-screen" aria-labelledby="build-screen-title" data-reveal><div class="section-heading"><p class="kicker">03 / MAKE IT VISIBLE</p><h2 id="build-screen-title">우선 눈에 보이는 분실물 센터</h2><p class="section-description">새 AI 채팅에서 시작해요. 원하는 동작을 말하고 파일 전체를 받아 실행합니다.</p></div><div class="example-stack"><pre class="prompt-block" id="prompt-screen" data-code data-language="text" data-label="PROMPT 01 · 분실물 센터 화면" data-slide data-slide-title="PROMPT 01 · 분실물 센터 화면"><code>고등학생이 사용할 ‘우리 학교 분실물 센터’를 만들고 싶어. 나는 코드를 읽지 못해.
+브라우저에서 바로 열 수 있는 index.html 전체를 줘. 외부 라이브러리는 쓰지 마.
+물건명, 종류, 특징, 발견 장소, 발견 날짜를 입력하는 등록 화면을 만들어줘.
+종류는 문구, 의류, 전자기기, 기타 중에서 고르게 해줘.
+사진은 JPG나 PNG 한 장, 최대 1MB로 정하고 고르면 미리 보이게 해줘.
+이 수업에서 1MB는 1,048,576바이트야. HEIC나 너무 큰 파일은 바꾸는 방법을 알려줘.
+등록 전에는 미리보기일 뿐이고 아직 저장되지 않았다는 안내를 보여줘.
+검정 우산, 초록 물병, 흰 이어폰 예시 카드를 보여주고 ‘연습 데이터’라고 표시해줘.
+지금은 저장하지 말고 등록 버튼을 누르면 ‘아직 서버 연결 전’이라고 알려줘.
+이름·연락처는 받지 말고 휴대폰에서도 글자와 버튼이 편하게 보이게 해줘.</code></pre><div data-slide data-slide-title="화면과 미리보기를 먼저 확인해요" ><ol class="instruction-list"><li><strong>Docs ‘4회_분실물 센터’를 만들고 받은 index.html을 보관해요.</strong><span>앞으로 같은 AI 채팅에서 이어가며, 고쳐 달라고 할 때 현재 파일 전체를 함께 줘요.</span></li><li><strong>AI 도구의 실행 미리보기 또는 저장한 index.html을 열어요.</strong><span>파일로 저장한다면 확장자가 .html인지 확인해요. 지금 단계에서는 로컬 파일로 열어도 돼요.</span></li><li><strong>연습용 JPG 또는 PNG를 선택해요.</strong><span>사진이 보여도 아직 Drive에는 없어요. 바꾸기·취소와 휴대폰 화면을 확인해요.</span></li></ol></div><div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ① 보이는 것과 저장된 것"><div class="check-list"><label><input type="checkbox" data-check="lost-preview"> 사진을 선택하면 미리 보이고, 아직 저장 전임을 설명할 수 있다.</label><label><input type="checkbox" data-check="lost-screen"> 등록 칸과 연습 카드가 휴대폰 폭에서도 읽힌다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div></section>
+
+<section class="lecture-section" id="prepare-storage" aria-labelledby="prepare-storage-title" data-reveal><div class="section-heading"><p class="kicker">04 / TWO PLACES TO SAVE</p><h2 id="prepare-storage-title">글자는 시트에, 사진은 Drive에</h2><p class="section-description">한 팀에서 담당자 한 명이 새 시트·폴더·Apps Script를 준비해요.</p></div><div class="example-stack"><div data-slide data-slide-title="이번 프로젝트만의 저장 공간" ><ol class="instruction-list"><li><strong>새 Sheets ‘4회_분실물 목록’을 만들어요.</strong><span>아래 첫 탭 이름은 ‘분실물’. 시트 전체 주소를 개인 Docs에 보관해요. 열 제목은 AI 코드가 준비하게 할 거예요.</span></li><li><strong>내 Drive에 새 폴더 ‘4회_분실물 사진’을 만들어요.</strong><span>폴더 전체 주소도 보관해요. 다른 사람에게 이미 공유한 폴더 안에 만들지 말고 일반 액세스는 ‘제한됨’으로 두어요.</span></li><li><strong>새 시트에서 확장 프로그램 → Apps Script를 열어요.</strong><span>프로젝트 이름을 ‘4회_분실물 센터’로 바꿔요. 시트와 폴더의 편집 권한은 운영자만 가져요.</span></li></ol><div class="lesson-actions"><a class="button button-primary" href="https://sheets.google.com/" target="_blank" rel="noopener noreferrer">Sheets 열기 ↗</a><a class="button" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Drive 열기 ↗</a></div></div><div data-slide data-slide-title="주소는 코드 대신 설정 화면에" ><div class="file-contract"><h3>SHEET_URL</h3><p>새 분실물 시트의 주소 전체를 넣어요.</p></div><div class="file-contract"><h3>PHOTO_FOLDER_URL</h3><p>새 사진 폴더의 주소 전체를 넣어요.</p></div><p class="after-note">Apps Script → 프로젝트 설정 → 스크립트 속성에서 두 이름과 값을 저장해요. 프로젝트와 시트 시간대는 Asia/Seoul(서울)로 맞춰요.</p></div></div></section>
+
+<section class="lecture-section" id="save-items" aria-labelledby="save-items-title" data-reveal><div class="section-heading"><p class="kicker">05 / SAVE ONE ITEM FIRST</p><h2 id="save-items-title">먼저 물건 정보 한 건을 저장해요</h2><p class="section-description">글자 저장이 확인된 다음 사진을 연결하면, 문제가 생긴 단계를 찾기 쉬워요.</p></div><div class="example-stack"><pre class="prompt-block" id="prompt-server" data-code data-language="text" data-label="PROMPT 02 · 글자를 저장할 Code.gs" data-slide data-slide-title="PROMPT 02 · 글자를 저장할 Code.gs" data-slide-lines="1-7"><code>이제 Google Sheets에 분실물 정보를 저장할 Code.gs 전체를 만들어줘.
+이 시트에서 연 Apps Script이고, 설정 SHEET_URL에는 시트 전체 주소를 넣었어.
+설정 PHOTO_FOLDER_URL에는 사진 폴더 주소가 있어. 사진 저장은 다음 단계에서 할 거야.
+같은 프로젝트의 index.html을 웹 앱 화면으로 열어줘.
+‘분실물’ 탭에 물건번호, 등록시각, 물건명, 종류, 특징, 발견장소, 발견날짜를 저장해줘.
+사진파일ID, 상태, 반환시각, 요청번호, 저장상태 칸도 준비하고 기존 내용은 보존해줘.
+필수 내용을 확인하고 종류는 정한 네 가지, 날짜는 실제 있는 YYYY-MM-DD만 받아줘.
+물건명·장소는 40자, 특징은 200자까지로 하고 글은 수식이나 명령으로 실행하지 마.
+물건번호는 고유하게 만들고 처음 상태는 ‘보관중’으로 해줘.
+같은 요청번호를 다시 보내거나 동시에 눌러도 물건 한 건만 저장해줘.
+성공 확인 전에 성공이라고 말하지 말고, 실패하면 이유를 알려줘.
+목록에는 저장 완료한 물건의 공개 정보만 보내고 내부 관리 칸은 보내지 마.
+화면에서 호출할 함수 이름과 주고받을 내용을 다음 화면 연결에 쓸 수 있게 알려줘.</code></pre><template data-slide data-slide-title="PROMPT 02 · 글자를 저장할 Code.gs · 이어서" data-slide-code="prompt-server" data-slide-lines="8-13"></template><pre class="prompt-block" id="prompt-connect" data-code data-language="text" data-label="PROMPT 03 · 내 화면을 실제 저장과 연결" data-slide data-slide-title="PROMPT 03 · 내 화면을 실제 저장과 연결" data-slide-lines="1-6"><code>방금 만든 Code.gs와 내 index.html 전체를 함께 줄게. 두 파일을 연결해줘.
+화면은 Apps Script에서 열고 서버와는 google.script.run으로 통신해줘.
+연습 카드는 지우고 실제 시트의 저장 완료 목록만 보여줘.
+아직 사진은 저장하지 않으므로 선택 기능을 잠시 끄고 ‘글자 저장 단계’라고 안내해줘.
+등록을 누르면 입력을 확인하고 요청번호 하나로 보내줘. 기다리는 동안 다시 누르지 못하게 해줘.
+응답을 놓쳐도 같은 요청번호로 결과를 확인하거나 다시 시도해줘.
+성공하기 전까지 입력과 요청번호를 보관하고, 확인 뒤에만 새 등록을 시작해줘.
+성공·실패·목록이 비어 있음·불러오는 중을 서로 다르게 알려줘.
+날짜는 화면과 서버에서 주고받기 쉬운 글자 형태로 보내줘.
+사용자가 적은 글은 그대로 글자로 보여주고 HTML로 실행하지 마.
+서로 맞는 index.html과 Code.gs 전체를 각각 줘. 바꿔야 할 파일을 분명히 알려줘.</code></pre><template data-slide data-slide-title="PROMPT 03 · 내 화면을 실제 저장과 연결 · 이어서" data-slide-code="prompt-connect" data-slide-lines="7-11"></template><div data-slide data-slide-title="파일 두 개를 넣고 나만 볼 수 있게 배포" ><ol class="instruction-list"><li><strong>받은 Code.gs 전체를 붙이고 HTML 파일을 추가해 이름을 index로 정해요.</strong><span>HTML 편집 화면에는 받은 index.html 전체를 붙여요. 두 파일을 저장해요.</span></li><li><strong>배포 → 새 배포 → 웹 앱을 선택해요.</strong><span>실행 계정은 나, 액세스는 우선 나만으로 시험해요. 필요한 Sheets·Drive 권한을 확인해요.</span></li><li><strong>배포된 /exec 주소에서 물건 한 건을 등록해요.</strong><span>로컬 HTML이나 AI 미리보기는 서버 연결 시험이 아니에요. 시트 한 줄과 새로고침한 목록을 대조해요.</span></li></ol><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/web" target="_blank" rel="noopener noreferrer">Google · 웹 앱 배포 ↗</a></p></div><div data-slide data-slide-title="수정할 때마다 같은 배포를 갱신해요" ><ol class="instruction-list"><li><strong>새 코드를 받을 때마다 해당 파일 전체를 교체하고 저장해요.</strong><span>이번부터는 배포된 앱에서 확인합니다. 코드 저장만으로 기존 /exec 화면이 바뀌지 않을 수 있어요.</span></li><li><strong>배포 → 배포 관리 → 연필 → 새 버전 → 배포를 선택해요.</strong><span>같은 배포 주소를 새로고침해 바뀐 기능을 확인해요.</span></li><li><strong>물건 한 건이 정확히 저장되면 v1로 보관해요.</strong><span>Docs에 두 파일 전체와 실제 시트·목록 확인 결과를 남겨요.</span></li></ol></div></div></section>
+
+<section class="lecture-section" id="upload-photo" aria-labelledby="upload-photo-title" data-reveal><div class="section-heading"><p class="kicker">06 / FROM PREVIEW TO FILE</p><h2 id="upload-photo-title">이제 사진도 진짜 저장하기</h2><p class="section-description">선택 → 미리보기 → 서버 확인 → Drive 저장 → 물건 정보와 연결. 단계별로 확인해요.</p></div><div class="example-stack"><pre class="prompt-block" id="prompt-upload" data-code data-language="text" data-label="PROMPT 04 · 사진 한 장을 물건과 연결" data-slide data-slide-title="PROMPT 04 · 사진 한 장을 물건과 연결" data-slide-lines="1-8"><code>현재 두 파일에 사진 업로드를 연결해줘. 앞으로 새 물건에는 사진 한 장이 필수야.
+JPG·PNG만, 최대 1,048,576바이트로 해줘. 화면과 서버가 모두 검사해야 해.
+확장자만 보지 말고 실제 파일 내용과 종류도 확인하고 빈 파일은 받지 마.
+사진을 고르면 미리 보이고, 등록을 눌렀을 때만 Apps Script로 보내줘.
+설정 PHOTO_FOLDER_URL 폴더에 고유한 이름으로 저장하고 시트에는 파일ID를 연결해줘.
+Drive 파일이나 폴더를 누구나 볼 수 있게 바꾸지 마. 원래 파일명도 공개하지 마.
+사진과 시트 기록이 모두 연결된 뒤에만 완료를 알리고 목록에 보여줘.
+같은 요청을 다시 보내도 파일과 물건이 늘지 않게 해줘. 기존 요청번호를 유지해줘.
+사진만 생겼다면 같은 요청의 파일을 찾아 이어가고, 불확실하면 확인이 필요하다고 알려줘.
+이미 성공한 파일은 지우지 말고 다른 폴더나 물건의 파일도 건드리지 마.
+카드의 ‘사진 보기’를 누르면 그 물건의 사진 한 장만 서버가 읽어 화면에 보여줘.
+사진 요청에는 물건번호만 받고, 이 시트와 지정 폴더에 연결된 파일인지 확인해줘.
+Drive 주소를 그림 주소로 쓰거나 외부에서 준 파일ID를 그대로 열지 마.
+사진을 못 읽어도 물건 설명은 남기고 ‘사진을 불러올 수 없음’과 다시 시도를 보여줘.
+이전 글자 연습 기록에는 ‘사진 없음’을 보여주고, 파일을 바꾸거나 취소할 수도 있게 해줘.
+나머지 기능을 유지한 index.html과 Code.gs 전체를 줘.</code></pre><template data-slide data-slide-title="PROMPT 04 · 사진 한 장을 물건과 연결 · 이어서" data-slide-code="prompt-upload" data-slide-lines="9-16"></template><div data-slide data-slide-title="등록 전후 세 곳을 비교해요" ><ol class="instruction-list"><li><strong>두 파일과 배포를 갱신한 뒤 사진이 있는 새 물건을 등록해요.</strong><span>수업에서 정한 1MB 이하 JPG·PNG를 사용해요. 큰 사진은 크기를 줄이고 HEIC는 JPG·PNG로 내보내요.</span></li><li><strong>Drive 폴더의 사진 한 개와 시트의 물건 한 줄을 확인해요.</strong><span>단순 미리보기가 아니라 실제 파일이 생겼는지 봐요. 두 번 눌러도 둘이 늘면 안 돼요.</span></li><li><strong>앱을 새로고침하고 카드의 ‘사진 보기’를 눌러요.</strong><span>새 창에서도 같은 사진이 보이면 저장·읽기를 연결한 거예요. 사진 원본의 공유 설정은 제한됨으로 남아야 해요.</span></li></ol></div><div data-slide data-slide-title="기술 한 걸음 · 사진 주소가 곧 사진은 아니에요" ><div class="spec-grid"><div><h3>Blob · 파일 묶음</h3><p>서버가 파일 내용과 종류를 받아 Drive에 저장해요.</p></div><div><h3>파일ID · 연결 번호</h3><p>시트는 사진 자체 대신 어떤 파일인지 가리키는 번호를 보관해요.</p></div><div><h3>사진 읽기</h3><p>앱이 요청받은 물건의 파일을 읽어 이미지 데이터로 보여줘요.</p></div></div><p class="after-note">Drive의 보기 페이지 주소를 이미지 주소처럼 붙이면 안 보일 수 있어요. 이번 방식은 서버가 사진 내용을 전달하므로 앱을 볼 수 있는 범위도 중요해요.</p><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/html/communication" target="_blank" rel="noopener noreferrer">Google · 화면과 서버 통신, 파일 전달 ↗</a></p></div><div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ② 사진 한 장과 물건 한 줄"><div class="check-list"><label><input type="checkbox" data-check="lost-saved"> Drive 사진과 시트 한 줄이 연결되고, 새로고침 뒤에도 사진이 보인다.</label><label><input type="checkbox" data-check="lost-once"> 반복 등록·실패 후 재시도에서 같은 요청의 파일과 물건이 중복되지 않는다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div></section>
+
+<section class="lecture-section" id="find-items" aria-labelledby="find-items-title" data-reveal><div class="section-heading"><p class="kicker">07 / NARROW IT DOWN</p><h2 id="find-items-title">찾고 싶은 물건만 남겨보기</h2><p class="section-description">사진을 눈으로 비교하고, 글자·종류·상태로 후보를 좁혀요.</p></div><div class="example-stack"><pre class="prompt-block" id="prompt-search" data-code data-language="text" data-label="PROMPT 05 · 검색과 필터" data-slide data-slide-title="PROMPT 05 · 검색과 필터"><code>지금 분실물 센터에 검색창과 종류·상태 선택을 추가해줘.
+검색어는 물건명, 특징, 발견 장소 어디에 들어 있어도 찾게 해줘.
+앞뒤 빈칸은 무시하고 영문은 대소문자를 구분하지 마.
+종류는 전체·문구·의류·전자기기·기타, 상태는 보관중·반환완료·전체야.
+처음에는 보관중을 보여주고 검색어와 두 조건을 모두 만족하는 물건만 보여줘.
+결과 개수, 검색 결과 없음, 조건 초기화 버튼을 넣어줘.
+서버에서 모든 조건으로 찾은 뒤 한 번에 최대 6개씩 보여줘. 다음·이전으로 이어서 보게 해줘.
+사진은 사진 보기로 한 장씩 읽고, 빈칸이나 오래된 응답 때문에 다른 물건 사진이 섞이지 않게 해줘.
+입력한 글을 명령처럼 실행하지 말고 기존 등록과 사진 기능을 유지해줘.
+바뀐 index.html과 Code.gs 전체를 줘.</code></pre><div data-slide data-slide-title="검색은 원본을 지우는 일이 아니에요" ><div class="spec-grid"><div><h3>장소 검색</h3><p>‘체육관’으로 찾고 시트의 해당 물건과 비교해요.</p></div><div><h3>조건 함께 쓰기</h3><p>‘이어폰’ + 전자기기 + 보관중. 세 조건을 함께 만족해야 해요.</p></div><div><h3>0개도 정상</h3><p>없는 단어를 넣으면 결과 없음. 초기화하면 보관중 목록으로 돌아와요.</p></div></div><p class="after-note">7개 이상 등록해 두 번째 페이지도 시험해요. 필터를 바꾸면 첫 페이지로 돌아가야 합니다. 잘되면 두 파일을 <strong>v2 · 사진과 검색</strong>으로 보관해요.</p></div><div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ③ 조건에 맞는 목록"><div class="check-list"><label><input type="checkbox" data-check="lost-filter"> 검색어·종류·상태를 함께 바꿔도 예상한 물건만 나온다.</label><label><input type="checkbox" data-check="lost-empty"> 결과 0개·조건 초기화·두 번째 페이지를 확인했다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div></section>
+
+<section class="lecture-section" id="return-item" aria-labelledby="return-item-title" data-reveal><div class="section-heading"><p class="kicker">08 / RETURN THE REAL THING</p><h2 id="return-item-title">주인에게 돌려줬다면 상태 바꾸기</h2><p class="section-description">‘내 물건이에요’라는 클릭만으로 끝내지 않아요. 운영자가 실제 전달 뒤 기록합니다.</p></div><div class="example-stack"><pre class="prompt-block" id="prompt-return" data-code data-language="text" data-label="PROMPT 06 · 운영자만 반환 처리" data-slide data-slide-title="PROMPT 06 · 운영자만 반환 처리" data-slide-lines="1-6"><code>현재 Code.gs에 시트용 ‘분실물 관리’ 메뉴를 추가해줘.
+이 시트를 다시 열면 메뉴가 나오고 ‘선택 물건 반환 완료’로 처리하게 해줘.
+운영자가 ‘분실물’의 물건 한 줄을 선택하고 실제 전달 후 메뉴를 누를 거야.
+물건번호·물건명을 먼저 보여주고 확인을 받아 상태와 반환시각만 바꿔줘.
+제목·빈 줄·여러 줄은 처리하지 말고, 확인하는 사이 행이 바뀌어도 같은 물건번호를 찾아줘.
+이미 반환완료라면 다시 바꾸거나 반환시각을 덮어쓰지 마.
+사진과 물건 기록은 보존해줘. 처리 뒤 앱에서 새로고침하면 새 상태가 보여야 해.
+반환은 시트 메뉴에서만 가능해야 하고 웹 앱에는 반환 기능을 열어두지 마.
+메뉴 전용 함수와 내부 보조 함수 이름은 _로 끝내 화면에서 호출하지 못하게 해줘.
+화면에 운영자 비밀번호를 넣거나 버튼을 숨기는 방법으로 대신하지 마.
+기존 저장·검색 기능을 유지한 Code.gs 전체와 필요하면 index.html 전체를 줘.</code></pre><template data-slide data-slide-title="PROMPT 06 · 운영자만 반환 처리 · 이어서" data-slide-code="prompt-return" data-slide-lines="7-11"></template><div data-slide data-slide-title="반환 뒤 목록에서 확인하기" ><ol class="instruction-list"><li><strong>코드를 저장하고 배포를 갱신한 뒤 시트도 새로고침해요.</strong><span>새 ‘분실물 관리’ 메뉴를 확인해요. 운영자만 이 시트를 편집합니다.</span></li><li><strong>연습 물건 한 줄의 셀을 선택해 반환 메뉴를 눌러요.</strong><span>확인 창의 물건번호와 이름을 보고 처리해요. 같은 물건을 다시 처리해도 반환시각이 바뀌면 안 돼요.</span></li><li><strong>앱을 새로고침해 보관중과 반환완료를 비교해요.</strong><span>보관중에서는 사라지고 반환완료·전체에서는 보여야 해요. Drive 사진과 원래 기록은 그대로 남아요.</span></li></ol><p class="after-note">이 실습의 반환 표시는 기록이에요. 실제 주인 확인과 물건 전달은 담당자가 합니다.</p></div></div></section>
+
+<section class="lecture-section" id="share-test" aria-labelledby="share-test-title" data-reveal><div class="section-heading"><p class="kicker">09 / WHO CAN SEE THE PHOTO?</p><h2 id="share-test-title">내 화면에서만 보이면 아직 확인이 부족해요</h2><p class="section-description">앱을 여는 권한과 Drive 원본을 여는 권한을 구분해요.</p></div><div class="example-stack"><div data-slide data-slide-title="사진을 보여주는 문은 두 곳" ><div class="role-comparison"><div><h3>Drive 원본</h3><p>폴더와 파일은 제한됨. 원본 주소만 안다고 열 수 있는 것은 아니에요.</p></div><div><h3>내 분실물 앱</h3><p>실행 계정인 운영자가 사진을 읽어 전달해요. 앱 이용자는 원본 권한이 없어도 앱 안에서 사진을 볼 수 있어요.</p></div></div><p class="after-note"><strong>Drive를 비공개로 두었다고 앱의 사진까지 비공개가 되는 것은 아니에요.</strong> 앱 접근 범위가 사진을 보여줄 범위가 됩니다.</p><p class="source-note">참고: <a href="https://developers.google.com/apps-script/guides/web" target="_blank" rel="noopener noreferrer">Google · 웹 앱 실행 계정과 접근 ↗</a></p></div><div data-slide data-slide-title="허용된 친구 계정으로 확인하기" ><ol class="instruction-list"><li><strong>선생님과 학교 계정에서 허용되는 배포 범위를 확인해요.</strong><span>기본은 나만. 학교 도메인 내부 옵션이 허용될 때만 그 범위로 넓혀요. 학교 전체와 우리 반은 다른 범위예요.</span></li><li><strong>허용된 친구 계정에 /exec 주소를 전달해 시험해요.</strong><span>등록·목록·사진·검색은 되는지, 시트와 원본 폴더는 편집할 수 없는지 확인해요.</span></li><li><strong>학교 내부 옵션이 없다면 나만 보기로 유지하고 함께 시연해요.</strong><span>친구 접속은 미실행으로 기록해요. 외부 전체 공개나 개인 계정으로 전환해 대신하지 않아요.</span></li></ol></div><div class="check-panel" data-widget="lesson-checks" data-slide data-slide-title="확인 ④ 반환과 공개 범위"><div class="check-list"><label><input type="checkbox" data-check="lost-returned"> 운영자 메뉴로만 반환하고, 앱의 상태 필터와 원본 보존을 확인했다.</label><label><input type="checkbox" data-check="lost-access"> 앱 이용자에게 사진이 전달되는 이유와 현재 배포 범위를 설명할 수 있다.</label></div><p class="check-summary" aria-live="polite">직접 확인한 뒤 체크하세요.</p></div></div></section>
+
+<section class="lecture-section" id="test-and-keep" aria-labelledby="test-and-keep-title" data-reveal><div class="section-heading"><p class="kicker">10 / PROVE IT WORKS</p><h2 id="test-and-keep-title">잘될 때 말고, 헷갈릴 때도 시험하기</h2><p class="section-description">내가 본 결과를 남기면 다음 프로젝트에서도 같은 기능을 자신 있게 조합할 수 있어요.</p></div><div class="example-stack"><div data-slide data-slide-title="반드시 해볼 네 가지 시험" ><div class="test-scenarios"><div><h3>파일 경계</h3><p>사진 없음·0바이트·1MB 초과·다른 형식은 거절. 정상 JPG·PNG는 등록.</p></div><div><h3>다시 누르기</h3><p>등록 연속 클릭·응답 지연 뒤 재시도. 같은 요청의 파일·물건은 하나.</p></div><div><h3>사진만 실패</h3><p>새 연습 파일을 잠시 휴지통에 넣고 열기. 설명은 남고 오류 안내, 복원 후 재시도.</p></div><div><h3>다른 계정과 반환</h3><p>허용된 친구의 조회 범위·시트 편집 불가 확인. 반환해도 파일·기록은 유지.</p></div></div></div><pre class="prompt-block" id="prompt-save" data-code data-language="text" data-label="PROMPT 07 · 최종본과 시험 기록" data-slide data-slide-title="PROMPT 07 · 최종본과 시험 기록"><code>지금 실제로 확인한 분실물 센터를 다음에도 이어 만들 수 있게 정리해줘.
+index.html과 Code.gs 최종 전체를 각각 주고 두 파일이 연결되는지 점검해줘.
+SHEET_URL, PHOTO_FOLDER_URL 설정과 배포를 갱신하는 순서를 써줘.
+사진 업로드·검색·반환·권한을 확인할 간단한 시험표를 만들어줘.
+파일이 너무 크거나 사진만 안 보일 때 어디부터 확인할지 알려줘.
+결과 칸은 비워둬. 내가 시험하지 않은 항목은 성공으로 쓰지 마.
+수업을 마친 뒤 웹 앱 배포를 중지하는 위치도 알려줘.
+내가 코드를 읽지 않아도 파일과 설정을 다시 찾을 수 있게 설명해줘.</code></pre><div data-slide data-slide-title="세 버전과 확인 결과를 남겨요" ><div class="version-trail"><p><strong>v1 · 글자 저장</strong>시트 한 줄과 목록 연결</p><p><strong>v2 · 사진과 검색</strong>파일 저장·읽기·조건 찾기</p><p><strong>v3 · 반환과 공유</strong>역할·상태·접근 범위 확인</p></div><p class="after-note">Docs에 실제 실행한 두 파일과 시험 결과를 보관해요. 배포 중지는 Apps Script → 배포 관리 → 해당 배포 보관처리. 예전 배포가 남았다면 함께 확인해요. 시트와 사진 파일은 별도로 남습니다.</p></div><div class="reflection-panel" data-widget="lesson-reflection" data-slide data-slide-title="나의 분실물 센터 기록"><label for="lost-result">직접 확인한 기능과 아직 못 해본 시험</label><textarea id="lost-result" data-note="lost-result" rows="2" maxlength="600" placeholder="예: 사진을 저장하고 다시 열었다. 친구 계정 시험은 아직 못 했다."></textarea><label for="lost-next">사진 + 검색 + 상태를 다른 서비스에 쓴다면?</label><textarea id="lost-next" data-note="lost-next" rows="2" maxlength="600" placeholder="예: 동아리 작품 전시관, 도서 교환 게시판, 체육용품 대여함."></textarea><p class="note-storage" aria-live="polite">개인정보 대신 내가 만든 기능과 배운 점을 남겨요.</p></div></div></section>
+
+<section class="lecture-section" id="optional-missions" aria-labelledby="optional-missions-title" data-reveal><div class="section-heading"><p class="kicker">OPTIONAL / MAKE FINDING EASIER</p><h2 id="optional-missions-title">선택 · 최신순과 오래된 순으로 보기</h2><p class="section-description">기본 흐름을 모두 확인했다면, 물건이 많아져도 찾기 좋은 목록으로 바꿔봐요.</p></div><div class="example-stack"><pre class="prompt-block" id="prompt-sort" data-code data-language="text" data-label="선택 A · 검색 결과의 순서 바꾸기" data-slide data-slide-title="선택 A · 검색 결과의 순서 바꾸기" data-slide-skip><code>검색 조건을 유지하면서 최신 등록순·오래된 등록순을 선택하게 해줘.
+같은 시각에 등록된 물건은 물건번호로 순서를 정해 흔들리지 않게 해줘.
+전체 검색 결과를 먼저 정렬한 뒤 6개씩 나누어 보여줘.
+순서나 조건을 바꾸면 첫 페이지부터 보여줘.
+다음 페이지에서도 중복·누락 없이 이어지는지 시험하는 방법을 알려줘.
+기존 등록·사진·검색·반환을 보존하고 바뀐 파일 전체를 줘.</code></pre><div data-slide data-slide-title="선택 기능도 결과로 확인해요" data-slide-skip><p>7개 이상을 등록해 최신순·오래된 순에서 첫 장과 둘째 장을 비교해요. 정렬은 보는 순서만 바꾸므로 <strong>시트의 물건번호와 원본 행을 다시 만들지 않아요.</strong></p></div></div></section>
+
+<section class="lecture-section" id="fix-it" aria-labelledby="fix-it-title" data-reveal><div class="section-heading"><p class="kicker">HELP / FOLLOW THE PHOTO</p><h2 id="fix-it-title">어느 단계에서 멈췄는지 알려줘요</h2><p class="section-description">“사진이 안 돼요”보다 선택·저장·목록·읽기 중 어디인지 말하면 해결이 빨라져요.</p></div><div class="example-stack"><div data-slide data-slide-title="보이는 증상에서 출발하기" data-slide-skip><div class="spec-grid"><div><h3>미리보기부터 안 됨</h3><p>사진 형식·크기·빈 파일인지 확인해요.</p></div><div><h3>시트·파일이 안 생김</h3><p>설정 주소·실행 계정·최근 배포 버전을 봐요.</p></div><div><h3>파일은 있는데 안 보임</h3><p>앱 접근 범위·파일 연결·사진 읽기 오류를 구분해요.</p></div></div></div><pre class="prompt-block" id="prompt-fix" data-code data-language="text" data-label="도움 · 멈춘 단계를 설명하기" data-slide data-slide-title="도움 · 멈춘 단계를 설명하기" data-slide-skip><code>분실물 센터를 만들다 아래 단계에서 멈췄어. 한 단계씩 해결을 도와줘.
+내가 한 일: [사진 선택 / 등록 / 검색 / 반환 / 친구 계정에서 열기]
+화면에 나온 말: [그대로 적기]
+시트의 물건과 Drive 파일: [각각 생겼는지, 몇 개인지]
+접속한 곳: [로컬 파일 / 배포된 앱], 계정: [운영자 / 허용된 친구]
+파일 형식·크기와 마지막 배포 갱신 여부: [확인한 내용]
+원하는 결과: [어떻게 되어야 하는지]
+현재 두 파일 전체를 줄게. 계정·설정값·개인정보는 가려서 보낼게.
+기존 파일을 무작정 공개하거나 지우지 말고 확인할 순서를 알려줘.
+수정이 필요하면 기존 기능을 유지한 파일 전체를 각각 줘.</code></pre><div class="lesson-bottom-nav"><a class="button" href="../lesson-03/index.html">← 3회 · 동아리 자동 비서</a><a class="button" href="../index.html">전체 프로젝트</a><p>다음 프로젝트: 5회 · 우리 학교 정보 도우미 — 피드백 후 이어갑니다.</p></div></div></section>
+</div></main>
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-instructor"><div data-instructor-avatar></div><div><strong data-instructor-name></strong><p data-instructor-affiliation></p><a class="footer-email" data-instructor-email></a></div></div><div data-other-lectures-region><h2 class="footer-heading">다른 강의 둘러보기</h2><div class="other-lectures" data-other-lectures></div></div></div></footer>
+  <div class="sr-only" role="status" aria-live="polite" data-copy-status></div>
+  <noscript>소개와 프롬프트는 그대로 읽을 수 있습니다. 프롬프트를 직접 선택해 복사하거나, JavaScript를 켜서 복사 버튼과 분실물 센터 체험을 사용하세요.</noscript>
+</body>
+</html>
