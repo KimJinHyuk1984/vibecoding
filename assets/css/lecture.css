@@ -227,6 +227,35 @@
 .presentation-stage .info-lab { gap: var(--space-3); padding: var(--space-4); }
 .presentation-stage :is(.info-answer, .info-status) { min-height: 0; }
 
+/* 마지막 프로젝트 · 기능 세 개를 고르는 조합 보드 */
+.project-board { display: grid; gap: var(--space-4); padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface-2); }
+.project-caption { color: var(--text-muted); font-size: var(--font-small); }
+.project-controls { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-3); }
+.project-controls label { display: grid; gap: var(--space-2); flex: 1 1 200px; min-width: 0; }
+.project-board select { min-width: 0; width: 100%; min-height: 48px; padding: var(--space-3); color: var(--text); background: var(--bg); border: 1px solid var(--control-border); border-radius: var(--radius-md); font: inherit; }
+.project-board .button { min-height: 48px; font-size: var(--font-small); }
+.project-features { min-width: 0; padding: 0; border: 0; }
+.project-features legend { padding: 0; margin-bottom: var(--space-3); font-weight: var(--weight-heading); }
+.project-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.project-feature { display: flex; align-items: center; gap: var(--space-3); min-width: 0; min-height: 48px; padding: var(--space-3); border: 1px solid var(--control-border); border-radius: var(--radius-md); background: var(--bg); cursor: pointer; }
+.project-feature:has(:checked) { border-color: var(--accent-text); box-shadow: inset 3px 0 var(--accent-text); }
+.project-feature input { width: 20px; height: 20px; flex: 0 0 20px; accent-color: var(--accent-text); }
+.project-board :is(input, select):focus-visible { outline: 3px solid var(--accent-text); outline-offset: 4px; }
+.project-result { padding-block: var(--space-3); border-block: 1px solid var(--border); }
+.project-selected { font-weight: var(--weight-heading); }
+.project-links { display: flex; flex-wrap: wrap; column-gap: var(--space-5); }
+.project-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.project-status { min-height: 2.8em; color: var(--accent-text); }
+.presentation-stage :is(.project-caption, .project-board .button) { font-size: var(--slide-body); }
+.presentation-stage .project-board { gap: var(--space-3); padding: var(--space-4); }
+.presentation-stage .project-status { min-height: 0; }
+@media (max-width: 767px) {
+  .project-board { padding: var(--space-4); }
+  .project-controls label { flex-basis: 100%; }
+  .project-controls .button { flex: 1 1 100px; }
+  .project-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* 발표 모드에서도 프롬프트 전문과 입력 컨트롤을 읽을 수 있게 유지합니다. */
 .presentation-stage .lead-question { font-size: 44px; }
 .presentation-stage pre.prompt-block { font-size: var(--slide-code); }

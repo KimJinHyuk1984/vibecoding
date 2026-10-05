@@ -621,6 +621,101 @@ window.WIDGETS = window.WIDGETS || {};
     });
     status.textContent = "기록은 이 브라우저에만 보관돼요. 작품과 함께 Docs에도 옮겨두세요.";
   };
+  window.WIDGETS["project-board"] = function (host) {
+    const features = [
+      { id: "book", name: "예약·정원", lesson: "02" },
+      { id: "return", name: "반환 상태", lesson: "04" },
+      { id: "search", name: "검색", lesson: "04" },
+      { id: "photo", name: "사진 업로드", lesson: "04" },
+      { id: "stats", name: "통계", lesson: "02" },
+      { id: "form", name: "설문", lesson: "02" },
+      { id: "calendar", name: "일정 자동화", lesson: "03" },
+      { id: "report", name: "보고서·PDF", lesson: "03" },
+      { id: "api", name: "외부 API", lesson: "05" }
+    ];
+    const ideas = {
+      loan: { name: "학교 물품 대여소", problem: "남은 물건을 찾고 신청한 뒤, 담당자가 반납을 확인해요.", picks: ["book", "return", "search"] },
+      gallery: { name: "동아리 작품 전시관", problem: "작품을 올리고 찾아보며, 작품에 대한 반응을 살펴봐요.", picks: ["photo", "search", "stats"] },
+      event: { name: "학급 행사 도우미", problem: "의견을 받고, 정한 일정을 달력에 넣고 결과를 정리해요.", picks: ["form", "calendar", "report"] },
+      custom: { name: "내 아이디어", problem: "내가 해결할 문제를 Docs에 적고 필요한 기능을 골라보세요.", picks: [] }
+    };
+    const panel = node("div", "interactive-widget project-board");
+    panel.append(node("h3", "", "첫 버전에는 기능 세 개"), node("p", "project-caption", "조합 연습 · 실제 앱 생성이나 Google 연결은 하지 않아요."));
+    const controls = node("div", "project-controls");
+    const label = node("label", "", "출발 아이디어");
+    const select = node("select", "project-idea");
+    Object.keys(ideas).forEach(function (id) {
+      const option = node("option", "", ideas[id].name);
+      option.value = id;
+      select.append(option);
+    });
+    label.append(select);
+    const clear = node("button", "button project-clear", "선택 비우기");
+    const reset = node("button", "button project-reset", "처음 조합");
+    clear.type = reset.type = "button";
+    controls.append(label, clear, reset);
+    const problem = node("p", "project-problem");
+    const fieldset = node("fieldset", "project-features");
+    fieldset.append(node("legend", "", "필요한 기능 · 최대 세 개"));
+    const grid = node("div", "project-feature-grid");
+    const inputs = [];
+    const status = node("p", "project-status");
+    status.setAttribute("role", "status");
+    status.setAttribute("aria-atomic", "true");
+    const result = node("div", "project-result");
+    const selected = node("p", "project-selected");
+    const links = node("div", "project-links");
+    links.setAttribute("aria-label", "선택 기능 복습");
+    result.append(selected, links);
+    function chosen() { return features.filter(function (_, index) { return inputs[index].checked; }); }
+    function update(message) {
+      const picks = chosen();
+      panel.dataset.count = String(picks.length);
+      panel.dataset.selected = picks.map(function (f) { return f.id; }).join(",");
+      selected.textContent = picks.length ? "선택: " + picks.map(function (f) { return f.name; }).join(" / ") : "아직 고른 기능이 없어요.";
+      links.replaceChildren();
+      const lessons = Array.from(new Set(picks.map(function (f) { return f.lesson; }))).sort();
+      lessons.forEach(function (lesson) {
+        const link = node("a", "", Number(lesson) + "회 복습 →");
+        link.setAttribute("href", "../lesson-" + lesson + "/index.html");
+        links.append(link);
+      });
+      status.textContent = message || (picks.length === 3 ? "3 / 3개 · 이 조합과 성공 장면을 Docs에 적어보세요." : picks.length + " / 3개 · 첫 버전에 필요한 기능을 골라보세요.");
+    }
+    features.forEach(function (feature) {
+      const item = node("label", "project-feature");
+      const input = node("input", "");
+      input.type = "checkbox";
+      input.value = feature.id;
+      input.addEventListener("change", function () {
+        if (chosen().length > 3) {
+          input.checked = false;
+          update("세 개까지 고를 수 있어요. 바꾸려면 먼저 하나를 해제하세요.");
+          return;
+        }
+        update();
+      });
+      inputs.push(input);
+      item.append(input, node("span", "", feature.name));
+      grid.append(item);
+    });
+    fieldset.append(grid);
+    function useIdea() {
+      const idea = ideas[select.value];
+      problem.textContent = idea.problem;
+      inputs.forEach(function (input) { input.checked = idea.picks.includes(input.value); });
+      update();
+    }
+    select.addEventListener("change", useIdea);
+    clear.addEventListener("click", function () {
+      inputs.forEach(function (input) { input.checked = false; });
+      update("선택을 비웠어요. 필요한 기능을 세 개 골라보세요.");
+    });
+    reset.addEventListener("click", function () { select.value = "loan"; useIdea(); });
+    panel.append(controls, problem, fieldset, result, status);
+    useIdea();
+    host.replaceChildren(panel);
+  };
   const mounted = new WeakSet();
   function mountWidgets(root = document) {
     const elements = Array.from(root.querySelectorAll("[data-widget]"));

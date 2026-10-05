@@ -1,6 +1,6 @@
 # 바이브코딩의 모든 것
 
-고등학생이 Google Workspace와 AI로 아이디어를 완성하는 웹 강의 시리즈입니다. [새 계획](plan2.md)에 따라 **6개 프로젝트**로 구성하며, 현재 1~5회가 준비되어 있습니다. 프로젝트는 2시간 수업 횟수와 구분하고, 시간 제한 없이 결과를 확인하며 진행합니다.
+고등학생이 Google Workspace와 AI로 아이디어를 완성하는 웹 강의 시리즈입니다. [새 계획](plan2.md)에 따라 **6개 프로젝트**로 구성하며, 1~6회 본문이 모두 준비되어 있습니다. 프로젝트는 2시간 수업 횟수와 구분하고, 시간 제한 없이 결과를 확인하며 진행합니다.
 
 학생은 코드를 읽는 대신 원하는 화면과 동작을 말하고, AI가 만든 파일 전체를 복사해 실행합니다. 첫 게임 → 내 취향 → 시트 저장 → 친구와 랭킹 공유를 하나의 흐름으로 연결합니다. 저장용 Code.gs도 학생이 AI에게 직접 요청하며, 시트 주소는 설정 화면에 붙입니다.
 
@@ -11,14 +11,15 @@
 - [3회 · 일하는 동아리 자동 비서](lesson-03/index.html): Forms 활동 신청 → 시트 맞춤 메뉴 → Calendar 일정 → 제출 트리거 → 실제 결과 → Docs 보고서·PDF. 기본 프롬프트 7개, 선택 1개, 도움 1개.
 - [4회 · 우리 학교 분실물 센터](lesson-04/index.html): 화면 → 글자 저장 → Drive 사진 업로드·읽기 → 검색·필터 → 운영자 반환 메뉴 → 접근 범위 확인. 기본 프롬프트 7개, 선택 1개, 도움 1개.
 - [5회 · 우리 학교 정보 도우미](lesson-05/index.html): 나이스 급식·Open-Meteo 예보 API → 카드 → 캐시·오류 처리 → 자료 기반 규칙 답변. 기본 프롬프트 7개, 승인된 AI 서비스 연결 선택 1개, 도움 1개.
-- 6회 독립 서비스 제작은 준비 중입니다.
+- [6회 · 내 아이디어를 실제 서비스로](lesson-06/index.html): 문제·기능 세 개 → 첫 버전 → 하나씩 연결 → 오류 해결 → 친구 테스트 → 개선·공유. 기본 프롬프트 8개, 다음 아이디어 선택 1개.
 - 기존 lesson-02·lesson-03 이동 페이지를 새 계획의 2·3회 본문으로 교체했습니다. 이전 게임 꾸미기·게임 랭킹 내용은 통합 1회에 있습니다.
 - 운영 안내: [통합 1회 메모](docs/lesson-01-teaching-notes.md), [최신 검증](docs/lesson-01-merged-verification.md).
 - 2회 운영 안내: [축제 프로젝트 메모](docs/lesson-02-festival-teaching-notes.md), [검증 기록](docs/lesson-02-festival-verification.md).
 - 3회 운영 안내: [동아리 자동 비서 메모](docs/lesson-03-club-teaching-notes.md), [검증 기록](docs/lesson-03-club-verification.md).
 - 4회 운영 안내: [분실물 센터 메모](docs/lesson-04-lost-teaching-notes.md), [검증 기록](docs/lesson-04-lost-verification.md).
 - 5회 운영 안내: [학교 정보 도우미 메모](docs/lesson-05-info-teaching-notes.md), [검증 기록](docs/lesson-05-info-verification.md).
-- 한 회차를 검토한 뒤 다음 회차를 작성합니다. 커밋·푸시·배포는 별도 지시로 진행합니다.
+- 6회 운영 안내: [독립 프로젝트 메모](docs/lesson-06-project-teaching-notes.md), [검증 기록](docs/lesson-06-project-verification.md).
+- 6개 회차 본문 작성을 마쳤으며, 회차별 피드백을 반영합니다. 커밋·푸시·배포는 별도 지시로 진행합니다.
 
 아래에는 기반 템플릿의 제작·운영 설명을 보존합니다.
 
