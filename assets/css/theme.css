@@ -1,0 +1,386 @@
+/* 바이브코딩의 모든 것 · 대화형 테마
+ * 이 저장소 전용 파일입니다. sync-shared 대상이 아니라서 템플릿 동기화로 덮어써지지 않습니다.
+ * 불러오는 순서: tokens.css → base.css → lecture.css → pretendard 글꼴 → theme.css
+ *
+ * 원칙
+ * 1) 학생이 AI에게 보내는 말(프롬프트)은 회차 색 말풍선으로 보여 줍니다.
+ * 2) 회차마다 색 하나. 색은 body[data-level]과 강의 목록의 n번째 카드에서만 정합니다.
+ * 3) 나머지는 남색 잉크와 옅은 바탕으로 차분하게 둡니다.
+ * 4) 글자와 바탕의 대비는 라이트·다크 모두 4.5:1 이상입니다.
+ */
+
+/* ── 1. 기본 토큰: 라이트 ── */
+:root {
+  --bg: #f4f6fb;
+  --surface: #eaeef6;
+  --surface-2: #ffffff;
+  --border: #dde2ee;
+  --text: #1b2140;
+  --text-muted: #59607e;
+  --control-border: #868daa;
+  --accent: #7fa5ff;
+  --accent-soft: #eaf0ff;
+  --accent-ink: #1b2140;
+  --accent-text: #2a4fb5;
+  --code-bg: #1d2135;
+  --code-text: #ffffff;
+  --code-muted: #b4bad3;
+  --code-border: #3b4263;
+  --code-highlight: #2c3352;
+  --backdrop: rgb(27 33 64 / 62%);
+  /* 도움 말풍선: 어느 회차 색과도 겹치지 않는 슬레이트 */
+  --help: #c9cfe3;
+  --help-soft: #ffffff;
+  --help-text: #3e4766;
+  --font-sans: "Pretendard Variable", "Pretendard", system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --leading-body: 1.6;
+}
+
+/* ── 2. 기본 토큰: 다크 (저장한 선택 → 시스템 설정 순) ── */
+:root[data-theme="dark"] {
+  --bg: #12152b;
+  --surface: #20253f;
+  --surface-2: #1a1e36;
+  --border: #2f3556;
+  --text: #eef0fa;
+  --text-muted: #aab1d0;
+  --control-border: #6e7699;
+  --accent-soft: #232c4d;
+  --accent-text: #99b7ff;
+  --code-bg: #0d1022;
+  --code-highlight: #262c4a;
+  --warn: #ffd08a;
+  --warn-soft: #3a2e14;
+  --backdrop: rgb(4 5 14 / 72%);
+  --help-soft: #1a1e36;
+  --help-text: #c9cfe3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12152b;
+    --surface: #20253f;
+    --surface-2: #1a1e36;
+    --border: #2f3556;
+    --text: #eef0fa;
+    --text-muted: #aab1d0;
+    --control-border: #6e7699;
+    --accent-soft: #232c4d;
+    --accent-text: #99b7ff;
+    --code-bg: #0d1022;
+    --code-highlight: #262c4a;
+    --warn: #ffd08a;
+    --warn-soft: #3a2e14;
+    --backdrop: rgb(4 5 14 / 72%);
+    --help-soft: #1a1e36;
+    --help-text: #c9cfe3;
+  }
+}
+
+/* ── 3. 회차 색 ──
+ * lesson: 말풍선 테두리·버튼·진행 표시 / soft: 말풍선 바탕 / deep: 작은 글자
+ * 강의 목록은 shared.js가 1~6회 순서로 카드를 만들기 때문에 n번째 항목으로 맞춥니다.
+ */
+body[data-level="lesson-01"], .level-path-step:nth-child(1) {
+  --lesson: #ff8a78; --lesson-soft: #ffede9; --lesson-deep: #b02f1c;
+  --lesson-soft-dark: #382837; --lesson-deep-dark: #ffa193;
+}
+body[data-level="lesson-02"], .level-path-step:nth-child(2) {
+  --lesson: #ffaa4a; --lesson-soft: #fff1e2; --lesson-deep: #8f4400;
+  --lesson-soft-dark: #382d30; --lesson-deep-dark: #ffbb6e;
+}
+body[data-level="lesson-03"], .level-path-step:nth-child(3) {
+  --lesson: #55cf86; --lesson-soft: #e5f8ec; --lesson-deep: #126c38;
+  --lesson-soft-dark: #1d333a; --lesson-deep-dark: #77d99e;
+}
+body[data-level="lesson-04"], .level-path-step:nth-child(4) {
+  --lesson: #3fccd3; --lesson-soft: #e0f7f8; --lesson-deep: #00626a;
+  --lesson-soft-dark: #193246; --lesson-deep-dark: #65d6dc;
+}
+body[data-level="lesson-05"], .level-path-step:nth-child(5) {
+  --lesson: #7fa5ff; --lesson-soft: #eaf0ff; --lesson-deep: #2a4fb5;
+  --lesson-soft-dark: #232c4d; --lesson-deep-dark: #99b7ff;
+}
+body[data-level="lesson-06"], .level-path-step:nth-child(6) {
+  --lesson: #b596ff; --lesson-soft: #f2ecff; --lesson-deep: #6236c2;
+  --lesson-soft-dark: #2c2a4d; --lesson-deep-dark: #c4abff;
+}
+
+/* tokens.css의 [data-accent] 규칙보다 구체적인 선택자로 회차 색을 연결합니다. */
+body[data-level],
+.level-path-step,
+.level-path-step .level-card {
+  --accent: var(--lesson, #7fa5ff);
+  --accent-soft: var(--lesson-soft, #eaf0ff);
+  --accent-text: var(--lesson-deep, #2a4fb5);
+}
+:root[data-theme="dark"] body[data-level],
+:root[data-theme="dark"] .level-path-step,
+:root[data-theme="dark"] .level-path-step .level-card {
+  --accent-soft: var(--lesson-soft-dark, #232c4d);
+  --accent-text: var(--lesson-deep-dark, #99b7ff);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body[data-level],
+  :root:not([data-theme="light"]) .level-path-step,
+  :root:not([data-theme="light"]) .level-path-step .level-card {
+    --accent-soft: var(--lesson-soft-dark, #232c4d);
+    --accent-text: var(--lesson-deep-dark, #99b7ff);
+  }
+}
+
+/* ── 4. 글자와 기본 요소 ── */
+h1 { font-weight: 800; }
+h2, .lead-question { font-weight: 750; }
+::selection { color: var(--accent-ink); background: var(--accent); }
+
+.site-header { background: var(--surface-2); }
+.badge-tag {
+  border-color: transparent;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-family: inherit;
+  font-weight: var(--weight-medium);
+}
+.callout { background: var(--surface-2); }
+.callout-warn { background: var(--warn-soft); }
+
+/* ── 5. 첫 화면 ── */
+.lesson-actions .button-primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: var(--weight-heading);
+}
+.lesson-actions .button-primary:hover {
+  background: var(--accent);
+  box-shadow: inset 0 0 0 2px var(--accent-ink);
+}
+.hero-promise {
+  padding: var(--space-5) var(--space-6);
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.hero-promise strong { font-size: 1.25rem; text-wrap: pretty; }
+
+/* 3단계에서 넣는 대화 미리보기: 내 말(회차 색) → AI의 답(남색) → 도착점 */
+.lesson-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: center;
+}
+.lesson-hero-grid h1 { font-size: clamp(2.75rem, 4.6vw, 4rem); }
+.hero-chat {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-6);
+  border-radius: 28px;
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.chat-bubble {
+  max-width: 92%;
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--font-small);
+  line-height: 1.55;
+}
+.chat-who {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: 0.9375rem;
+  font-weight: var(--weight-heading);
+}
+.chat-me {
+  justify-self: end;
+  border: 2px solid var(--accent);
+  border-radius: 22px 22px 6px 22px;
+  background: var(--accent-soft);
+  color: var(--text);
+}
+.chat-me .chat-who { color: var(--accent-text); }
+.chat-ai {
+  justify-self: start;
+  border-radius: 22px 22px 22px 6px;
+  background: var(--code-bg);
+  color: var(--code-text);
+}
+.chat-ai .chat-who { color: var(--code-muted); }
+.hero-chat .hero-promise {
+  margin: var(--space-2) 0 0;
+  padding: var(--space-4) var(--space-1) 0;
+  border-top: 1px dashed var(--control-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ── 6. 단계 라벨 ── */
+.section-heading .kicker {
+  width: fit-content;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  letter-spacing: 0;
+}
+:is(#optional-missions, #ai-extension, [data-role="optional"]) .section-heading .kicker {
+  padding: 2px calc(var(--space-4) - 2px);
+  border: 2px dashed var(--accent);
+  background: transparent;
+}
+:is(#fix-it, [data-role="help"]) .section-heading .kicker {
+  background: var(--help-soft);
+  color: var(--help-text);
+  box-shadow: inset 0 0 0 2px var(--help);
+}
+
+/* ── 7. 프롬프트 말풍선 ── */
+.code-block:has(.prompt-block) {
+  margin-left: min(6%, 56px);
+  border: 2px solid var(--accent);
+  border-radius: 22px 22px 6px 22px;
+  background: var(--accent-soft);
+  color: var(--text);
+}
+.code-block:has(.prompt-block) .code-toolbar {
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  border-bottom: 0;
+  background: var(--accent);
+}
+.code-block:has(.prompt-block) .code-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  color: var(--accent-ink);
+  font-weight: var(--weight-heading);
+}
+.code-block:has(.prompt-block) .code-label::before {
+  content: "나";
+  content: "나" / "";
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1b2140;
+  font-size: 0.875rem;
+}
+.code-block:has(.prompt-block) .copy-button {
+  flex-shrink: 0;
+  border-color: transparent;
+  background: #ffffff;
+  color: #1b2140;
+  font-weight: var(--weight-heading);
+}
+.code-block:has(.prompt-block) .copy-button:hover {
+  background: #ffffff;
+  box-shadow: inset 0 0 0 2px #1b2140;
+}
+.code-block:has(.prompt-block) .copy-button:focus-visible { outline-color: #1b2140; }
+.code-block:has(.prompt-block) pre[data-code] {
+  padding-block: var(--space-4) var(--space-5);
+  background: transparent;
+  color: var(--text);
+}
+.code-block:has(.prompt-block) pre:focus-visible { outline-color: var(--accent-text); }
+
+/* 선택 미션: 점선 말풍선 */
+.code-block:has(pre[data-label^="선택"]) {
+  border-style: dashed;
+  background: var(--surface-2);
+}
+.code-block:has(pre[data-label^="선택"]) .code-toolbar {
+  border-bottom: 2px dashed var(--accent);
+  background: transparent;
+}
+.code-block:has(pre[data-label^="선택"]) .code-label { color: var(--accent-text); }
+.code-block:has(pre[data-label^="선택"]) .code-label::before {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+.code-block:has(pre[data-label^="선택"]) .copy-button { background: var(--accent); }
+
+/* 막혔을 때: 슬레이트 말풍선 */
+.code-block:has(pre[data-label^="도움"]) {
+  --accent: var(--help);
+  --accent-soft: var(--help-soft);
+  --accent-text: var(--help-text);
+}
+
+/* ── 8. 확인 체크리스트 ── */
+.check-panel {
+  padding: var(--space-5) var(--space-6);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+.check-list { gap: var(--space-2); margin-top: 0; }
+.check-list label {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  transition: background-color var(--duration-fast) ease;
+}
+.check-list label:has(input:checked) { background: var(--accent-soft); }
+.check-list input { accent-color: var(--accent-text); }
+.check-summary { margin-top: var(--space-4); color: var(--text-muted); }
+.check-panel:has(input:checked) .check-summary { color: var(--accent-text); }
+.check-panel:has(input):not(:has(input:not(:checked))) { border-color: var(--accent); }
+.check-panel:has(input):not(:has(input:not(:checked))) .check-summary {
+  width: fit-content;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* ── 9. 강의 목록 ── */
+.path-number {
+  border: 0;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-heading);
+}
+.level-path-step:has([data-status="coming"]) .path-number {
+  border: 2px dashed var(--accent);
+  background: var(--surface-2);
+  color: var(--text-muted);
+}
+.level-card { border-width: 2px; background: var(--surface-2); }
+.level-card[data-status="ready"] { border-color: var(--accent); }
+.level-card[data-status="ready"]:hover { border-color: var(--accent); background: var(--accent-soft); }
+.level-card[data-status="coming"] { border-style: dashed; background: var(--surface-2); }
+.level-card .kicker {
+  width: fit-content;
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--accent-ink);
+  letter-spacing: 0;
+}
+.level-card[data-status="coming"] .kicker { background: var(--accent-soft); color: var(--accent-text); }
+.level-cta { color: var(--accent-text); }
+
+/* ── 10. 발표 모드와 좁은 화면 ── */
+.presentation-stage .code-block:has(.prompt-block) { margin-left: 0; }
+.presentation-stage .code-block:has(.prompt-block) .code-label::before { width: 40px; height: 40px; font-size: 1.125rem; }
+.presentation-stage .check-list input { flex-basis: 28px; width: 28px; height: 28px; margin-top: 6px; }
+
+@media (max-width: 900px) {
+  .lesson-hero-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-7); }
+}
+@media (max-width: 767px) {
+  .code-block:has(.prompt-block) { margin-left: 0; }
+  .check-panel { padding: var(--space-4); }
+  .hero-chat { padding: var(--space-4); border-radius: 22px; }
+}
+@media (max-width: 479px) {
+  .lesson-hero-grid h1 { font-size: 2.25rem; }
+}

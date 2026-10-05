@@ -27,6 +27,13 @@
 이 저장소에서 복제한 각 강의 저장소 자체가 사이트 루트입니다.
 예: `https://kimjinhyuk1984.github.io/ai-squat-king/`
 
+## 디자인 테마(대화형)
+
+- [assets/css/theme.css](assets/css/theme.css)는 이 저장소 전용 테마이며 sync-shared 동기화 대상이 아닙니다.
+- 회차 색은 theme.css의 `body[data-level]`과 강의 목록의 `.level-path-step:nth-child(n)`에서 정합니다. 1회 코랄, 2회 주황, 3회 초록, 4회 청록, 5회 파랑, 6회 보라입니다.
+- Pretendard v1.3.9 다이내믹 서브셋을 `assets/fonts/pretendard/`에 내장합니다. SIL OFL 1.1 라이선스는 [OFL.txt](assets/fonts/pretendard/OFL.txt)에 보관합니다. 이는 DESIGN.md의 외부 폰트 없이 사용한다는 규칙에 대한 이 저장소 한정 예외이며, 외부 CDN 없이 오프라인에서도 불러옵니다.
+- 새 강의 페이지에도 `lecture.css` 바로 다음에 Pretendard CSS → theme.css 순서로 두 링크를 넣습니다. 전체 순서는 `tokens.css → base.css → lecture.css → pretendardvariable-dynamic-subset.css → theme.css`입니다. 루트에서는 `assets/`, lesson 폴더에서는 `../assets/` 상대 경로를 사용합니다.
+
 ## 새 강의 만드는 법
 
 AI 코딩 도구의 단계별 작업 지시서는 [WORKFLOW.md](WORKFLOW.md)입니다. 복제한 저장소에서 `WORKFLOW.md의 1단계를 수행하라`처럼 지시하세요. 지정한 단계만 수행하며, 판단이 필요한 사항과 각 단계 종료 시에는 보고하고 멈춥니다.
